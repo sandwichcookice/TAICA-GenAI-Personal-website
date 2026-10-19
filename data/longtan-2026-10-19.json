@@ -522,11 +522,11 @@
     {
       "id": "mrblack",
       "name": "黑先生飯館Mr.Black",
-      "address": "雲林縣斗六市仁義路13之8號",
+      "address": "雲林縣斗六市仁義路8-16號",
       "areaEvidence": {
         "included": true,
         "basis": "地址位於大學路以南的仁義路生活圈",
-        "source": "https://ifoodie.tw/restaurant/60463467873d7975311c3f09-%E9%BB%91%E5%85%88%E7%94%9F%E9%A3%AF%E9%A4%A8Mr-Black",
+        "source": "https://yingoyingo.pixnet.net/blog/posts/1034271291",
         "checkedAt": "2026-10-19"
       }
     },
@@ -659,6 +659,72 @@
         "included": true,
         "basis": "地址位於大學路以南的龍潭路生活圈",
         "source": "https://food.timetables.tw/restaurant/ChIJIdy079fJbjQRvZR7KSsOjeE/",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "hongya_yuntech",
+      "name": "弘爺漢堡 雲科店",
+      "address": "雲林縣斗六市龍潭路1-29號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.hongya88.com.tw/TW/Stores/StoresData/173",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "hongya_north",
+      "name": "弘爺漢堡 龍潭北店",
+      "address": "雲林縣斗六市龍潭北路16之12號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭北路生活圈",
+        "source": "https://www.hongya88.com.tw/TW/Stores/StoresData/173",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "hongya_dalun",
+      "name": "弘爺漢堡 大崙店",
+      "address": "雲林縣斗六市仁義路26號1F",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的仁義路生活圈",
+        "source": "https://www.hongya88.com.tw/TW/Stores/StoresData/173?page=2",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "morning",
+      "name": "晨間廚房 斗六龍潭店",
+      "address": "雲林縣斗六市龍潭北路16號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭北路生活圈",
+        "source": "https://www.ubereats.com/tw/store/晨間廚房-斗六龍潭店/m_7cfJlNW6CBJjdxNeuHjA",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "fage",
+      "name": "大崙發哥麵店",
+      "address": "雲林縣斗六市仁義路62-1號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的仁義路生活圈",
+        "source": "https://supertaste.tvbs.com.tw/infocard/31482",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "oyster",
+      "name": "蚵仔之家",
+      "address": "雲林縣斗六市仁義路9-12號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的仁義路生活圈",
+        "source": "https://www.foodpanda.com.tw/restaurant/rrhb/he-zi-zhi-jia-rrhb",
         "checkedAt": "2026-10-19"
       }
     }
@@ -905,17 +971,65 @@
       ]
     },
     {
-      "id": "mrblack",
-      "source": "https://ifoodie.tw/restaurant/60463467873d7975311c3f09-%E9%BB%91%E5%85%88%E7%94%9F%E9%A3%AF%E9%A4%A8Mr-Black",
-      "kind": "directory",
+      "id": "morning",
+      "source": "https://www.ubereats.com/tw/store/晨間廚房-斗六龍潭店/m_7cfJlNW6CBJjdxNeuHjA",
+      "kind": "delivery",
+      "openingHoursSpecification": [
+        {
+          "dayOfWeek": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "05:45",
+          "closes": "12:30"
+        }
+      ]
+    },
+    {
+      "id": "fage",
+      "source": "https://supertaste.tvbs.com.tw/infocard/31482",
+      "kind": "article",
       "openingHoursList": [
+        "星期日 休息",
+        "星期一 11:00-14:00, 16:30-19:00",
+        "星期二 11:00-14:00, 16:30-19:00",
+        "星期三 11:00-14:00, 16:30-19:00",
+        "星期四 11:00-14:00, 16:30-19:00",
+        "星期五 11:00-14:00, 16:30-19:00",
+        "星期六 休息"
+      ]
+    },
+    {
+      "id": "oyster",
+      "source": "https://ericboyworld.blogspot.com/2025/04/justwaffle.html",
+      "kind": "article",
+      "openingHoursList": [
+        "星期日 10:30-19:00",
+        "星期一 10:30-19:00",
+        "星期二 10:30-19:00",
+        "星期三 10:30-19:00",
+        "星期四 10:30-19:00",
+        "星期五 休息",
+        "星期六 10:30-19:00"
+      ]
+    },
+    {
+      "id": "mrblack",
+      "source": "https://yingoyingo.pixnet.net/blog/posts/1034271291",
+      "kind": "article",
+      "openingHoursList": [
+        "星期日 11:00-13:30, 16:30-19:30",
         "星期一 11:00-13:30, 16:30-19:30",
-        "星期二 休息",
+        "星期二 11:00-13:30, 16:30-19:30",
         "星期三 休息",
         "星期四 11:00-13:30, 16:30-19:30",
         "星期五 11:00-13:30, 16:30-19:30",
-        "星期六 11:00-13:30, 16:30-19:30",
-        "星期日 11:00-13:30, 16:30-19:30"
+        "星期六 11:00-13:30, 16:30-19:30"
       ]
     }
   ],
@@ -974,5 +1088,25 @@
       "reason": "目錄資料較舊，現況與時刻待核對。",
       "source": "https://food.timetables.tw/restaurant/ChIJIdy079fJbjQRvZR7KSsOjeE/"
     }
-  ]
+  ],
+  "supplement": {
+    "added": [
+      "hongya_yuntech",
+      "hongya_north",
+      "hongya_dalun",
+      "morning",
+      "fage",
+      "oyster"
+    ],
+    "corrected": [
+      "mrblack"
+    ],
+    "excluded": [
+      {
+        "name": "買辣麻辣燙",
+        "reason": "愛食記結構化店名標示已歇業，未加入抽選。",
+        "source": "https://ifoodie.tw/restaurant/65641e0f7be9c3339ec9e7fc"
+      }
+    ]
+  }
 }

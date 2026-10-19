@@ -39,7 +39,7 @@ test('published walking evidence matches the fixed gate, destination and rounded
 });
 test('real nearby meals are available at dinner and remain empty after closing',t=>{
  const {w,get,$}=setup(t),rows=get('RESTAURANTS'),f={...options,range:'near'};
- assert.deepEqual(plain(w.selectPool(rows,f,w.parseTaipei('2026-10-19T18:00'),null,false).pool.map(r=>r.id)),['datou','grayspace','leedong','viet','meiwei','nantou','chicken','myshop','seetea','edo','pengfood','hokkaido','mrblack']);
+ assert.deepEqual(plain(w.selectPool(rows,f,w.parseTaipei('2026-10-19T18:00'),null,false).pool.map(r=>r.id)),['datou','grayspace','leedong','viet','meiwei','nantou','chicken','myshop','seetea','edo','pengfood','hokkaido','mrblack','fage','oyster']);
  assert.equal(w.selectPool(rows,f,w.parseTaipei('2026-10-20T00:01'),null,false).pool.length,0);
  get("state.filters={...DEFAULTS,time:'at',at:'2026-10-19T18:00'};syncControls();refresh()");$('spin').click();
  assert.match($('oddsNote').textContent,/排除上次/);assert.doesNotMatch($('oddsNote').textContent,/允許重複/);
@@ -64,7 +64,7 @@ test('default area remains usable without walking routes and keeps explicit time
  $('resetFilters').click();assert.equal(get('state.filters.range'),'near');assert.equal(get('state.filters.time'),'now');
 });
 test('all public records have unique identity, sources and honest optional fields',t=>{
- const {get}=setup(t),rows=get('RESTAURANTS');assert.equal(rows.length,60);assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
+ const {get}=setup(t),rows=get('RESTAURANTS');assert.equal(rows.length,66);assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
  for(const r of rows){assert.equal(r.city,'斗六市');assert.ok(r.address.startsWith('雲林縣斗六市'));assert.equal(new URL(r.source).protocol,'https:');assert.match(r.checkedAt,/^\d{4}-\d{2}-\d{2}$/);for(const p of Object.values(r.priceByCategory))if(p){assert.ok(p.amount>0);assert.ok(p.source);assert.ok(p.item);assert.ok(p.checkedAt);}}
 });
 test('Taiwan time conversion and impossible date validation',t=>{
@@ -153,7 +153,7 @@ test('filter change marks old result and redraws eligible slices',t=>{
 test('search is text-only and never changes draw pool; full directory includes pending data',t=>{
  const {$,get,d,w,available,change}=setup(t);available();const before=get('state.pool.map(r=>r.id).join()');
  $('search').value='<img src=x onerror=alert(1)>';$('search').dispatchEvent(new w.Event('input'));assert.equal(d.querySelectorAll('#restaurantGrid img').length,0);assert.equal(get('state.pool.map(r=>r.id).join()'),before);
- $('search').value='';change('listMode','all');assert.equal(d.querySelectorAll('.restaurant-card').length,60);assert.match($('restaurantGrid').textContent,/待核對/);
+ $('search').value='';change('listMode','all');assert.equal(d.querySelectorAll('.restaurant-card').length,66);assert.match($('restaurantGrid').textContent,/待核對/);
 });
 test('viewing a card or history changes map without affecting draw state',t=>{
  const {$,get,d,available}=setup(t);available();$('spin').click();const last=get('state.lastId'),history=get('state.history.map(r=>r.id).join()');d.querySelector('.card-actions button').click();assert.match($('result').textContent,/正在查看/);assert.equal(get('state.lastId'),last);d.querySelector('#history button').click();assert.equal(get('state.history.map(r=>r.id).join()'),history);
@@ -181,7 +181,7 @@ test('Canvas failure does not block text drawing; map/source links are safe',t=>
  const {$,w,d,available,get}=setup(t,{canvas:false});available();assert.equal($('canvasFallback').hidden,false);$('spin').click();assert.equal(get('state.history.length'),1);assert.ok(d.querySelector('.direction').href.startsWith('https://www.google.com/maps/dir/'));d.querySelectorAll('a[target="_blank"]').forEach(a=>assert.match(a.rel,/noopener/));assert.equal(w.link('unsafe','javascript:alert(1)').hasAttribute('href'),false);
 });
 test('fresh page keeps shared defaults, no stored personal settings',t=>{
- const {$,w,get,available}=setup(t);available();$('spin').click();assert.equal(w.localStorage.length,0);assert.equal(w.sessionStorage.length,0);assert.equal(get('DATASET.version'),'2026-10-19.4');
+ const {$,w,get,available}=setup(t);available();$('spin').click();assert.equal(w.localStorage.length,0);assert.equal(w.sessionStorage.length,0);assert.equal(get('DATASET.version'),'2026-10-19.5');
 });
 
 test('a later time-boundary refresh relabels a completed draw without adding history',t=>{
@@ -193,7 +193,7 @@ test('near directory shows closed and pending shops independently of wheel filte
  const {$,get,change,d}=setup(t);assert.equal($('listMode').value,'near');
  assert.equal(d.querySelectorAll('.restaurant-card').length,get('RESTAURANTS.filter(inLongtanArea).length'));
  change('timeMode','at');change('atTime','2026-10-20T00:01');assert.equal(get('state.pool.length'),0);
- assert.equal(d.querySelectorAll('.restaurant-card').length,47);change('listMode','eligible');assert.equal(d.querySelectorAll('.restaurant-card').length,0);
+ assert.equal(d.querySelectorAll('.restaurant-card').length,53);change('listMode','eligible');assert.equal(d.querySelectorAll('.restaurant-card').length,0);
 });
 test('delivery schedules are identified in result and never used as on-site prices',t=>{
  const {get,$}=setup(t);get("state.filters.time='at';state.filters.at='2026-10-19T18:00';viewRestaurant(RESTAURANTS.find(r=>r.id==='viet'))");
