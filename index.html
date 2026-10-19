@@ -5800,12 +5800,7 @@
       return buffer[0]%length;
     }
     function wheelGroups(items) {
-      const n=items.length,step=n>36?Math.ceil(n/12):1,groups=[];
-      for(let i=0;i<n;i+=step) {
-        const end=Math.min(i+step,n);
-        groups.push({start:i,end,from:i/n,to:end/n,label:n<=18?items[i].short:n<=36?String(i+1).padStart(2,'0'):`${String(i+1).padStart(2,'0')}–${String(end).padStart(2,'0')}`});
-      }
-      return groups;
+      return items.map((r,i)=>({start:i,end:i+1,from:i/items.length,to:(i+1)/items.length,label:r.name}));
     }
     function targetRotation(current,index,items) {
       const group=wheelGroups(items).find(g=>index>=g.start&&index<g.end);
@@ -5836,7 +5831,6 @@
       $('wheelTitle').textContent=(mode==='drawn'?'今天就吃':mode==='view'?'正在查看':'上次抽中')+'｜'+r.short;$('wheelTitle').title=r.name;
       $('quickResult').textContent=(mode==='drawn'?'今天就吃：':mode==='view'?'正在查看：':'上次抽中：')+r.name+' · 詳細資訊 ↓';$('quickResult').href='#result';$('quickResult').classList.add('picked');box.replaceChildren();box.classList.toggle('won',mode==='drawn');
       box.append(el('p','eyebrow',mode==='drawn'?'本次抽中 · 今天就吃這家':mode==='view'?'正在查看 · 不影響抽選':'上次結果 · 請依目前條件重新抽選'),el('h3','',r.name),el('p','',r.address),el('p','',r.note));
-      if(index!==undefined) box.append(el('p','',`本次轉盤編號 ${String(index+1).padStart(2,'0')}`));
       if(r.status!=='已收錄') {box.append(el('p','notice',r.status+'：'+r.statusNote));if(r.statusSource)box.append(link('狀態資料來源 ↗',r.statusSource,'result-source'));}
       const prices=filters.budget==='any'?priceOptions(r,filters.category):matchingPrices(r,filters);
       if(prices.length) for(const p of prices) {
@@ -5897,14 +5891,14 @@
         const groups=wheelGroups(items);
         groups.forEach((g,i)=>{
           const start=g.from*Math.PI*2-Math.PI/2,end=g.to*Math.PI*2-Math.PI/2;
-          ctx.beginPath();ctx.moveTo(500,500);ctx.arc(500,500,492,start,end);ctx.closePath();ctx.fillStyle=palette[i%palette.length];ctx.fill();ctx.strokeStyle='#ffffff';ctx.lineWidth=3;ctx.stroke();
-          ctx.save();ctx.translate(500,500);ctx.rotate((start+end)/2);ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillStyle=i%palette.length===0?'#fff':'#193b3a';ctx.font=`700 ${items.length<=18?30:28}px sans-serif`;ctx.fillText(g.label,450,0,310);ctx.restore();
+          ctx.beginPath();ctx.moveTo(500,500);ctx.arc(500,500,492,start,end);ctx.closePath();ctx.fillStyle=palette[i%palette.length];ctx.fill();ctx.strokeStyle='#ffffff';ctx.lineWidth=items.length>36?1:3;ctx.stroke();
+          ctx.save();ctx.translate(500,500);ctx.rotate((start+end)/2);ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillStyle=i%palette.length===0?'#fff':'#193b3a';ctx.font=`700 ${Math.min(28,Math.max(6,2*Math.PI*200/items.length*.8))}px sans-serif`;ctx.fillText(g.label,465,0,265);ctx.restore();
         });
         if(!items.length){ctx.beginPath();ctx.arc(500,500,492,0,Math.PI*2);ctx.fillStyle='#d6eeea';ctx.fill();}
       }
       $('wheel').setAttribute('aria-label',`餐廳轉盤，共 ${items.length} 家；完整名單可展開下方「本次轉盤名單」。`);
-      $('legend').replaceChildren();items.forEach((r,i)=>$('legend').append(el('li','',`${String(i+1).padStart(2,'0')} · ${r.name}`)));
-      $('groupNote').textContent=items.length>36?'以編號分組顯示，扇形大小依店家數分配；每家店的抽中機率相同。':items.length>18?'轉盤以編號顯示，展開名單查看完整店名。':'每個扇形代表一家店，每家抽中機率相同。';
+      $('legend').replaceChildren();items.forEach(r=>$('legend').append(el('li','',r.name)));
+      $('groupNote').textContent='每家店各占一格，顯示完整店名；每家抽中機率相同。';
     }
     function summaryText(date) {
       const f=state.filters,time=f.time==='any'?'不限時間':f.time==='at'?formatTime(date):'現在依表定營業 · '+formatTime(date);

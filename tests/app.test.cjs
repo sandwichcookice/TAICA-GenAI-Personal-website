@@ -132,10 +132,10 @@ test('single candidate can repeat and no-repeat otherwise removes only previous 
  const {w}=setup(t),a=record({id:'a'}),b=record({id:'b'}),date=w.parseTaipei(options.at);
  assert.equal(w.selectPool([a],options,date,'a',true).pool.length,1);assert.deepEqual(plain(w.selectPool([a,b],options,date,'a',true).pool.map(r=>r.id)),['b']);assert.equal(w.selectPool([a,b],options,date,'a',false).pool.length,2);
 });
-test('wheel pointer hits every correct slice/group for 1, 12, 18, 36, 37, 60 and 101 candidates',t=>{
+test('wheel displays every full restaurant name and pointer hits its individual slice at every size',t=>{
  const {w}=setup(t);
  for(const n of [1,12,18,36,37,60,101]){
-  const items=Array.from({length:n},(_,i)=>({short:String(i)})),groups=w.wheelGroups(items);assert.ok(groups.length<=(n>36?12:n));assert.equal(groups.reduce((s,g)=>s+g.end-g.start,0),n);
+  const items=Array.from({length:n},(_,i)=>({name:'完整餐廳名稱 '+i,short:'簡稱'})),groups=w.wheelGroups(items);assert.equal(groups.length,n);assert.deepEqual(plain(groups.map(g=>g.label)),items.map(r=>r.name));assert.ok(groups.every(g=>g.end===g.start+1));
   for(let i=0;i<n;i++)for(const previous of [0,1813,28964.4]){const angle=w.targetRotation(previous,i,items),fraction=((360-angle%360)%360)/360;const g=groups.find(g=>fraction>=g.from-1e-8&&fraction<g.to);assert.ok(i>=g.start&&i<g.end);assert.ok(angle-previous>=1800);}
  }
 });
