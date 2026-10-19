@@ -290,7 +290,7 @@
         "verified": true,
         "accessible": true,
         "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
-        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+        "note": "依公開步行路網估計，未實地踏查；實際通行與時間依現場為準。"
       }
     ],
     "location": {
@@ -412,7 +412,7 @@
         "verified": true,
         "accessible": true,
         "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
-        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+        "note": "依公開步行路網估計，未實地踏查；實際通行與時間依現場為準。"
       }
     ],
     "location": {
@@ -503,7 +503,7 @@
         "verified": true,
         "accessible": true,
         "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
-        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+        "note": "依公開步行路網估計，未實地踏查；實際通行與時間依現場為準。"
       }
     ],
     "location": {
@@ -749,7 +749,7 @@
         "verified": true,
         "accessible": true,
         "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
-        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+        "note": "依公開步行路網估計，未實地踏查；實際通行與時間依現場為準。"
       }
     ],
     "location": {
@@ -1103,7 +1103,7 @@
         "verified": true,
         "accessible": true,
         "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
-        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+        "note": "依公開步行路網估計，未實地踏查；實際通行與時間依現場為準。"
       }
     ],
     "location": {
@@ -1419,7 +1419,7 @@
         "verified": true,
         "accessible": true,
         "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
-        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+        "note": "依公開步行路網估計，未實地踏查；實際通行與時間依現場為準。"
       }
     ],
     "location": {
@@ -1510,7 +1510,7 @@
         "verified": true,
         "accessible": true,
         "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
-        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+        "note": "依公開步行路網估計，未實地踏查；實際通行與時間依現場為準。"
       }
     ],
     "location": {
@@ -1601,7 +1601,7 @@
         "verified": true,
         "accessible": true,
         "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
-        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+        "note": "依公開步行路網估計，未實地踏查；實際通行與時間依現場為準。"
       }
     ],
     "location": {
@@ -1692,7 +1692,7 @@
         "verified": true,
         "accessible": true,
         "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
-        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+        "note": "依公開步行路網估計，未實地踏查；實際通行與時間依現場為準。"
       }
     ],
     "location": {
@@ -1901,7 +1901,7 @@
       $('spin').disabled=state.spinning||!selection.pool.length||!$('timeError').hidden;
       $('spinLabel').textContent=state.spinning?'正在決定下一餐…':selection.pool.length?'轉一下，決定吃什麼':'沒有符合條件的店家';
       $('wheelEmpty').hidden=!!state.wheelItems.length;
-      $('oddsNote').textContent=selection.pool.length===1?'目前僅一家，允許重複抽選':selection.counts.repeat?'下次將排除上次抽中的店家':'每家等機率抽選';
+      $('oddsNote').textContent=selection.base.length===1?'目前僅一家，允許重複抽選':selection.counts.repeat?'下次將排除上次抽中的店家':'每家等機率抽選';
       const reasons=$('exclusionList');reasons.replaceChildren();
       Object.entries(selection.counts).filter(([,v])=>v).forEach(([k,v])=>reasons.append(el('li','',`${REASONS[k]}：${v} 家`)));
       $('diagnosticsSummary').textContent=`名單 ${RESTAURANTS.length} 家 → 符合條件 ${selection.base.length} 家 → 下次可抽 ${selection.pool.length} 家`;

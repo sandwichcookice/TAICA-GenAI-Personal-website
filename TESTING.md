@@ -31,15 +31,19 @@
 
 測試指令：本機啟動 `python3 -m http.server 8000`，再執行 `npm run test:browser`。使用系統 Chromium，`CHROMIUM_PATH` 可指定執行檔；`SITE_URL` 可指定正式網址；`SCREENSHOT_DIR` 可保存截圖。
 
-涵蓋 320／390／768／1280px：Enter 鍵抽選、真實動畫凍結與完成、減少動態、防重複、手機結果在地圖前、無水平溢出、完整名單搜尋不影響候選、深夜空候選、離線抽選與 JavaScript 錯誤監測。瀏覽器使用 America/Los_Angeles 時區，指定時間仍按台灣時區處理。
+四種寬度均通過。涵蓋 320／390／768／1280px：Enter 鍵抽選、真實動畫凍結與完成、減少動態、防重複、手機結果在地圖前、無水平溢出、完整名單搜尋不影響候選、深夜空候選、離線抽選與 JavaScript 錯誤監測。瀏覽器使用 America/Los_Angeles 時區，指定時間仍按台灣時區處理。
 
-Google 地圖已另外以 Chromium 連線檢查 iframe 載入；固定起點能載入 Google Maps，頁面保留外開地圖與導航連結。
+Google 地圖已另外以 Chromium 連線檢查 iframe 載入；固定起點與抽中李東記的地圖圖釘均能載入 Google Maps，頁面保留外開地圖與導航連結。
 
 ## 驗證邊界與後續維護
 
 - **步行資料**：9 家公開路網已核對，其餘仍待補；未進行實地踏查。路線資料不能保證臨時通行狀況。
 - **實際裝置**：Chromium 視窗模擬不等於 Android Chrome、iOS Safari 或實體手機驗收；螢幕閱讀器尚未實測。
 - **外部地圖**：Google 搜尋與地圖內容可能改變；同名店、校內櫃位與餐車仍需使用者核對。
-- **發布**：本輪 GitHub Pages 部署及正式站驗證結果於發布後補記。
+- **發布**：功能版本 `36a6fb9` 的 [GitHub Pages 部署](https://github.com/sandwichcookice/TAICA-GenAI-Personal-website/actions/runs/39227498852)已成功；線上 HTML 與該 commit 完全一致，正式網址的手機抽選流程通過。後續補正防重複提示，並以兩組相關測試確認。
 
 DOM 測試沒有瀏覽器排版引擎，因此不將測試通過等同於手機視覺或外部地圖驗收通過。
+
+## 發布驗證（2026-10-19，台灣時間）
+
+[正式網站](https://sandwichcookice.github.io/TAICA-GenAI-Personal-website/)已發布資料版本 `2026-10-19.3`。核心功能採 29 組邏輯測試與四種寬度的 Chromium 檢查；部署後再檢查正式網址的資料版本、指定時間、手機抽選結果與檔案一致性。

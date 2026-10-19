@@ -41,7 +41,9 @@ test('real nearby meals are available at dinner and remain empty after closing',
  const {w,get,$}=setup(t),rows=get('RESTAURANTS'),f={...options,range:'near'};
  assert.deepEqual(plain(w.selectPool(rows,f,w.parseTaipei('2026-10-19T18:00'),null,false).pool.map(r=>r.id)),['grayspace','leedong']);
  assert.equal(w.selectPool(rows,f,w.parseTaipei('2026-10-19T23:00'),null,false).pool.length,0);
- get("state.filters={...DEFAULTS,time:'at',at:'2026-10-19T23:00'};syncControls();refresh()");
+ get("state.filters={...DEFAULTS,time:'at',at:'2026-10-19T18:00'};syncControls();refresh()");$('spin').click();
+ assert.match($('oddsNote').textContent,/排除上次/);assert.doesNotMatch($('oddsNote').textContent,/允許重複/);
+ get("state.filters.at='2026-10-19T23:00';syncControls();refresh({changed:true})");
  assert.equal($('spin').disabled,true);assert.doesNotMatch($('emptyMessage').textContent,/目前缺少符合此步行範圍/);
  assert.equal(get('state.filters.range'),'near');
 });
