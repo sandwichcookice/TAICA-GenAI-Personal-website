@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f7f6">
+  <meta name="description" content="雲科今天吃什麼？篩選校園周邊餐飲，轉一下選出下一餐，直接在 Google 地圖查看店家位置。">
+  <title>雲科吃什麼｜把選擇交給轉盤</title>
+  <style>
+    /* Teal interface inspired by YunTech’s official emblem description; web tones are adaptations. */
+    :root{--paper:#f3f7f6;--white:#ffffff;--ink:#193b3a;--muted:#5c7170;--line:#d4e2df;--brand:#007f78;--accent:#d5a569;--yellow:#f0d4ad;--mint:#d6eeea}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.6}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:wait;opacity:.5}a{color:inherit;text-underline-offset:4px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button{color:inherit}button,input,select{min-height:44px}.wrap{max-width:1240px;margin:auto;padding:0 36px}.skip{position:absolute;top:-80px;left:20px;background:var(--white);z-index:5;padding:12px}.skip:focus{top:12px}
+    header{border-bottom:1px solid var(--line)}.nav{height:88px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:21px;font-weight:850;letter-spacing:1px}.brand-mark{display:grid;place-items:center;width:42px;height:42px;background:var(--brand);color:var(--paper);border-radius:50%;font-size:24px}.nav-right{display:flex;align-items:center;gap:26px;font-size:13px}.nav-right a{text-decoration:none}.location{border-left:1px solid var(--line);padding-left:26px;color:var(--muted)}.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:7px}
+    .intro{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding:44px 0 30px}.eyebrow{font-size:11px;font-weight:750;letter-spacing:2.5px;color:var(--brand);margin:0 0 10px}.intro h1{font-size:clamp(32px,4vw,48px);letter-spacing:-1.5px;line-height:1.3;margin:0 0 12px;font-weight:850}.intro h1 span{color:var(--brand);position:relative;white-space:nowrap}.intro p{margin:0;color:var(--muted);font-size:14px}.intro-note{font-size:12px!important;text-align:right;line-height:1.8;flex-shrink:0}.intro-note strong{font-size:28px;color:var(--brand);font-family:Georgia,serif;font-weight:400;margin-right:5px}
+    .filters{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0 22px;flex-wrap:wrap}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid var(--line);background:transparent;border-radius:24px;padding:8px 17px;font-size:13px;transition:background .15s}.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:white}.chip:hover{border-color:var(--brand)}.area-control{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted)}select{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:7px 30px 7px 12px;color:var(--ink);max-width:100%}
+    .playground{display:grid;grid-template-columns:1.12fr 1fr;gap:22px;align-items:stretch}.roulette{border:1px solid var(--line);border-radius:20px;background:var(--white);padding:24px;display:flex;flex-direction:column;overflow:hidden}.panel-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.panel-heading h2{font-size:14px;font-weight:700;margin:0}.counter{font-size:11px;color:var(--muted);background:#e7f1ee;padding:4px 10px;border-radius:20px}.wheel-stage{position:relative;display:grid;place-items:center;padding:24px 0 18px;flex:1;min-height:300px;background:radial-gradient(circle,#dceae6 1px,transparent 1px);background-size:18px 18px;margin:14px 0}.wheel-shell{position:relative;width:min(100%,380px);aspect-ratio:1;border-radius:50%;padding:9px;background:var(--ink);box-shadow:0 8px 0 #c9ded9}.wheel-shell:after{content:"";position:absolute;inset:5px;border-radius:50%;border:1px dashed #a6c9c1;pointer-events:none}canvas{display:block;width:100%;height:100%;border-radius:50%;will-change:transform}.pointer{position:absolute;top:-5px;left:calc(50% - 13px);z-index:2;width:26px;height:38px;background:var(--accent);clip-path:polygon(0 0,100% 0,100% 52%,50% 100%,0 52%);filter:drop-shadow(0 3px 1px #0003)}.hub{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:76px;height:76px;border:5px solid var(--ink);border-radius:50%;background:var(--white);display:flex;flex-direction:column;justify-content:center;align-items:center;line-height:1.1;box-shadow:0 2px 6px #0002;pointer-events:none}.hub strong{font-size:24px}.hub small{font-size:8px;letter-spacing:1px;margin-top:6px}.wheel-empty{position:absolute;text-align:center;max-width:240px;background:var(--white);padding:20px;border-radius:16px;z-index:3}.wheel-empty p{font-size:13px;color:var(--muted)}[hidden]{display:none!important}
+    .spin{width:100%;background:var(--brand);color:white;border:0;border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:center;gap:14px;font-size:18px;font-weight:700;box-shadow:0 4px 0 #005c57;transition:background .2s}.spin:hover:not(:disabled){background:#00645e}.spin-icon{font-size:25px;line-height:1}.spin-subline{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-top:16px;color:var(--muted);font-size:11px}.repeat-label{display:flex;align-items:center;gap:7px;cursor:pointer}.repeat-label input{accent-color:var(--brand);min-height:18px;width:16px;height:16px;margin:0}.text-button{background:none;border:0;text-decoration:underline;text-underline-offset:4px;font-size:12px;padding:4px 0;min-height:32px}
+    .map-panel{border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;background:var(--white)}.map-header{padding:22px 24px;display:flex;justify-content:space-between;gap:12px;align-items:center}.map-header h2{font-size:14px;margin:0}.map-header a{font-size:11px;color:var(--muted)}.map-frame{position:relative;min-height:280px;flex:1;background:#e3efeb}.map-frame iframe{display:block;width:100%;height:100%;min-height:280px;border:0;position:absolute;inset:0}.map-help{font-size:11px;color:var(--muted);padding:8px 24px;border-bottom:1px solid var(--line);margin:0}.result{padding:20px 24px 24px;min-height:190px;position:relative}.result .eyebrow{font-size:10px;letter-spacing:1.5px;color:#006b65;margin-bottom:5px}.result h3{font-size:23px;line-height:1.4;margin:0 0 8px;font-weight:800;overflow-wrap:anywhere}.result p{font-size:12px;color:var(--muted);margin:5px 0}.result-bottom{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:14px}.tags{display:flex;gap:5px;flex-wrap:wrap}.tag{font-size:10px;border:1px solid var(--line);border-radius:4px;padding:2px 7px}.direction{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-size:12px;font-weight:700;background:var(--accent);color:#193b3a;border:1px solid #bd905b;border-radius:7px;padding:8px 14px;white-space:nowrap;min-height:40px}.result-source{font-size:10px!important;margin-top:12px!important}.welcome-art{position:absolute;right:24px;bottom:30px;font-size:56px;transform:rotate(-12deg);opacity:.15;pointer-events:none}.result.won{background:#e5f2ee}
+    .history{margin:20px 0 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--muted);min-height:34px}.history-label{font-weight:700;letter-spacing:1px}.history button{background:transparent;border:1px solid var(--line);border-radius:20px;font-size:11px;padding:4px 12px;min-height:32px}.history button:hover{border-color:var(--brand)}.history-empty{color:var(--muted)}
+    .directory{margin:45px 0 24px;border-top:1px solid var(--line);padding-top:24px}.directory-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}.directory-heading h2{font-size:21px;margin:0}.directory-heading p{font-size:12px;color:var(--muted);margin:3px 0 0}.search-wrap{position:relative;max-width:290px;width:100%}.search-wrap input{width:100%;border:1px solid var(--line);background:var(--white);border-radius:8px;padding:9px 14px;font-size:13px}.restaurant-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.restaurant-card{padding:16px;background:var(--white);border:1px solid var(--line);border-radius:10px;display:flex;gap:12px;align-items:flex-start;min-width:0}.food-symbol{display:grid;place-items:center;min-width:38px;height:38px;background:#e8f1ee;border-radius:50%;font-size:20px}.restaurant-info{min-width:0;flex:1}.restaurant-info h3{font-size:13px;margin:0;font-weight:750;overflow-wrap:anywhere}.restaurant-info p{font-size:10px;color:var(--muted);margin:4px 0;overflow-wrap:anywhere}.card-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px}.card-actions a{font-size:10px;color:var(--muted)}.card-actions button{background:transparent;border:0;padding:4px 0;font-size:11px;font-weight:700;min-height:32px}.no-results{grid-column:1/-1;text-align:center;border:1px dashed var(--line);border-radius:10px;padding:24px;color:var(--muted);font-size:13px}.data-note{border:1px solid var(--line);border-radius:10px;padding:15px 18px;margin:22px 0 32px;font-size:12px;color:var(--muted)}.data-note summary{cursor:pointer;color:var(--ink);font-weight:600;min-height:26px}.data-note p{max-width:850px;margin-bottom:0}.data-note a{color:var(--brand)}footer{border-top:1px solid var(--line);padding:22px 0 28px;font-size:11px;color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-inner strong{color:var(--brand);letter-spacing:1px}noscript{display:block;background:#f6e5cf;padding:20px;text-align:center}
+    @media(min-width:1400px){.wrap{max-width:1320px}.wheel-shell{width:400px}.map-frame,.map-frame iframe{min-height:310px}}
+    @media(max-width:800px){.wrap{padding:0 22px}.nav{height:72px}.location{display:none}.intro{padding-top:30px}.intro-note{display:none}.playground{grid-template-columns:1fr 1fr;gap:14px}.roulette{padding:16px}.wheel-stage{min-height:230px;padding:20px 0}.hub{width:62px;height:62px}.hub strong{font-size:20px}.map-header{padding:18px}.map-header a{display:none}.result{padding:18px;min-height:210px}.result h3{font-size:20px}.result-bottom{align-items:flex-start;flex-direction:column}.restaurant-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:620px){.wrap{padding:0 18px}.nav-right{gap:16px;font-size:12px}.brand{font-size:17px;gap:8px}.brand-mark{width:35px;height:35px;font-size:20px}.intro h1{font-size:36px}.intro p{font-size:12px}.intro{padding-bottom:16px}.filters{gap:12px;padding-bottom:18px}.chip{padding:7px 13px;font-size:12px}.area-control{width:100%;justify-content:space-between}.area-control select{flex:1;max-width:230px}.playground{grid-template-columns:1fr}.roulette{padding:20px}.wheel-shell{width:min(100%,330px)}.wheel-stage{min-height:280px}.spin{font-size:18px}.hub{width:70px;height:70px}.map-header a{display:block}.map-frame,.map-frame iframe{min-height:300px}.result{min-height:175px}.result-bottom{flex-direction:row;align-items:center}.directory{margin-top:32px}.directory-heading{align-items:flex-start;flex-direction:column}.search-wrap{max-width:none}.restaurant-grid{grid-template-columns:1fr}.restaurant-card{padding:14px}.restaurant-info h3{font-size:14px}.restaurant-info p,.card-actions a{font-size:11px}.directory-heading h2{font-size:20px}.history{gap:8px}.footer-inner{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip">跳至抽選轉盤</a>
+  <header><div class="wrap nav"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">食</span>雲科吃什麼<span style="color:var(--accent)">.</span></a><nav class="nav-right" aria-label="主要導覽"><a href="#directory">口袋名單 ↗</a><span class="location"><span class="dot"></span>YUNTECH · 斗六</span></nav></div></header>
+  <noscript>請啟用 JavaScript 使用轉盤與店家名單。你也可以<a href="https://www.google.com/maps/search/?api=1&amp;query=雲林科技大學附近餐廳">直接在 Google 地圖找餐廳</a>。</noscript>
+  <main class="wrap" id="main">
+    <section class="intro" aria-labelledby="title"><div><p class="eyebrow">LESS THINKING, MORE EATING.</p><h1>今天，<span>吃點什麼？</span></h1><p>選擇困難先放一邊，讓轉盤幫你決定下一餐。</p></div><p class="intro-note"><strong id="totalCount">18</strong>個口袋選項<br>龍潭路・鎮南路・大學路・校園內</p></section>
+    <section class="filters" aria-label="抽選條件"><div class="chips" role="group" aria-label="餐點類型"><button class="chip" data-category="全部" aria-pressed="true">都可以</button><button class="chip" data-category="正餐" aria-pressed="false">正餐</button><button class="chip" data-category="早午餐" aria-pressed="false">早午餐</button><button class="chip" data-category="點心" aria-pressed="false">點心</button><button class="chip" data-category="飲料" aria-pressed="false">喝一杯</button></div><label class="area-control" for="area">想走多遠？<select id="area"><option value="全部">整個校園生活圈</option><option>龍潭路</option><option>鎮南路</option><option>大學路</option><option>校園內</option></select></label></section>
+    <div class="playground">
+      <section class="roulette" aria-labelledby="wheelTitle"><div class="panel-heading"><h2 id="wheelTitle">01 / 把選擇交給轉盤</h2><span class="counter" id="candidateCount">18 個選項</span></div><div class="wheel-stage"><div class="wheel-shell"><div class="pointer" aria-hidden="true"></div><canvas id="wheel" width="1000" height="1000" role="img" aria-label="餐廳轉盤，候選店家列於下方口袋名單">餐廳轉盤</canvas><div class="hub" aria-hidden="true"><strong>開飯</strong><small>LET'S EAT</small></div></div><div class="wheel-empty" id="wheelEmpty" hidden><strong>這個組合還沒有店家</strong><p>換個類型或區域，看看其他選擇。</p><button class="text-button" id="emptyReset">清除篩選</button></div></div><button class="spin" id="spin"><span class="spin-icon" aria-hidden="true">⟳</span><span id="spinLabel">轉一下，決定吃什麼</span><span aria-hidden="true">↗</span></button><div class="spin-subline"><label class="repeat-label"><input type="checkbox" id="noRepeat" checked>避免連續抽到同一家</label><span id="oddsNote">每個選項都有機會</span></div></section>
+      <section class="map-panel" aria-labelledby="mapTitle"><div class="map-header"><h2 id="mapTitle">02 / 好吃的，就在附近</h2><a id="mapOpen" href="https://www.google.com/maps/search/?api=1&amp;query=雲林科技大學附近餐廳" target="_blank" rel="noopener noreferrer">開啟 Google 地圖 ↗</a></div><div class="map-frame"><iframe id="map" title="Google 地圖：雲林科技大學周邊餐廳" src="https://www.google.com/maps?q=%E9%9B%B2%E6%9E%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E9%99%84%E8%BF%91%E9%A4%90%E5%BB%B3&amp;output=embed&amp;hl=zh-TW" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><p class="map-help">地圖需連線；若未顯示，可使用上方連結查看。</p><div class="result" id="result" aria-live="polite" aria-atomic="true"><p class="eyebrow">YOUR NEXT GOOD MEAL</p><h3>下一餐的靈感，轉一下就有。</h3><p>抽出店家後，這裡會顯示地址與導航。</p><p>也可以從下方名單挑一家，在地圖上看看。</p><span class="welcome-art" aria-hidden="true">↗</span></div></section>
+    </div>
+    <div class="history" aria-label="最近抽選"><span class="history-label">剛剛抽過</span><span id="history" class="history-empty">還沒有紀錄，第一餐交給你。</span></div>
+    <section class="directory" id="directory" aria-labelledby="directoryTitle"><div class="directory-heading"><div><h2 id="directoryTitle">你的下一餐，都在這裡。</h2><p id="listCount">瀏覽口袋名單，也可以直接查看位置。</p></div><label class="search-wrap"><input id="search" type="search" aria-label="搜尋店名或地址，只篩選下方名單" placeholder="搜尋店名、地址…（僅搜尋名單）" maxlength="100"></label></div><div id="restaurantGrid" class="restaurant-grid"></div></section>
+    <details class="data-note"><summary>關於這份口袋名單 · 資料整理於 2026.10.19</summary><p>這是持續整理中的校園生活圈名單，目前收錄 18 個選項，並非周邊所有店家的完整普查。每家店都附有公開資料來源；整理日期表示查閱日期，不代表當日實地確認營業。校內餐飲可能隨學期調整，餐車位置亦可能變動，出發前請查看店家公告或 Google 地圖。本站不提供即時營業判斷、價格或評分。</p><p>抽選在符合條件的店家間等機率進行；勾選避免連續重複時，若有兩家以上，會排除上一次抽中的店家。搜尋框只搜尋下方名單，不改變轉盤。Google 地圖以店名及地址搜尋定位；校內櫃位或餐車可能僅顯示附近位置。</p></details>
+  </main>
+  <footer><div class="wrap footer-inner"><strong>雲科吃什麼. <span style="font-weight:400">讓每一餐，多一點期待。</span></strong><span>MADE FOR HUNGRY DAYS · YUNTECH</span></div></footer>
+  <script>
+    'use strict';
+    const CAMPUS_SOURCE = 'https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11';
+    // Public source facts are deliberately separate from live operating status.
+    const RESTAURANTS = [
+      {id:'datou',name:'大頭小吃部',short:'大頭小吃部',area:'龍潭路',categories:['正餐'],icon:'🍱',address:'雲林縣斗六市龍潭路1之79號',note:'排骨飯、便當',source:'https://vocus.cc/article/68d774c1fd89780001038d19',sourceName:'方格子食記（2025）'},
+      {id:'roulei',name:'肉嘞 斗六店',short:'肉嘞',area:'龍潭路',categories:['正餐'],icon:'🍚',address:'雲林縣斗六市龍潭路1-5號',note:'燒肉丼飯',source:'https://taberu-food.com/roulei/',sourceName:'肉依小姐吃什麼（2023）'},
+      {id:'grayspace',name:'灰色維度早午餐咖啡廳',short:'灰色維度',area:'龍潭路',categories:['正餐','早午餐','飲料'],icon:'☕',address:'雲林縣斗六市龍潭路1-28號1樓',note:'早午餐、義大利麵、丼飯',source:'https://www.ftvnews.com.tw/news/detail/2024327w0280',sourceName:'民視新聞（2024）'},
+      {id:'leedong',name:'李東記肉骨茶 斗六分店',short:'李東記',area:'龍潭路',categories:['正餐'],icon:'🍲',address:'雲林縣斗六市龍潭路10號',note:'肉骨茶',source:'https://supertaste.tvbs.com.tw/infocard/31480',sourceName:'食尚玩家（2025）'},
+      {id:'pengtea',name:'烹小茶',short:'烹小茶',area:'龍潭路',categories:['飲料'],icon:'🧋',address:'雲林縣斗六市龍潭路3-2號',note:'茶飲',source:'https://tour.yunlin.gov.tw/main/modules/MySpace/BlogList.php?cn=ZC10365087&pn=9&sn=yunlin',sourceName:'慢遊雲林'},
+      {id:'smile',name:'Mr. Smile 微笑早餐園地 龍潭店',short:'微笑早餐',area:'龍潭路',categories:['早午餐'],icon:'🍳',address:'雲林縣斗六市龍潭路3-16號',note:'早餐；公開名錄資料，出發前請確認',source:'https://footinder.com.tw/雲林縣斗六市/138407/',sourceName:'FooTinder 店家名錄（2023）'},
+      {id:'teas',name:"TEA'S 原味 斗六龍潭店",short:"TEA'S 原味",area:'龍潭路',categories:['飲料'],icon:'🧋',address:'雲林縣斗六市龍潭路14-12號',note:'茶飲',source:'https://drink.footinder.com.tw/uncategorized/33631/',sourceName:'台灣飲料地圖（2025）'},
+      {id:'laobing',name:'烙一手好餅',short:'烙一手好餅',area:'龍潭路',categories:['早午餐','點心'],icon:'🥞',address:'雲林縣斗六市龍潭路與四維路口',note:'餅類點心；攤位位置請先確認',source:'https://food.timetables.tw/restaurant/ChIJ_4_T3xrJbjQRthcNLhlEx1M/',sourceName:'店家名錄'},
+      {id:'kumaball',name:'熊太地瓜球 斗六店',short:'熊太地瓜球',area:'龍潭路',categories:['點心'],icon:'🍠',address:'雲林縣斗六市龍潭路5之9號',note:'地瓜球',source:'https://www.foodpanda.com.tw/restaurant/qd7q/xiong-tai-di-gua-qiu-dou-liu-dian',sourceName:'foodpanda 店家頁'},
+      {id:'chico',name:'CHICO 餐廚',short:'CHICO 餐廚',area:'鎮南路',categories:['正餐','早午餐'],icon:'🍝',address:'雲林縣斗六市鎮南路176號',note:'早午餐、義式與西式料理',source:'https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xmlid=1037321',sourceName:'慢遊雲林'},
+      {id:'wendocurry',name:'溫度咖哩',short:'溫度咖哩',area:'鎮南路',categories:['正餐'],icon:'🍛',address:'雲林縣斗六市鎮南路166號',note:'咖哩飯',source:'https://ericboyworld.blogspot.com/2025/01/wendocurry.html',sourceName:'大男孩的享食世界（2025）'},
+      {id:'milkfish',name:'專吃無刺虱目魚',short:'無刺虱目魚',area:'鎮南路',categories:['正餐'],icon:'🍲',address:'雲林縣斗六市鎮南路288之6號',note:'虱目魚、飯、粥、湯',source:'https://travel.yam.com/article/128552',sourceName:'輕旅行（2023）'},
+      {id:'meishan',name:'梅山米糕',short:'梅山米糕',area:'鎮南路',categories:['正餐'],icon:'🍚',address:'雲林縣斗六市鎮南路90號',note:'米糕',source:'https://ericboyworld.blogspot.com/2025/11/05-5378979.html',sourceName:'大男孩的享食世界（2025）'},
+      {id:'hans',name:"Han's Pizza 翰斯比薩",short:'翰斯比薩',area:'大學路',categories:['正餐','點心'],icon:'🍕',address:'雲林縣斗六市大學路三段',note:'窯烤披薩餐車；停靠位置請先確認',source:'https://tour.yunlin.gov.tw/main/modules/MySpace/BlogList.php?cn=ZC10353694&pn=11&sn=yunlin',sourceName:'慢遊雲林'},
+      {id:'kalugi',name:'卡璐佶咖啡館 雲科大店',short:'卡璐佶',area:'校園內',categories:['正餐','飲料','點心'],icon:'🍽️',address:'雲林縣斗六市大學路三段123號（設計學院荷花池旁）',note:'套餐、飲料、蛋糕',source:CAMPUS_SOURCE,sourceName:'雲科大官方餐飲資訊'},
+      {id:'louisa',name:'路易莎咖啡 雲科大店',short:'路易莎',area:'校園內',categories:['早午餐','飲料'],icon:'☕',address:'雲林縣斗六市大學路三段123號（雲泰表演廳南側）',note:'咖啡、健康餐、輕食',source:CAMPUS_SOURCE,sourceName:'雲科大官方餐飲資訊'},
+      {id:'xinxin',name:'心心複合式餐飲',short:'心心餐飲',area:'校園內',categories:['早午餐','飲料','點心'],icon:'🥪',address:'雲林縣斗六市大學路三段123號（員生餐廳內）',note:'早午餐、飲品；寒暑假及例假日供餐請確認',source:CAMPUS_SOURCE,sourceName:'雲科大官方餐飲資訊'},
+      {id:'qinqin',name:'親親食堂',short:'親親食堂',area:'校園內',categories:['正餐'],icon:'🍜',address:'雲林縣斗六市大學路三段123號（員生餐廳內）',note:'飯麵、水餃；寒暑假及例假日供餐請確認',source:CAMPUS_SOURCE,sourceName:'雲科大官方餐飲資訊'}
+    ];
+    const $ = id => document.getElementById(id);
+    const state = {category:'全部',area:'全部',candidates:[],spinning:false,rotation:0,lastId:null,history:[]};
+    const palette = ['#007f78','#d6eeea','#f0d4ad','#5baea4','#e9f4f1','#b7dcd5'];
+    function filteredRestaurants(category,area) { return RESTAURANTS.filter(r => (category==='全部'||r.categories.includes(category))&&(area==='全部'||r.area===area)); }
+    function eligibleRestaurants(candidates,lastId,noRepeat) { return noRepeat && candidates.length>1 ? candidates.filter(r=>r.id!==lastId) : candidates; }
+    function randomIndex(length) {
+      if(!Number.isInteger(length)||length<1) throw new RangeError('At least one candidate is required');
+      if(!window.crypto || !window.crypto.getRandomValues) return Math.floor(Math.random()*length);
+      const buffer=new Uint32Array(1), limit=Math.floor(4294967296/length)*length;
+      do { window.crypto.getRandomValues(buffer); } while(buffer[0]>=limit);
+      return buffer[0]%length;
+    }
+    function targetRotation(current,index,count) { const target=(360-(index+.5)*360/count)%360; return current+1800+((target-current%360+360)%360); }
+    function queryFor(r) { return r.name+' '+r.address; }
+    function mapUrl(query) { return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(query); }
+    function setMap(r) {
+      const query = r ? queryFor(r) : '雲林科技大學附近餐廳';
+      $('map').src='https://www.google.com/maps?q='+encodeURIComponent(query)+'&output=embed&hl=zh-TW';
+      $('map').title='Google 地圖：'+(r?r.name:'雲林科技大學周邊餐廳');
+      $('mapOpen').href=mapUrl(query);
+    }
+    function makeElement(tag,className,text) { const el=document.createElement(tag); if(className)el.className=className; if(text!==undefined)el.textContent=text; return el; }
+    function externalLink(text,url,className) { const a=makeElement('a',className,text);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a; }
+    function showResult(r,drawn=false) {
+      const box=$('result');box.replaceChildren();box.classList.toggle('won',drawn);
+      box.append(makeElement('p','eyebrow',drawn?'THE WHEEL HAS SPOKEN · 今天就吃這家':'ON YOUR RADAR · 看看這一家'),makeElement('h3','',r.name),makeElement('p','',r.address),makeElement('p','',r.note));
+      const bottom=makeElement('div','result-bottom'),tags=makeElement('div','tags');
+      [r.area,...r.categories].forEach(t=>tags.append(makeElement('span','tag',t)));
+      bottom.append(tags,externalLink('帶我去吃 ↗','https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(queryFor(r)),'direction'));
+      const source=makeElement('p','result-source');source.append(externalLink('資料來源：'+r.sourceName+' ↗',r.source));
+      box.append(bottom,source);setMap(r);
+    }
+    function drawWheel() {
+      const canvas=$('wheel'),ctx=canvas.getContext('2d');if(!ctx)return;
+      const items=state.candidates,n=items.length,size=1000,c=size/2,radius=493;
+      ctx.clearRect(0,0,size,size);
+      if(!n){ctx.beginPath();ctx.arc(c,c,radius,0,Math.PI*2);ctx.fillStyle='#e1ede9';ctx.fill();return;}
+      items.forEach((r,i)=>{
+        const start=-Math.PI/2+i*Math.PI*2/n,end=start+Math.PI*2/n;
+        ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,radius,start,end);ctx.closePath();ctx.fillStyle=palette[i%palette.length];ctx.fill();ctx.strokeStyle='#ffffff';ctx.lineWidth=3;ctx.stroke();
+        ctx.save();ctx.translate(c,c);ctx.rotate((start+end)/2);ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillStyle=i%palette.length===0?'#ffffff':'#193b3a';ctx.font=`700 ${n>14?26:32}px "Microsoft JhengHei", sans-serif`;ctx.fillText(r.short,radius-36,0,300);ctx.restore();
+      });
+    }
+    function renderDirectory() {
+      const term=$('search').value.trim().toLocaleLowerCase();
+      const list=state.candidates.filter(r=>(r.name+r.address+r.note).toLocaleLowerCase().includes(term));
+      $('listCount').textContent=`目前顯示 ${list.length} 家 / 轉盤共有 ${state.candidates.length} 個選項`;
+      const grid=$('restaurantGrid');grid.replaceChildren();
+      if(!list.length){grid.append(makeElement('p','no-results','沒有符合的店家，試著清除搜尋或更換上方篩選。'));return;}
+      list.forEach(r=>{
+        const card=makeElement('article','restaurant-card'),icon=makeElement('span','food-symbol',r.icon);icon.setAttribute('aria-hidden','true');
+        const info=makeElement('div','restaurant-info');info.append(makeElement('h3','',r.name),makeElement('p','',r.area+' · '+r.categories.join(' / ')),makeElement('p','',r.address));
+        const actions=makeElement('div','card-actions'),view=makeElement('button','','查看位置 ↗');view.type='button';view.disabled=state.spinning;view.setAttribute('aria-label','查看'+r.name+'的位置');view.addEventListener('click',()=>{if(state.spinning)return;showResult(r);$('mapTitle').scrollIntoView({behavior:'smooth',block:'start'});});
+        actions.append(externalLink('資料來源 ↗',r.source),view);info.append(actions);card.append(icon,info);grid.append(card);
+      });
+    }
+    function refresh() {
+      if(state.spinning)return;
+      state.candidates=filteredRestaurants(state.category,state.area);
+      document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===state.category)));
+      $('candidateCount').textContent=state.candidates.length+' 個選項';$('wheelEmpty').hidden=state.candidates.length>0;$('spin').disabled=!state.candidates.length;
+      $('spinLabel').textContent=state.candidates.length?'轉一下，決定吃什麼':'換個條件，再來試試';
+      $('oddsNote').textContent=state.candidates.length===1?'只有一家，就決定是它！':'每個選項都有機會';
+      $('wheel').style.transition='none';$('wheel').style.transform='rotate(0deg)';state.rotation=0;
+      drawWheel();renderDirectory();
+    }
+    function setBusy(busy) {
+      state.spinning=busy;$('spin').disabled=busy||!state.candidates.length;
+      document.querySelectorAll('.chip,#area,#noRepeat,#search,#emptyReset,.card-actions button,#history button').forEach(el=>el.disabled=busy);
+      $('wheel').setAttribute('aria-busy',String(busy));
+    }
+    function renderHistory() {
+      const history=$('history');history.replaceChildren();history.className='history';history.style.margin='0';
+      state.history.forEach(r=>{const b=makeElement('button','',r.name);b.type='button';b.addEventListener('click',()=>{if(!state.spinning)showResult(r);});history.append(b);});
+    }
+    function spin() {
+      if(state.spinning||!state.candidates.length)return;
+      const pool=eligibleRestaurants(state.candidates,state.lastId,$('noRepeat').checked),winner=pool[randomIndex(pool.length)];
+      const index=state.candidates.findIndex(r=>r.id===winner.id),wheel=$('wheel');
+      setBusy(true);$('spinLabel').textContent='美味正在轉過來…';
+      const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches,duration=reduced?0:4200;
+      const next=targetRotation(state.rotation,index,state.candidates.length);state.rotation=next;
+      let finished=false,timer;
+      const finish=()=>{if(finished)return;finished=true;clearTimeout(timer);wheel.removeEventListener('transitionend',onEnd);state.lastId=winner.id;state.history=[winner,...state.history].slice(0,5);showResult(winner,true);setBusy(false);renderHistory();$('spinLabel').textContent='再轉一次，換個靈感';};
+      const onEnd=e=>{if(e.target===wheel&&e.propertyName==='transform')finish();};
+      wheel.style.transition=duration?`transform ${duration}ms cubic-bezier(.12,.65,.12,1)`:'none';
+      // Flush the reset transform before starting a new transition.
+      void wheel.offsetWidth;wheel.addEventListener('transitionend',onEnd);wheel.style.transform=`rotate(${next}deg)`;
+      timer=setTimeout(finish,duration?duration+150:0);
+    }
+    document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>{if(state.spinning)return;state.category=button.dataset.category;refresh();}));
+    $('area').addEventListener('change',()=>{state.area=$('area').value;refresh();});
+    $('emptyReset').addEventListener('click',()=>{state.category='全部';state.area='全部';$('area').value='全部';$('search').value='';refresh();});
+    $('search').addEventListener('input',renderDirectory);$('spin').addEventListener('click',spin);$('totalCount').textContent=RESTAURANTS.length;refresh();
+  </script>
+</body>
+</html>
