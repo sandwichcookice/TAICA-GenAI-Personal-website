@@ -60,7 +60,7 @@
         </div></div><p id="rangeHelp" class="help"></p><a class="gate-link" href="https://www.google.com/maps/search/?api=1&amp;query=23.693064%2C120.533660" target="_blank" rel="noopener noreferrer">查看固定步行起點 ↗</a>
         <details class="advanced" open><summary>預算與營業時間</summary><div class="advanced-fields">
           <label for="budget">一人預算<select id="budget"><option value="any">預算不限</option><option value="100">100 元內</option><option value="200">101–200 元</option><option value="300">201–300 元</option><option value="301">301 元以上</option></select></label>
-          <label for="timeMode">什麼時候吃<select id="timeMode"><option value="now">現在依表定營業</option><option value="any">不限時間</option><option value="at">指定日期時間</option></select></label>
+          <label for="timeMode">什麼時候吃<select id="timeMode"><option value="now">現在依表定營業</option><option value="any">不限時間（含時刻待補店家）</option><option value="at">指定日期時間</option></select></label>
           <label id="atControl" for="atTime" hidden>日期時間（台灣）<input id="atTime" type="datetime-local" aria-describedby="timeError"></label>
         </div><p id="timeError" class="notice" role="alert" hidden>請填寫有效的台灣日期與時間。</p><p class="help">預算依各類型基準品項；營業依公開時刻表（部分採外送平台供餐時段），不含臨時異動。啟用條件時會排除資料不明的店家。</p></details>
       <div class="spin-subline"><label class="repeat-label"><input type="checkbox" id="noRepeat" checked>避免連續抽到同一家</label><span id="oddsNote">每個選項都有機會</span></div><details class="wheel-legend"><summary>本次轉盤名單</summary><p id="groupNote" class="help"></p><ol id="legend"></ol></details></fieldset>
@@ -566,12 +566,12 @@
     "icon": "🍳",
     "address": "雲林縣斗六市龍潭路3-16號",
     "note": "早餐；公開名錄資料，出發前請確認",
-    "source": "https://footinder.com.tw/雲林縣斗六市/138407/",
-    "sourceName": "FooTinder 店家名錄（2023）",
+    "source": "https://www.google.com/maps/place/Mr.+Smile+%E5%BE%AE%E7%AC%91%E6%97%A9%E9%A4%90%E5%9C%92%E5%9C%B0%EF%BC%88%E6%96%97%E5%85%AD%E9%BE%8D%E6%BD%AD%E5%BA%97%EF%BC%89/data=!4m7!3m6!1s0x346ec8032791dfb9:0xa9dbe4447ca3abb7!8m2!3d23.6923486!4d120.5308783!16s%2Fg%2F11ggr71jhb!19sChIJud-RJwPIbjQRt6ujfETk26k",
+    "sourceName": "Google 地圖店家資料",
     "city": "斗六市",
     "checkedAt": "2026-10-19",
-    "status": "待核對",
-    "statusNote": "舊名錄資料，尚缺近期店家資訊。",
+    "status": "已收錄",
+    "statusNote": null,
     "priceByCategory": {
       "早午餐": null
     },
@@ -579,7 +579,7 @@
     "hoursExceptions": {},
     "hoursSource": null,
     "hoursCheckedAt": null,
-    "hoursNote": "每週時刻待核對",
+    "hoursNote": "地圖仍有龍潭路3-16號店家資料；完整每週時刻待補，選「不限時間」可抽選。",
     "accessRoutes": [],
     "location": {
       "precision": "address"
@@ -587,7 +587,7 @@
     "longtanArea": {
       "included": true,
       "basis": "地址位於大學路以南",
-      "source": "https://footinder.com.tw/雲林縣斗六市/138407/",
+      "source": "https://www.google.com/maps/place/Mr.+Smile+%E5%BE%AE%E7%AC%91%E6%97%A9%E9%A4%90%E5%9C%92%E5%9C%B0%EF%BC%88%E6%96%97%E5%85%AD%E9%BE%8D%E6%BD%AD%E5%BA%97%EF%BC%89/data=!4m7!3m6!1s0x346ec8032791dfb9:0xa9dbe4447ca3abb7!8m2!3d23.6923486!4d120.5308783!16s%2Fg%2F11ggr71jhb!19sChIJud-RJwPIbjQRt6ujfETk26k",
       "checkedAt": "2026-10-19"
     }
   },
@@ -2436,7 +2436,7 @@
     "city": "斗六市",
     "checkedAt": "2026-10-19",
     "status": "待核對",
-    "statusNote": "外送平台已停止上架，實體店現況待確認；不參與抽選。",
+    "statusNote": "舊址目前有七里香斗六雲科店的店家資料；原店是否搬遷仍待核對，不參與抽選。",
     "priceByCategory": {
       "正餐": null
     },
@@ -2454,7 +2454,8 @@
       "basis": "地址位於大學路以南的龍潭路生活圈",
       "source": "https://www.ubereats.com/tw/store/韓風食堂/6aKGOZ0SW1e5Nydrx60tjQ",
       "checkedAt": "2026-10-19"
-    }
+    },
+    "statusSource": "https://www.google.com/maps/place/CHILISHUN%E8%8C%B6%E9%A3%B2+%E4%B8%83%E9%87%8C%E9%A6%99%E6%96%97%E5%85%AD%E9%9B%B2%E7%A7%91%E5%BA%97/data=!4m7!3m6!1s0x346ec942dc99b00b:0xf38016cc0852586a!8m2!3d23.6922713!4d120.5304818!16s%2Fg%2F11yhb2l5wn!19sChIJC7CZ3ELJbjQRalhSCMwWgPM"
   },
   {
     "id": "wayne",
@@ -4198,7 +4199,7 @@
     "city": "斗六市",
     "checkedAt": "2026-10-19",
     "status": "待核對",
-    "statusNote": "僅找到較早食記，現況與時刻待核對。",
+    "statusNote": "舊址目前有米倉食堂的店家資料；原店是否搬遷仍待核對，不參與抽選。",
     "priceByCategory": {
       "正餐": null
     },
@@ -4216,7 +4217,8 @@
       "basis": "地址位於大學路以南的龍潭路生活圈",
       "source": "https://www.ptt.cc/bbs/Food/M.1639286755.A.F9C.html",
       "checkedAt": "2026-10-19"
-    }
+    },
+    "statusSource": "https://www.findcompany.com.tw/%E7%B1%B3%E5%80%89%E9%A3%9F%E5%A0%82/72412229"
   },
   {
     "id": "shizai",
@@ -4636,10 +4638,1086 @@
       "source": "https://www.foodpanda.com.tw/restaurant/rrhb/he-zi-zhi-jia-rrhb",
       "checkedAt": "2026-10-19"
     }
+  },
+  {
+    "id": "micang",
+    "name": "米倉食堂 私房料理 斗六店",
+    "short": "米倉食堂",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路5-7號",
+    "note": "2026-09-14 登記遷至龍潭路5-7號；地圖列為米倉食堂斗六店。",
+    "source": "https://www.findcompany.com.tw/%E7%B1%B3%E5%80%89%E9%A3%9F%E5%A0%82/72412229",
+    "sourceName": "米倉食堂 2026-09-14 登記異動／地圖比對",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.findcompany.com.tw/%E7%B1%B3%E5%80%89%E9%A3%9F%E5%A0%82/72412229",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "buwan",
+    "name": "不晚餐館_BUWAN",
+    "short": "不晚餐館",
+    "area": "龍潭北路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭北路16-1號1樓",
+    "note": "龍潭北路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E4%B8%8D%E6%99%9A%E9%A4%90%E9%A4%A8_BUWAN/data=!4m7!3m6!1s0x346ec99812080969:0x699449c38b41476c!8m2!3d23.6918139!4d120.5279658!16s%2Fg%2F11xgylj811!19sChIJaQkIEpjJbjQRbEdBi8NJlGk",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6918139,
+      "lon": 120.5279658,
+      "source": "https://www.google.com/maps/place/%E4%B8%8D%E6%99%9A%E9%A4%90%E9%A4%A8_BUWAN/data=!4m7!3m6!1s0x346ec99812080969:0x699449c38b41476c!8m2!3d23.6918139!4d120.5279658!16s%2Fg%2F11xgylj811!19sChIJaQkIEpjJbjQRbEdBi8NJlGk",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭北路生活圈",
+      "source": "https://www.google.com/maps/place/%E4%B8%8D%E6%99%9A%E9%A4%90%E9%A4%A8_BUWAN/data=!4m7!3m6!1s0x346ec99812080969:0x699449c38b41476c!8m2!3d23.6918139!4d120.5279658!16s%2Fg%2F11xgylj811!19sChIJaQkIEpjJbjQRbEdBi8NJlGk",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "woowoo",
+    "name": "麵屋嗚嗚Menya WooWoo",
+    "short": "麵屋嗚嗚",
+    "area": "龍潭北路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭北路16-6號",
+    "note": "龍潭北路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E5%97%9A%E5%97%9AMenya+WooWoo/data=!4m7!3m6!1s0x346eb74b772d2199:0xa0cbfd4a92626d7d!8m2!3d23.691792!4d120.5279155!16s%2Fg%2F11mld9s9x8!19sChIJmSEtd0u3bjQRfW1ikkr9y6A",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.691792,
+      "lon": 120.5279155,
+      "source": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E5%97%9A%E5%97%9AMenya+WooWoo/data=!4m7!3m6!1s0x346eb74b772d2199:0xa0cbfd4a92626d7d!8m2!3d23.691792!4d120.5279155!16s%2Fg%2F11mld9s9x8!19sChIJmSEtd0u3bjQRfW1ikkr9y6A",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭北路生活圈",
+      "source": "https://www.google.com/maps/place/%E9%BA%B5%E5%B1%8B%E5%97%9A%E5%97%9AMenya+WooWoo/data=!4m7!3m6!1s0x346eb74b772d2199:0xa0cbfd4a92626d7d!8m2!3d23.691792!4d120.5279155!16s%2Fg%2F11mld9s9x8!19sChIJmSEtd0u3bjQRfW1ikkr9y6A",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "followme",
+    "name": "花路米美食坊",
+    "short": "花路米",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路3-14號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E8%8A%B1%E8%B7%AF%E7%B1%B3%E7%BE%8E%E9%A3%9F%E5%9D%8A/data=!4m7!3m6!1s0x346ec80327bfe3b3:0xb526da4b396db46d!8m2!3d23.6923645!4d120.5309103!16s%2Fg%2F11f3njz16d!19sChIJs-O_JwPIbjQRbbRtOUvaJrU",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6923645,
+      "lon": 120.5309103,
+      "source": "https://www.google.com/maps/place/%E8%8A%B1%E8%B7%AF%E7%B1%B3%E7%BE%8E%E9%A3%9F%E5%9D%8A/data=!4m7!3m6!1s0x346ec80327bfe3b3:0xb526da4b396db46d!8m2!3d23.6923645!4d120.5309103!16s%2Fg%2F11f3njz16d!19sChIJs-O_JwPIbjQRbbRtOUvaJrU",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E8%8A%B1%E8%B7%AF%E7%B1%B3%E7%BE%8E%E9%A3%9F%E5%9D%8A/data=!4m7!3m6!1s0x346ec80327bfe3b3:0xb526da4b396db46d!8m2!3d23.6923645!4d120.5309103!16s%2Fg%2F11f3njz16d!19sChIJs-O_JwPIbjQRbbRtOUvaJrU",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "ayao",
+    "name": "ㄚ瑤食堂",
+    "short": "ㄚ瑤食堂",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路3-15號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E3%84%9A%E7%91%A4%E9%A3%9F%E5%A0%82/data=!4m7!3m6!1s0x346ec802d87f8939:0x1601b49ebd8e2b45!8m2!3d23.6923503!4d120.5308484!16s%2Fg%2F11fx7mnk8g!19sChIJOYl_2ALIbjQRRSuOvZ60ARY",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6923503,
+      "lon": 120.5308484,
+      "source": "https://www.google.com/maps/place/%E3%84%9A%E7%91%A4%E9%A3%9F%E5%A0%82/data=!4m7!3m6!1s0x346ec802d87f8939:0x1601b49ebd8e2b45!8m2!3d23.6923503!4d120.5308484!16s%2Fg%2F11fx7mnk8g!19sChIJOYl_2ALIbjQRRSuOvZ60ARY",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E3%84%9A%E7%91%A4%E9%A3%9F%E5%A0%82/data=!4m7!3m6!1s0x346ec802d87f8939:0x1601b49ebd8e2b45!8m2!3d23.6923503!4d120.5308484!16s%2Fg%2F11fx7mnk8g!19sChIJOYl_2ALIbjQRRSuOvZ60ARY",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "longtanone",
+    "name": "龍潭路1號早午餐",
+    "short": "龍潭路1號",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐"
+    ],
+    "icon": "🥪",
+    "address": "雲林縣斗六市龍潭路1號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E9%BE%8D%E6%BD%AD%E8%B7%AF1%E8%99%9F%E6%97%A9%E5%8D%88%E9%A4%90/data=!4m7!3m6!1s0x346ec9c121935705:0xc163887d02d5e6e0!8m2!3d23.692619!4d120.5319621!16s%2Fg%2F11swlcdjtj!19sChIJBVeTIcHJbjQR4ObVAn2IY8E",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.692619,
+      "lon": 120.5319621,
+      "source": "https://www.google.com/maps/place/%E9%BE%8D%E6%BD%AD%E8%B7%AF1%E8%99%9F%E6%97%A9%E5%8D%88%E9%A4%90/data=!4m7!3m6!1s0x346ec9c121935705:0xc163887d02d5e6e0!8m2!3d23.692619!4d120.5319621!16s%2Fg%2F11swlcdjtj!19sChIJBVeTIcHJbjQR4ObVAn2IY8E",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E9%BE%8D%E6%BD%AD%E8%B7%AF1%E8%99%9F%E6%97%A9%E5%8D%88%E9%A4%90/data=!4m7!3m6!1s0x346ec9c121935705:0xc163887d02d5e6e0!8m2!3d23.692619!4d120.5319621!16s%2Fg%2F11swlcdjtj!19sChIJBVeTIcHJbjQR4ObVAn2IY8E",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "macc",
+    "name": "早安美芝城雲林科大",
+    "short": "美芝城科大",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐"
+    ],
+    "icon": "🥪",
+    "address": "雲林縣斗六市龍潭路18-5號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E6%97%A9%E5%AE%89%E7%BE%8E%E8%8A%9D%E5%9F%8E%E9%9B%B2%E6%9E%97%E7%A7%91%E5%A4%A7/data=!4m7!3m6!1s0x346ec8028419594d:0xa21bcf7200111994!8m2!3d23.6912952!4d120.5284028!16s%2Fg%2F11b6v8k_w3!19sChIJTVkZhALIbjQRlBkRAHLPG6I",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6912952,
+      "lon": 120.5284028,
+      "source": "https://www.google.com/maps/place/%E6%97%A9%E5%AE%89%E7%BE%8E%E8%8A%9D%E5%9F%8E%E9%9B%B2%E6%9E%97%E7%A7%91%E5%A4%A7/data=!4m7!3m6!1s0x346ec8028419594d:0xa21bcf7200111994!8m2!3d23.6912952!4d120.5284028!16s%2Fg%2F11b6v8k_w3!19sChIJTVkZhALIbjQRlBkRAHLPG6I",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E6%97%A9%E5%AE%89%E7%BE%8E%E8%8A%9D%E5%9F%8E%E9%9B%B2%E6%9E%97%E7%A7%91%E5%A4%A7/data=!4m7!3m6!1s0x346ec8028419594d:0xa21bcf7200111994!8m2!3d23.6912952!4d120.5284028!16s%2Fg%2F11b6v8k_w3!19sChIJTVkZhALIbjQRlBkRAHLPG6I",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "jingpin",
+    "name": "晶品早午餐",
+    "short": "晶品早午餐",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐"
+    ],
+    "icon": "🥪",
+    "address": "雲林縣斗六市龍潭路3之13號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E6%99%B6%E5%93%81%E6%97%A9%E5%8D%88%E9%A4%90/data=!4m7!3m6!1s0x346ec8032628e853:0x4ec19bf6e0ad2787!8m2!3d23.6925068!4d120.5313102!16s%2Fg%2F11f15n4pz7!19sChIJU-goJgPIbjQRhyet4PabwU4",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6925068,
+      "lon": 120.5313102,
+      "source": "https://www.google.com/maps/place/%E6%99%B6%E5%93%81%E6%97%A9%E5%8D%88%E9%A4%90/data=!4m7!3m6!1s0x346ec8032628e853:0x4ec19bf6e0ad2787!8m2!3d23.6925068!4d120.5313102!16s%2Fg%2F11f15n4pz7!19sChIJU-goJgPIbjQRhyet4PabwU4",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E6%99%B6%E5%93%81%E6%97%A9%E5%8D%88%E9%A4%90/data=!4m7!3m6!1s0x346ec8032628e853:0x4ec19bf6e0ad2787!8m2!3d23.6925068!4d120.5313102!16s%2Fg%2F11f15n4pz7!19sChIJU-goJgPIbjQRhyet4PabwU4",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "jiaxiang",
+    "name": "家香古早味",
+    "short": "家香古早味",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路14之3號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E5%AE%B6%E9%A6%99%E5%8F%A4%E6%97%A9%E5%91%B3/data=!4m7!3m6!1s0x346ec802eb1c99b1:0x8629301098ecb97c!8m2!3d23.691939!4d120.5292038!16s%2Fg%2F11c5xf7v53!19sChIJsZkc6wLIbjQRfLnsmBAwKYY",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.691939,
+      "lon": 120.5292038,
+      "source": "https://www.google.com/maps/place/%E5%AE%B6%E9%A6%99%E5%8F%A4%E6%97%A9%E5%91%B3/data=!4m7!3m6!1s0x346ec802eb1c99b1:0x8629301098ecb97c!8m2!3d23.691939!4d120.5292038!16s%2Fg%2F11c5xf7v53!19sChIJsZkc6wLIbjQRfLnsmBAwKYY",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E5%AE%B6%E9%A6%99%E5%8F%A4%E6%97%A9%E5%91%B3/data=!4m7!3m6!1s0x346ec802eb1c99b1:0x8629301098ecb97c!8m2!3d23.691939!4d120.5292038!16s%2Fg%2F11c5xf7v53!19sChIJsZkc6wLIbjQRfLnsmBAwKYY",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "chilishun",
+    "name": "CHILISHUN茶飲 七里香斗六雲科店",
+    "short": "七里香雲科",
+    "area": "龍潭路",
+    "categories": [
+      "飲料"
+    ],
+    "icon": "🧋",
+    "address": "雲林縣斗六市龍潭路5-6號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/CHILISHUN%E8%8C%B6%E9%A3%B2+%E4%B8%83%E9%87%8C%E9%A6%99%E6%96%97%E5%85%AD%E9%9B%B2%E7%A7%91%E5%BA%97/data=!4m7!3m6!1s0x346ec942dc99b00b:0xf38016cc0852586a!8m2!3d23.6922713!4d120.5304818!16s%2Fg%2F11yhb2l5wn!19sChIJC7CZ3ELJbjQRalhSCMwWgPM",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6922713,
+      "lon": 120.5304818,
+      "source": "https://www.google.com/maps/place/CHILISHUN%E8%8C%B6%E9%A3%B2+%E4%B8%83%E9%87%8C%E9%A6%99%E6%96%97%E5%85%AD%E9%9B%B2%E7%A7%91%E5%BA%97/data=!4m7!3m6!1s0x346ec942dc99b00b:0xf38016cc0852586a!8m2!3d23.6922713!4d120.5304818!16s%2Fg%2F11yhb2l5wn!19sChIJC7CZ3ELJbjQRalhSCMwWgPM",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/CHILISHUN%E8%8C%B6%E9%A3%B2+%E4%B8%83%E9%87%8C%E9%A6%99%E6%96%97%E5%85%AD%E9%9B%B2%E7%A7%91%E5%BA%97/data=!4m7!3m6!1s0x346ec942dc99b00b:0xf38016cc0852586a!8m2!3d23.6922713!4d120.5304818!16s%2Fg%2F11yhb2l5wn!19sChIJC7CZ3ELJbjQRalhSCMwWgPM",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "bingyu",
+    "name": "冰寓茶屋",
+    "short": "冰寓茶屋",
+    "area": "龍潭路",
+    "categories": [
+      "飲料"
+    ],
+    "icon": "🧋",
+    "address": "雲林縣斗六市龍潭路2號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E5%86%B0%E5%AF%93%E8%8C%B6%E5%B1%8B/data=!4m7!3m6!1s0x346ec9c8e4dcff81:0xd0edd5cea5ee9bde!8m2!3d23.6920894!4d120.5295705!16s%2Fg%2F11zd8m0mg9!19sChIJgf_c5MjJbjQR3pvupc7V7dA",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6920894,
+      "lon": 120.5295705,
+      "source": "https://www.google.com/maps/place/%E5%86%B0%E5%AF%93%E8%8C%B6%E5%B1%8B/data=!4m7!3m6!1s0x346ec9c8e4dcff81:0xd0edd5cea5ee9bde!8m2!3d23.6920894!4d120.5295705!16s%2Fg%2F11zd8m0mg9!19sChIJgf_c5MjJbjQR3pvupc7V7dA",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E5%86%B0%E5%AF%93%E8%8C%B6%E5%B1%8B/data=!4m7!3m6!1s0x346ec9c8e4dcff81:0xd0edd5cea5ee9bde!8m2!3d23.6920894!4d120.5295705!16s%2Fg%2F11zd8m0mg9!19sChIJgf_c5MjJbjQR3pvupc7V7dA",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "teasoldier",
+    "name": "NO.1紅茶兵",
+    "short": "紅茶兵",
+    "area": "龍潭路",
+    "categories": [
+      "飲料"
+    ],
+    "icon": "🧋",
+    "address": "雲林縣斗六市龍潭路3-5號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/NO.1%E7%B4%85%E8%8C%B6%E5%85%B5/data=!4m7!3m6!1s0x346ec9003e2de639:0x60e3592d3357c032!8m2!3d23.6923759!4d120.5311604!16s%2Fg%2F11w26f67ps!19sChIJOeYtPgDJbjQRMsBXMy1Z42A",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6923759,
+      "lon": 120.5311604,
+      "source": "https://www.google.com/maps/place/NO.1%E7%B4%85%E8%8C%B6%E5%85%B5/data=!4m7!3m6!1s0x346ec9003e2de639:0x60e3592d3357c032!8m2!3d23.6923759!4d120.5311604!16s%2Fg%2F11w26f67ps!19sChIJOeYtPgDJbjQRMsBXMy1Z42A",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/NO.1%E7%B4%85%E8%8C%B6%E5%85%B5/data=!4m7!3m6!1s0x346ec9003e2de639:0x60e3592d3357c032!8m2!3d23.6923759!4d120.5311604!16s%2Fg%2F11w26f67ps!19sChIJOeYtPgDJbjQRMsBXMy1Z42A",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "originalbbq",
+    "name": "原味燒烤",
+    "short": "原味燒烤",
+    "area": "龍潭路",
+    "categories": [
+      "點心"
+    ],
+    "icon": "🍡",
+    "address": "雲林縣斗六市龍潭路7號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E5%8E%9F%E5%91%B3%E7%87%92%E7%83%A4/data=!4m7!3m6!1s0x346ec80293a522d3:0xda409e9ed5808d66!8m2!3d23.6917053!4d120.529129!16s%2Fg%2F11c5st9701!19sChIJ0yKlkwLIbjQRZo2A1Z6eQNo",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6917053,
+      "lon": 120.529129,
+      "source": "https://www.google.com/maps/place/%E5%8E%9F%E5%91%B3%E7%87%92%E7%83%A4/data=!4m7!3m6!1s0x346ec80293a522d3:0xda409e9ed5808d66!8m2!3d23.6917053!4d120.529129!16s%2Fg%2F11c5st9701!19sChIJ0yKlkwLIbjQRZo2A1Z6eQNo",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E5%8E%9F%E5%91%B3%E7%87%92%E7%83%A4/data=!4m7!3m6!1s0x346ec80293a522d3:0xda409e9ed5808d66!8m2!3d23.6917053!4d120.529129!16s%2Fg%2F11c5st9701!19sChIJ0yKlkwLIbjQRZo2A1Z6eQNo",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "beifang",
+    "name": "斗六北方鍋貼小籠包",
+    "short": "北方鍋貼",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路11-1號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E6%96%97%E5%85%AD%E5%8C%97%E6%96%B9%E9%8D%8B%E8%B2%BC%E5%B0%8F%E7%B1%A0%E5%8C%85/data=!4m7!3m6!1s0x346ec80293a09c5d:0x360b1323ca237b2!8m2!3d23.691823!4d120.5294514!16s%2Fg%2F11g9dr0__l!19sChIJXZygkwLIbjQRsjeiPDKxYAM",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.691823,
+      "lon": 120.5294514,
+      "source": "https://www.google.com/maps/place/%E6%96%97%E5%85%AD%E5%8C%97%E6%96%B9%E9%8D%8B%E8%B2%BC%E5%B0%8F%E7%B1%A0%E5%8C%85/data=!4m7!3m6!1s0x346ec80293a09c5d:0x360b1323ca237b2!8m2!3d23.691823!4d120.5294514!16s%2Fg%2F11g9dr0__l!19sChIJXZygkwLIbjQRsjeiPDKxYAM",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E6%96%97%E5%85%AD%E5%8C%97%E6%96%B9%E9%8D%8B%E8%B2%BC%E5%B0%8F%E7%B1%A0%E5%8C%85/data=!4m7!3m6!1s0x346ec80293a09c5d:0x360b1323ca237b2!8m2!3d23.691823!4d120.5294514!16s%2Fg%2F11g9dr0__l!19sChIJXZygkwLIbjQRsjeiPDKxYAM",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "gaibom",
+    "name": "丐幫滷味雲科分舵",
+    "short": "丐幫滷味",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路11號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E4%B8%90%E5%B9%AB%E6%BB%B7%E5%91%B3%E9%9B%B2%E7%A7%91%E5%88%86%E8%88%B5/data=!4m7!3m6!1s0x346ec802eb40ffa7:0xc320f68a883cb213!8m2!3d23.6917364!4d120.5292027!16s%2Fg%2F11ckyc4vgh!19sChIJp_9A6wLIbjQRE7I8iIr2IMM",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "官網、官方 LINE 與地圖的打烊時刻不同，暫不套用時段；選「不限時間」可加入抽選。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6917364,
+      "lon": 120.5292027,
+      "source": "https://www.google.com/maps/place/%E4%B8%90%E5%B9%AB%E6%BB%B7%E5%91%B3%E9%9B%B2%E7%A7%91%E5%88%86%E8%88%B5/data=!4m7!3m6!1s0x346ec802eb40ffa7:0xc320f68a883cb213!8m2!3d23.6917364!4d120.5292027!16s%2Fg%2F11ckyc4vgh!19sChIJp_9A6wLIbjQRE7I8iIr2IMM",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E4%B8%90%E5%B9%AB%E6%BB%B7%E5%91%B3%E9%9B%B2%E7%A7%91%E5%88%86%E8%88%B5/data=!4m7!3m6!1s0x346ec802eb40ffa7:0xc320f68a883cb213!8m2!3d23.6917364!4d120.5292027!16s%2Fg%2F11ckyc4vgh!19sChIJp_9A6wLIbjQRE7I8iIr2IMM",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "aliang",
+    "name": "阿亮鹽酥雞店",
+    "short": "阿亮鹽酥雞",
+    "area": "龍潭北路",
+    "categories": [
+      "點心"
+    ],
+    "icon": "🍡",
+    "address": "雲林縣斗六市龍潭北路5號",
+    "note": "龍潭北路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E9%98%BF%E4%BA%AE%E9%B9%BD%E9%85%A5%E9%9B%9E%E5%BA%97/data=!4m7!3m6!1s0x346eb7fd7d44e8b3:0x5d6b84f71b0aa6f7!8m2!3d23.6917091!4d120.5279392!16s%2Fg%2F11c2nnmwhc!19sChIJs-hEff23bjQR96YKG_eEa10",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6917091,
+      "lon": 120.5279392,
+      "source": "https://www.google.com/maps/place/%E9%98%BF%E4%BA%AE%E9%B9%BD%E9%85%A5%E9%9B%9E%E5%BA%97/data=!4m7!3m6!1s0x346eb7fd7d44e8b3:0x5d6b84f71b0aa6f7!8m2!3d23.6917091!4d120.5279392!16s%2Fg%2F11c2nnmwhc!19sChIJs-hEff23bjQR96YKG_eEa10",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭北路生活圈",
+      "source": "https://www.google.com/maps/place/%E9%98%BF%E4%BA%AE%E9%B9%BD%E9%85%A5%E9%9B%9E%E5%BA%97/data=!4m7!3m6!1s0x346eb7fd7d44e8b3:0x5d6b84f71b0aa6f7!8m2!3d23.6917091!4d120.5279392!16s%2Fg%2F11c2nnmwhc!19sChIJs-hEff23bjQR96YKG_eEa10",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "changpu",
+    "name": "張蒲 鹹酥雞",
+    "short": "張蒲鹹酥雞",
+    "area": "龍潭北路",
+    "categories": [
+      "點心"
+    ],
+    "icon": "🍡",
+    "address": "雲林縣斗六市龍潭北路16-2號",
+    "note": "鹹酥雞與炸物；地址另與店家介紹的龍潭北路16-2號核對。",
+    "source": "https://www.google.com/maps/place/%E5%BC%B5%E8%92%B2+%E9%B9%B9%E9%85%A5%E9%9B%9E/data=!4m7!3m6!1s0x346ec8029bcac267:0xb21cc7dac1ba0a1e!8m2!3d23.691744!4d120.5282257!16s%2Fg%2F11cs46wvfg!19sChIJZ8LKmwLIbjQRHgq6wdrHHLI",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.691744,
+      "lon": 120.5282257,
+      "source": "https://www.google.com/maps/place/%E5%BC%B5%E8%92%B2+%E9%B9%B9%E9%85%A5%E9%9B%9E/data=!4m7!3m6!1s0x346ec8029bcac267:0xb21cc7dac1ba0a1e!8m2!3d23.691744!4d120.5282257!16s%2Fg%2F11cs46wvfg!19sChIJZ8LKmwLIbjQRHgq6wdrHHLI",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭北路生活圈",
+      "source": "https://www.google.com/maps/place/%E5%BC%B5%E8%92%B2+%E9%B9%B9%E9%85%A5%E9%9B%9E/data=!4m7!3m6!1s0x346ec8029bcac267:0xb21cc7dac1ba0a1e!8m2!3d23.691744!4d120.5282257!16s%2Fg%2F11cs46wvfg!19sChIJZ8LKmwLIbjQRHgq6wdrHHLI",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "luye",
+    "name": "鹿野奇蹟鹹酥雞",
+    "short": "鹿野奇蹟",
+    "area": "龍潭路",
+    "categories": [
+      "點心"
+    ],
+    "icon": "🍡",
+    "address": "雲林縣斗六市龍潭路9號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E9%B9%BF%E9%87%8E%E5%A5%87%E8%B9%9F%E9%B9%B9%E9%85%A5%E9%9B%9E/data=!4m7!3m6!1s0x346ec802ea04557d:0x598e14649e85f515!8m2!3d23.6918617!4d120.5294833!16s%2Fg%2F11gcxz2t0c!19sChIJfVUE6gLIbjQRFfWFnmQUjlk",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6918617,
+      "lon": 120.5294833,
+      "source": "https://www.google.com/maps/place/%E9%B9%BF%E9%87%8E%E5%A5%87%E8%B9%9F%E9%B9%B9%E9%85%A5%E9%9B%9E/data=!4m7!3m6!1s0x346ec802ea04557d:0x598e14649e85f515!8m2!3d23.6918617!4d120.5294833!16s%2Fg%2F11gcxz2t0c!19sChIJfVUE6gLIbjQRFfWFnmQUjlk",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E9%B9%BF%E9%87%8E%E5%A5%87%E8%B9%9F%E9%B9%B9%E9%85%A5%E9%9B%9E/data=!4m7!3m6!1s0x346ec802ea04557d:0x598e14649e85f515!8m2!3d23.6918617!4d120.5294833!16s%2Fg%2F11gcxz2t0c!19sChIJfVUE6gLIbjQRFfWFnmQUjlk",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "jinwang",
+    "name": "津旺",
+    "short": "津旺",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路13-2號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E6%B4%A5%E6%97%BA/data=!4m7!3m6!1s0x346ec802dc012fb3:0x8797b2d36d866bfa!8m2!3d23.69161!4d120.528911!16s%2Fg%2F11clvlw4pr!19sChIJsy8B3ALIbjQR-muGbdOyl4c",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.69161,
+      "lon": 120.528911,
+      "source": "https://www.google.com/maps/place/%E6%B4%A5%E6%97%BA/data=!4m7!3m6!1s0x346ec802dc012fb3:0x8797b2d36d866bfa!8m2!3d23.69161!4d120.528911!16s%2Fg%2F11clvlw4pr!19sChIJsy8B3ALIbjQR-muGbdOyl4c",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E6%B4%A5%E6%97%BA/data=!4m7!3m6!1s0x346ec802dc012fb3:0x8797b2d36d866bfa!8m2!3d23.69161!4d120.528911!16s%2Fg%2F11clvlw4pr!19sChIJsy8B3ALIbjQR-muGbdOyl4c",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "anan",
+    "name": "阿男滷肉飯",
+    "short": "阿男滷肉飯",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路13之1號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E9%98%BF%E7%94%B7%E6%BB%B7%E8%82%89%E9%A3%AF/data=!4m7!3m6!1s0x346ec802dc012fb3:0xd79ad0e9b64ce834!8m2!3d23.6916077!4d120.5289426!16s%2Fg%2F11c5s89_gx!19sChIJsy8B3ALIbjQRNOhMtunQmtc",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6916077,
+      "lon": 120.5289426,
+      "source": "https://www.google.com/maps/place/%E9%98%BF%E7%94%B7%E6%BB%B7%E8%82%89%E9%A3%AF/data=!4m7!3m6!1s0x346ec802dc012fb3:0xd79ad0e9b64ce834!8m2!3d23.6916077!4d120.5289426!16s%2Fg%2F11c5s89_gx!19sChIJsy8B3ALIbjQRNOhMtunQmtc",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E9%98%BF%E7%94%B7%E6%BB%B7%E8%82%89%E9%A3%AF/data=!4m7!3m6!1s0x346ec802dc012fb3:0xd79ad0e9b64ce834!8m2!3d23.6916077!4d120.5289426!16s%2Fg%2F11c5s89_gx!19sChIJsy8B3ALIbjQRNOhMtunQmtc",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "yicun",
+    "name": "一村香 家的味道",
+    "short": "一村香",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路14-12號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E4%B8%80%E6%9D%91%E9%A6%99+%E5%AE%B6%E7%9A%84%E5%91%B3%E9%81%93/data=!4m7!3m6!1s0x346ec81f5de52ba1:0x9523f5053aa44db6!8m2!3d23.6917514!4d120.5288696!16s%2Fg%2F11g9jmcjzj!19sChIJoSvlXR_IbjQRtk2kOgX1I5U",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6917514,
+      "lon": 120.5288696,
+      "source": "https://www.google.com/maps/place/%E4%B8%80%E6%9D%91%E9%A6%99+%E5%AE%B6%E7%9A%84%E5%91%B3%E9%81%93/data=!4m7!3m6!1s0x346ec81f5de52ba1:0x9523f5053aa44db6!8m2!3d23.6917514!4d120.5288696!16s%2Fg%2F11g9jmcjzj!19sChIJoSvlXR_IbjQRtk2kOgX1I5U",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E4%B8%80%E6%9D%91%E9%A6%99+%E5%AE%B6%E7%9A%84%E5%91%B3%E9%81%93/data=!4m7!3m6!1s0x346ec81f5de52ba1:0x9523f5053aa44db6!8m2!3d23.6917514!4d120.5288696!16s%2Fg%2F11g9jmcjzj!19sChIJoSvlXR_IbjQRtk2kOgX1I5U",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "zixuan",
+    "name": "紫軒食坊",
+    "short": "紫軒食坊",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路14-8號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E7%B4%AB%E8%BB%92%E9%A3%9F%E5%9D%8A/data=!4m7!3m6!1s0x346ec80293ee0987:0x816fefb8ece0a728!8m2!3d23.692079!4d120.529369!16s%2Fg%2F11g01vqdv2!19sChIJhwnukwLIbjQRKKfg7Ljvb4E",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.692079,
+      "lon": 120.529369,
+      "source": "https://www.google.com/maps/place/%E7%B4%AB%E8%BB%92%E9%A3%9F%E5%9D%8A/data=!4m7!3m6!1s0x346ec80293ee0987:0x816fefb8ece0a728!8m2!3d23.692079!4d120.529369!16s%2Fg%2F11g01vqdv2!19sChIJhwnukwLIbjQRKKfg7Ljvb4E",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E7%B4%AB%E8%BB%92%E9%A3%9F%E5%9D%8A/data=!4m7!3m6!1s0x346ec80293ee0987:0x816fefb8ece0a728!8m2!3d23.692079!4d120.529369!16s%2Fg%2F11g01vqdv2!19sChIJhwnukwLIbjQRKKfg7Ljvb4E",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "axuan",
+    "name": "阿萱麵食館",
+    "short": "阿萱麵食館",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路25號",
+    "note": "龍潭路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E9%98%BF%E8%90%B1%E9%BA%B5%E9%A3%9F%E9%A4%A8/data=!4m7!3m6!1s0x346eb7005110a375:0x55dce9d6222f5c95!8m2!3d23.6909446!4d120.5278161!16s%2Fg%2F11ynss77nz!19sChIJdaMQUQC3bjQRlVwvItbp3FU",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6909446,
+      "lon": 120.5278161,
+      "source": "https://www.google.com/maps/place/%E9%98%BF%E8%90%B1%E9%BA%B5%E9%A3%9F%E9%A4%A8/data=!4m7!3m6!1s0x346eb7005110a375:0x55dce9d6222f5c95!8m2!3d23.6909446!4d120.5278161!16s%2Fg%2F11ynss77nz!19sChIJdaMQUQC3bjQRlVwvItbp3FU",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.google.com/maps/place/%E9%98%BF%E8%90%B1%E9%BA%B5%E9%A3%9F%E9%A4%A8/data=!4m7!3m6!1s0x346eb7005110a375:0x55dce9d6222f5c95!8m2!3d23.6909446!4d120.5278161!16s%2Fg%2F11ynss77nz!19sChIJdaMQUQC3bjQRlVwvItbp3FU",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "canle",
+    "name": "餐樂小館",
+    "short": "餐樂小館",
+    "area": "龍潭北路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭北路7之1號",
+    "note": "龍潭北路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E9%A4%90%E6%A8%82%E5%B0%8F%E9%A4%A8/data=!4m7!3m6!1s0x346eb7005934dbc7:0x14cb273322de9091!8m2!3d23.6916804!4d120.5277444!16s%2Fg%2F11whg82cxf!19sChIJx9s0WQC3bjQRkZDeIjMnyxQ",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6916804,
+      "lon": 120.5277444,
+      "source": "https://www.google.com/maps/place/%E9%A4%90%E6%A8%82%E5%B0%8F%E9%A4%A8/data=!4m7!3m6!1s0x346eb7005934dbc7:0x14cb273322de9091!8m2!3d23.6916804!4d120.5277444!16s%2Fg%2F11whg82cxf!19sChIJx9s0WQC3bjQRkZDeIjMnyxQ",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭北路生活圈",
+      "source": "https://www.google.com/maps/place/%E9%A4%90%E6%A8%82%E5%B0%8F%E9%A4%A8/data=!4m7!3m6!1s0x346eb7005934dbc7:0x14cb273322de9091!8m2!3d23.6916804!4d120.5277444!16s%2Fg%2F11whg82cxf!19sChIJx9s0WQC3bjQRkZDeIjMnyxQ",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "huangjia",
+    "name": "皇嘉手工水餃（龍潭北路）",
+    "short": "皇嘉水餃",
+    "area": "龍潭北路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭北路16-3號",
+    "note": "龍潭北路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E7%9A%87%E5%98%89%E6%89%8B%E5%B7%A5%E6%B0%B4%E9%A4%83%EF%BC%88%E9%BE%8D%E6%BD%AD%E5%8C%97%E8%B7%AF%EF%BC%89/data=!4m7!3m6!1s0x346ec7000a2043b1:0xf9c775b8247e3fe2!8m2!3d23.6917563!4d120.5281892!16s%2Fg%2F11y7ftqqdd!19sChIJsUMgCgDHbjQR4j9-JLh1x_k",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6917563,
+      "lon": 120.5281892,
+      "source": "https://www.google.com/maps/place/%E7%9A%87%E5%98%89%E6%89%8B%E5%B7%A5%E6%B0%B4%E9%A4%83%EF%BC%88%E9%BE%8D%E6%BD%AD%E5%8C%97%E8%B7%AF%EF%BC%89/data=!4m7!3m6!1s0x346ec7000a2043b1:0xf9c775b8247e3fe2!8m2!3d23.6917563!4d120.5281892!16s%2Fg%2F11y7ftqqdd!19sChIJsUMgCgDHbjQR4j9-JLh1x_k",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭北路生活圈",
+      "source": "https://www.google.com/maps/place/%E7%9A%87%E5%98%89%E6%89%8B%E5%B7%A5%E6%B0%B4%E9%A4%83%EF%BC%88%E9%BE%8D%E6%BD%AD%E5%8C%97%E8%B7%AF%EF%BC%89/data=!4m7!3m6!1s0x346ec7000a2043b1:0xf9c775b8247e3fe2!8m2!3d23.6917563!4d120.5281892!16s%2Fg%2F11y7ftqqdd!19sChIJsUMgCgDHbjQR4j9-JLh1x_k",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "innlobby",
+    "name": "inn Lobby斗宅樓下蛋糕店",
+    "short": "斗宅樓下",
+    "area": "龍潭南路",
+    "categories": [
+      "點心"
+    ],
+    "icon": "🍡",
+    "address": "雲林縣斗六市龍潭南路7-17號",
+    "note": "龍潭南路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/inn+Lobby%E6%96%97%E5%AE%85%E6%A8%93%E4%B8%8B%E8%9B%8B%E7%B3%95%E5%BA%97/data=!4m7!3m6!1s0x346ec9154bfb4d6d:0xdf47d18cc9307552!8m2!3d23.6912594!4d120.5294966!16s%2Fg%2F11sdf2xy60!19sChIJbU37SxXJbjQRUnUwyYzRR98",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6912594,
+      "lon": 120.5294966,
+      "source": "https://www.google.com/maps/place/inn+Lobby%E6%96%97%E5%AE%85%E6%A8%93%E4%B8%8B%E8%9B%8B%E7%B3%95%E5%BA%97/data=!4m7!3m6!1s0x346ec9154bfb4d6d:0xdf47d18cc9307552!8m2!3d23.6912594!4d120.5294966!16s%2Fg%2F11sdf2xy60!19sChIJbU37SxXJbjQRUnUwyYzRR98",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭南路生活圈",
+      "source": "https://www.google.com/maps/place/inn+Lobby%E6%96%97%E5%AE%85%E6%A8%93%E4%B8%8B%E8%9B%8B%E7%B3%95%E5%BA%97/data=!4m7!3m6!1s0x346ec9154bfb4d6d:0xdf47d18cc9307552!8m2!3d23.6912594!4d120.5294966!16s%2Fg%2F11sdf2xy60!19sChIJbU37SxXJbjQRUnUwyYzRR98",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "kekou",
+    "name": "可口豆花燒仙草",
+    "short": "可口豆花",
+    "area": "八德路",
+    "categories": [
+      "點心"
+    ],
+    "icon": "🍡",
+    "address": "雲林縣斗六市八德路86號",
+    "note": "八德路沿線店家；可查看地圖確認位置。",
+    "source": "https://www.google.com/maps/place/%E5%8F%AF%E5%8F%A3%E8%B1%86%E8%8A%B1%E7%87%92%E4%BB%99%E8%8D%89/data=!4m7!3m6!1s0x346ec802978abaf3:0x9bf40d5af7f75ba!8m2!3d23.69225!4d120.5284493!16s%2Fg%2F11c60mb3_l!19sChIJ87qKlwLIbjQRunV_r9VAvwk",
+    "sourceName": "Google 地圖店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "尚未取得完整每週時刻，選「不限時間」可加入抽選；出發前請查看地圖或聯絡店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.69225,
+      "lon": 120.5284493,
+      "source": "https://www.google.com/maps/place/%E5%8F%AF%E5%8F%A3%E8%B1%86%E8%8A%B1%E7%87%92%E4%BB%99%E8%8D%89/data=!4m7!3m6!1s0x346ec802978abaf3:0x9bf40d5af7f75ba!8m2!3d23.69225!4d120.5284493!16s%2Fg%2F11c60mb3_l!19sChIJ87qKlwLIbjQRunV_r9VAvwk",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的八德路生活圈",
+      "source": "https://www.google.com/maps/place/%E5%8F%AF%E5%8F%A3%E8%B1%86%E8%8A%B1%E7%87%92%E4%BB%99%E8%8D%89/data=!4m7!3m6!1s0x346ec802978abaf3:0x9bf40d5af7f75ba!8m2!3d23.69225!4d120.5284493!16s%2Fg%2F11c60mb3_l!19sChIJ87qKlwLIbjQRunV_r9VAvwk",
+      "checkedAt": "2026-10-19"
+    }
   }
 ];
     // Geographic membership and walking routes are independent, source-backed facts.
-    const DATASET = {version:'2026-10-19.5', checkedAt:'2026-10-19', city:'斗六市'};
+    const DATASET = {version:'2026-10-19.6', checkedAt:'2026-10-19', city:'斗六市'};
     const GATE = {id:'yuntech-longtan-gate',name:'雲科龍潭路側校門',verified:true,location:{lat:23.693064,lon:120.533660},source:'https://maps.app.goo.gl/ypxEHj9Yf8EK6Q3MA',checkedAt:'2026-10-19'};
     const DEFAULTS = {category:'正餐',range:'near',budget:'any',time:'now',at:''};
     const RANGE_LABELS = {near:'龍潭路附近',far:'遠一點',city:'斗六市區'};
