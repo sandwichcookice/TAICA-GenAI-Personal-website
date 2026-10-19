@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f3f7f6">
-  <meta name="description" content="雲科今天吃什麼？篩選校園周邊餐飲，轉一下選出下一餐，直接在 Google 地圖查看店家位置。">
+  <meta name="description" content="雲科今天吃什麼？依範圍、預算與表定營業時間篩選斗六餐飲，轉一下選出下一餐，直接在 Google 地圖查看店家位置。">
   <title>雲科吃什麼｜把選擇交給轉盤</title>
   <style>
     /* Teal interface inspired by YunTech’s official emblem description; web tones are adaptations. */
@@ -22,6 +22,12 @@
     @media(max-width:800px){.wrap{padding:0 22px}.nav{height:72px}.location{display:none}.intro{padding-top:30px}.intro-note{display:none}.playground{grid-template-columns:1fr 1fr;gap:14px}.roulette{padding:16px}.wheel-stage{min-height:230px;padding:20px 0}.hub{width:62px;height:62px}.hub strong{font-size:20px}.map-header{padding:18px}.map-header a{display:none}.result{padding:18px;min-height:210px}.result h3{font-size:20px}.result-bottom{align-items:flex-start;flex-direction:column}.restaurant-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:620px){.wrap{padding:0 18px}.nav-right{gap:16px;font-size:12px}.brand{font-size:17px;gap:8px}.brand-mark{width:35px;height:35px;font-size:20px}.intro h1{font-size:36px}.intro p{font-size:12px}.intro{padding-bottom:16px}.filters{gap:12px;padding-bottom:18px}.chip{padding:7px 13px;font-size:12px}.area-control{width:100%;justify-content:space-between}.area-control select{flex:1;max-width:230px}.playground{grid-template-columns:1fr}.roulette{padding:20px}.wheel-shell{width:min(100%,330px)}.wheel-stage{min-height:280px}.spin{font-size:18px}.hub{width:70px;height:70px}.map-header a{display:block}.map-frame,.map-frame iframe{min-height:300px}.result{min-height:175px}.result-bottom{flex-direction:row;align-items:center}.directory{margin-top:32px}.directory-heading{align-items:flex-start;flex-direction:column}.search-wrap{max-width:none}.restaurant-grid{grid-template-columns:1fr}.restaurant-card{padding:14px}.restaurant-info h3{font-size:14px}.restaurant-info p,.card-actions a{font-size:11px}.directory-heading h2{font-size:20px}.history{gap:8px}.footer-inner{font-size:10px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+    /* v1 controls and readable result details */
+    .gate-link{font-size:14px;display:inline-flex;align-items:center;min-height:44px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .filter-panel{border-top:1px solid var(--line);padding:22px 0;margin-bottom:20px}fieldset{border:0;margin:0;padding:0;min-width:0}.filter-row{display:flex;align-items:center;gap:18px;margin-bottom:14px}.filter-label{font-size:14px;min-width:70px;font-weight:700}.help{font-size:14px;color:var(--muted);margin:8px 0;overflow-wrap:anywhere}.advanced{margin-top:16px;border-top:1px solid var(--line);padding-top:8px}summary{min-height:44px;cursor:pointer;padding:10px 0;font-size:14px}.advanced-fields{display:flex;flex-wrap:wrap;gap:16px;margin:6px 0}.advanced-fields label{display:flex;flex-direction:column;gap:6px;font-size:14px;flex:1;min-width:180px}.advanced-fields input{border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);padding:8px;max-width:100%;min-width:0}.filter-bottom{display:flex;align-items:center;gap:15px;justify-content:space-between}.filter-bottom .help{flex:1}.filter-bottom button{flex-shrink:0}.diagnostics{font-size:14px}.diagnostics ul{display:flex;gap:8px 24px;flex-wrap:wrap;padding-left:22px}.empty-actions{padding:14px 18px;border:1px solid #bccecb;background:#e7f1ee;border-radius:12px;margin-top:12px}.empty-actions p{font-size:14px;margin-top:0}.notice{color:#7c4013!important;font-weight:600}.counter{font-size:13px;text-align:right}.spin-subline,.history,.history button,.map-header a,.map-help,.data-note,.text-button,.card-actions a,.card-actions button{font-size:14px}.text-button,.card-actions button,.history button,.direction,.repeat-label,.card-actions a{min-height:44px;display:inline-flex;align-items:center}.repeat-label input{min-width:18px;min-height:18px}.result p,.restaurant-info p,.tag{font-size:14px}.result-source{font-size:13px!important}.result .eyebrow{font-size:12px}.restaurant-info h3{font-size:16px}.result-bottom{flex-wrap:wrap}.price-line{font-weight:700;color:var(--ink)!important}.result-jump{font-size:14px;display:block;padding:12px 0;min-height:44px;text-align:center}.wheel-legend{border-top:1px solid var(--line)}.wheel-legend ol{list-style:none;max-height:220px;overflow:auto;margin:0;padding:0;font-size:14px}.wheel-legend li{padding:5px 0;overflow-wrap:anywhere}.list-mode{display:flex;align-items:center;gap:12px;margin-bottom:16px;font-size:14px}.map-panel{min-width:0}.map-frame{flex:none;height:330px}.map-header{flex-wrap:wrap}.map-header a{min-height:44px;display:inline-flex;align-items:center}.restaurant-grid{align-items:start}.intro-note{font-size:14px!important}.restaurant-info p{margin:8px 0}.result{scroll-margin-top:20px}.spin:disabled{cursor:not-allowed}
+    @media(max-width:800px){.playground{grid-template-columns:1fr}.wheel-shell{width:min(100%,380px)}.map-panel .result{order:-1;border-bottom:1px solid var(--line)}.map-frame{height:300px}.map-header{padding:10px 18px}.map-frame iframe{min-height:300px}.map-help{border-bottom:0}.result h3{font-size:24px}.result-bottom{flex-direction:row}.result{min-height:0}.result-source{font-size:13px!important}.map-header a{display:inline-flex}.spin-subline{font-size:14px}}
+    @media(max-width:620px){.filter-row{align-items:flex-start;flex-direction:column;gap:8px}.filter-bottom{align-items:flex-start;flex-direction:column;gap:0}.chip{font-size:14px;padding:8px 13px}.roulette{padding:16px}.wheel-stage{min-height:0}.wheel-shell{width:100%}.advanced-fields{flex-direction:column}.advanced-fields label{min-width:0}.restaurant-info h3{font-size:16px}.restaurant-info p,.card-actions a,.history button{font-size:14px}.map-frame{height:260px;min-height:260px}.map-frame iframe{min-height:260px}.result-bottom{align-items:flex-start}.result-jump{font-weight:700}.intro p{font-size:14px}.map-header a{display:inline-flex}.intro h1{font-size:clamp(28px,8vw,36px)}.panel-heading{align-items:flex-start}.counter{max-width:50%}.result-source a{overflow-wrap:anywhere}.diagnostics ul{display:block}.directory-heading p{font-size:14px}}
   </style>
 </head>
 <body>
@@ -29,135 +35,1956 @@
   <header><div class="wrap nav"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">食</span>雲科吃什麼<span style="color:var(--accent)">.</span></a><nav class="nav-right" aria-label="主要導覽"><a href="#directory">口袋名單 ↗</a><span class="location"><span class="dot"></span>YUNTECH · 斗六</span></nav></div></header>
   <noscript>請啟用 JavaScript 使用轉盤與店家名單。你也可以<a href="https://www.google.com/maps/search/?api=1&amp;query=雲林科技大學附近餐廳">直接在 Google 地圖找餐廳</a>。</noscript>
   <main class="wrap" id="main">
-    <section class="intro" aria-labelledby="title"><div><p class="eyebrow">LESS THINKING, MORE EATING.</p><h1>今天，<span>吃點什麼？</span></h1><p>選擇困難先放一邊，讓轉盤幫你決定下一餐。</p></div><p class="intro-note"><strong id="totalCount">18</strong>個口袋選項<br>龍潭路・鎮南路・大學路・校園內</p></section>
-    <section class="filters" aria-label="抽選條件"><div class="chips" role="group" aria-label="餐點類型"><button class="chip" data-category="全部" aria-pressed="true">都可以</button><button class="chip" data-category="正餐" aria-pressed="false">正餐</button><button class="chip" data-category="早午餐" aria-pressed="false">早午餐</button><button class="chip" data-category="點心" aria-pressed="false">點心</button><button class="chip" data-category="飲料" aria-pressed="false">喝一杯</button></div><label class="area-control" for="area">想走多遠？<select id="area"><option value="全部">整個校園生活圈</option><option>龍潭路</option><option>鎮南路</option><option>大學路</option><option>校園內</option></select></label></section>
+    <section class="intro" aria-labelledby="title"><div><p class="eyebrow">LESS THINKING, MORE EATING.</p><h1>今天，<span>吃點什麼？</span></h1><p>選擇困難先放一邊，讓轉盤幫你決定下一餐。</p></div><p class="intro-note"><strong id="totalCount">—</strong>個口袋選項<br>從雲科出發，探索斗六</p></section>
+    <section class="filter-panel" aria-label="抽選條件">
+      <fieldset id="filterFields"><legend class="sr-only">選擇餐點、範圍、預算與時間</legend>
+        <div class="filter-row"><span class="filter-label" id="categoryLabel">今天想吃</span><div class="chips" role="group" aria-labelledby="categoryLabel">
+          <button class="chip" data-category="全部" aria-pressed="false">都可以</button><button class="chip" data-category="正餐" aria-pressed="true">正餐</button><button class="chip" data-category="早午餐" aria-pressed="false">早午餐</button><button class="chip" data-category="點心" aria-pressed="false">點心</button><button class="chip" data-category="飲料" aria-pressed="false">喝一杯</button>
+        </div></div>
+        <div class="filter-row"><span class="filter-label" id="rangeLabel">想走多遠</span><div class="chips" role="group" aria-labelledby="rangeLabel" aria-describedby="rangeHelp">
+          <button class="chip" data-range="near" aria-pressed="true">龍潭路附近</button><button class="chip" data-range="far" aria-pressed="false">遠一點</button><button class="chip" data-range="city" aria-pressed="false">斗六市區</button>
+        </div></div><p id="rangeHelp" class="help"></p><a class="gate-link" href="https://www.google.com/maps/search/?api=1&amp;query=23.693064%2C120.533660" target="_blank" rel="noopener noreferrer">查看固定步行起點 ↗</a>
+        <details class="advanced" open><summary>預算與營業時間</summary><div class="advanced-fields">
+          <label for="budget">一人預算<select id="budget"><option value="any">預算不限</option><option value="100">100 元內</option><option value="200">101–200 元</option><option value="300">201–300 元</option><option value="301">301 元以上</option></select></label>
+          <label for="timeMode">什麼時候吃<select id="timeMode"><option value="now">現在依表定營業</option><option value="any">不限時間</option><option value="at">指定日期時間</option></select></label>
+          <label id="atControl" for="atTime" hidden>日期時間（台灣）<input id="atTime" type="datetime-local" aria-describedby="timeError"></label>
+        </div><p id="timeError" class="notice" role="alert" hidden>請填寫有效的台灣日期與時間。</p><p class="help">預算依各類型基準品項；營業依公開時刻表，不含臨時異動。啟用條件時會排除資料不明的店家。</p></details>
+      </fieldset>
+      <div class="filter-bottom"><p id="filterSummary" class="help"></p><button id="resetFilters" class="text-button">恢復預設條件</button></div>
+      <details class="diagnostics"><summary id="diagnosticsSummary">計算候選中</summary><p class="help">依狀態、範圍、類型、預算、時間依序篩選；每家只計入第一個排除原因。</p><ul id="exclusionList"></ul></details>
+      <div id="emptyActions" class="empty-actions" hidden><p id="emptyMessage"></p><div class="chips"><button class="chip" id="widenRange">擴大至斗六市區</button><button class="chip" id="clearBudget">改為預算不限</button><button class="chip" id="clearTime">改為不限時間</button></div></div>
+    </section>
     <div class="playground">
-      <section class="roulette" aria-labelledby="wheelTitle"><div class="panel-heading"><h2 id="wheelTitle">01 / 把選擇交給轉盤</h2><span class="counter" id="candidateCount">18 個選項</span></div><div class="wheel-stage"><div class="wheel-shell"><div class="pointer" aria-hidden="true"></div><canvas id="wheel" width="1000" height="1000" role="img" aria-label="餐廳轉盤，候選店家列於下方口袋名單">餐廳轉盤</canvas><div class="hub" aria-hidden="true"><strong>開飯</strong><small>LET'S EAT</small></div></div><div class="wheel-empty" id="wheelEmpty" hidden><strong>這個組合還沒有店家</strong><p>換個類型或區域，看看其他選擇。</p><button class="text-button" id="emptyReset">清除篩選</button></div></div><button class="spin" id="spin"><span class="spin-icon" aria-hidden="true">⟳</span><span id="spinLabel">轉一下，決定吃什麼</span><span aria-hidden="true">↗</span></button><div class="spin-subline"><label class="repeat-label"><input type="checkbox" id="noRepeat" checked>避免連續抽到同一家</label><span id="oddsNote">每個選項都有機會</span></div></section>
-      <section class="map-panel" aria-labelledby="mapTitle"><div class="map-header"><h2 id="mapTitle">02 / 好吃的，就在附近</h2><a id="mapOpen" href="https://www.google.com/maps/search/?api=1&amp;query=雲林科技大學附近餐廳" target="_blank" rel="noopener noreferrer">開啟 Google 地圖 ↗</a></div><div class="map-frame"><iframe id="map" title="Google 地圖：雲林科技大學周邊餐廳" src="https://www.google.com/maps?q=%E9%9B%B2%E6%9E%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E9%99%84%E8%BF%91%E9%A4%90%E5%BB%B3&amp;output=embed&amp;hl=zh-TW" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><p class="map-help">地圖需連線；若未顯示，可使用上方連結查看。</p><div class="result" id="result" aria-live="polite" aria-atomic="true"><p class="eyebrow">YOUR NEXT GOOD MEAL</p><h3>下一餐的靈感，轉一下就有。</h3><p>抽出店家後，這裡會顯示地址與導航。</p><p>也可以從下方名單挑一家，在地圖上看看。</p><span class="welcome-art" aria-hidden="true">↗</span></div></section>
+      <section class="roulette" id="roulette" aria-labelledby="wheelTitle"><div class="panel-heading"><h2 id="wheelTitle">01 / 把選擇交給轉盤</h2><span class="counter" id="candidateCount">計算中</span></div><div class="wheel-stage"><div class="wheel-shell"><div class="pointer" aria-hidden="true"></div><canvas id="wheel" width="1000" height="1000" role="img" aria-label="餐廳轉盤，候選店家列於下方口袋名單">餐廳轉盤</canvas><div class="hub" aria-hidden="true"><strong>開飯</strong><small>LET'S EAT</small></div></div><div class="wheel-empty" id="wheelEmpty" hidden><strong>還沒有符合的店家</strong><p>請在上方調整條件，或查看下方完整名單。</p></div></div><p id="canvasFallback" class="help" hidden>轉盤圖形無法顯示，仍可按下抽選並查看文字結果。</p><button class="spin" id="spin"><span class="spin-icon" aria-hidden="true">⟳</span><span id="spinLabel">轉一下，決定吃什麼</span><span aria-hidden="true">↗</span></button><div class="spin-subline"><label class="repeat-label"><input type="checkbox" id="noRepeat" checked>避免連續抽到同一家</label><span id="oddsNote">每個選項都有機會</span></div><a class="result-jump" href="#result">查看結果與位置 ↓</a><details class="wheel-legend"><summary>本次轉盤名單</summary><p id="groupNote" class="help"></p><ol id="legend"></ol></details></section>
+      <section class="map-panel" aria-labelledby="mapTitle"><div class="map-header"><h2 id="mapTitle">02 / 這家在哪裡？</h2><a id="mapOpen" href="https://www.google.com/maps/search/?api=1&amp;query=雲林科技大學附近餐廳" target="_blank" rel="noopener noreferrer">開啟 Google 地圖 ↗</a></div><div class="map-frame"><iframe id="map" title="Google 地圖：雲林科技大學周邊餐廳" src="https://www.google.com/maps?q=%E9%9B%B2%E6%9E%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E9%99%84%E8%BF%91%E9%A4%90%E5%BB%B3&amp;output=embed&amp;hl=zh-TW" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><p class="map-help">地圖需連線；若未顯示，可使用上方連結查看。</p><div class="result" id="result" tabindex="-1"><p class="eyebrow">YOUR NEXT GOOD MEAL</p><h3>下一餐的靈感，轉一下就有。</h3><p>抽出店家後，這裡會顯示地址與導航。</p><p>也可以從下方名單挑一家，在地圖上看看。</p><span class="welcome-art" aria-hidden="true">↗</span></div></section>
     </div>
+    <p id="liveStatus" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
     <div class="history" aria-label="最近抽選"><span class="history-label">剛剛抽過</span><span id="history" class="history-empty">還沒有紀錄，第一餐交給你。</span></div>
-    <section class="directory" id="directory" aria-labelledby="directoryTitle"><div class="directory-heading"><div><h2 id="directoryTitle">你的下一餐，都在這裡。</h2><p id="listCount">瀏覽口袋名單，也可以直接查看位置。</p></div><label class="search-wrap"><input id="search" type="search" aria-label="搜尋店名或地址，只篩選下方名單" placeholder="搜尋店名、地址…（僅搜尋名單）" maxlength="100"></label></div><div id="restaurantGrid" class="restaurant-grid"></div></section>
-    <details class="data-note"><summary>關於這份口袋名單 · 資料整理於 2026.10.19</summary><p>這是持續整理中的校園生活圈名單，目前收錄 18 個選項，並非周邊所有店家的完整普查。每家店都附有公開資料來源；整理日期表示查閱日期，不代表當日實地確認營業。校內餐飲可能隨學期調整，餐車位置亦可能變動，出發前請查看店家公告或 Google 地圖。本站不提供即時營業判斷、價格或評分。</p><p>抽選在符合條件的店家間等機率進行；勾選避免連續重複時，若有兩家以上，會排除上一次抽中的店家。搜尋框只搜尋下方名單，不改變轉盤。Google 地圖以店名及地址搜尋定位；校內櫃位或餐車可能僅顯示附近位置。</p></details>
+    <section class="directory" id="directory" aria-labelledby="directoryTitle"><div class="directory-heading"><div><h2 id="directoryTitle">你的下一餐，都在這裡。</h2><p id="listCount">瀏覽口袋名單，也可以直接查看位置。</p></div><label class="search-wrap"><input id="search" type="search" aria-label="搜尋店名或地址，只篩選下方名單" placeholder="搜尋店名、地址…（僅搜尋名單）" maxlength="100"></label></div><label class="list-mode" for="listMode">瀏覽範圍 <select id="listMode"><option value="eligible">下次可抽</option><option value="all">全部已收錄</option></select></label><div id="restaurantGrid" class="restaurant-grid"></div></section>
+    <details class="data-note"><summary>關於名單與資料 · 查閱 2026.10.19</summary><p id="coverage"></p><p id="dataCoverage"></p><p>每家附有公開來源；查閱日期不代表實地確認營業。步行分鐘依 OpenStreetMap 路網與 Valhalla 計算，未實地踏查。步行路線、基準價格與每週時刻仍在逐筆補齊，未知資料會依條件排除。校內餐飲受學期或假期影響，日期適用性未確認時視為未知。</p><p>價格表示一份已記錄基準品項，不代表整份菜單都在預算內；現場售價與最後供餐時間請向店家確認。營業判斷一律使用台灣時間，每分鐘更新，並非即時營業回報。抽選期間固定名單，下一次重新篩選。</p><p>所有人共用相同名單，不儲存個人偏好；最近五次抽選只保留於當次頁面。搜尋僅影響下方名單。Google 地圖使用店名與地址搜尋，可能需要自行確認校內櫃位或餐車位置；嵌入地圖會向 Google 發出第三方請求。</p><p>步行資料：<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors（ODbL）</a> · <a href="https://valhalla.github.io/valhalla/" target="_blank" rel="noopener noreferrer">Valhalla</a> · <a href="DATA.md">資料維護紀錄</a></p></details>
   </main>
   <footer><div class="wrap footer-inner"><strong>雲科吃什麼. <span style="font-weight:400">讓每一餐，多一點期待。</span></strong><span>MADE FOR HUNGRY DAYS · YUNTECH</span></div></footer>
   <script>
     'use strict';
-    const CAMPUS_SOURCE = 'https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11';
-    // Public source facts are deliberately separate from live operating status.
     const RESTAURANTS = [
-      {id:'datou',name:'大頭小吃部',short:'大頭小吃部',area:'龍潭路',categories:['正餐'],icon:'🍱',address:'雲林縣斗六市龍潭路1之79號',note:'排骨飯、便當',source:'https://vocus.cc/article/68d774c1fd89780001038d19',sourceName:'方格子食記（2025）'},
-      {id:'roulei',name:'肉嘞 斗六店',short:'肉嘞',area:'龍潭路',categories:['正餐'],icon:'🍚',address:'雲林縣斗六市龍潭路1-5號',note:'燒肉丼飯',source:'https://taberu-food.com/roulei/',sourceName:'肉依小姐吃什麼（2023）'},
-      {id:'grayspace',name:'灰色維度早午餐咖啡廳',short:'灰色維度',area:'龍潭路',categories:['正餐','早午餐','飲料'],icon:'☕',address:'雲林縣斗六市龍潭路1-28號1樓',note:'早午餐、義大利麵、丼飯',source:'https://www.ftvnews.com.tw/news/detail/2024327w0280',sourceName:'民視新聞（2024）'},
-      {id:'leedong',name:'李東記肉骨茶 斗六分店',short:'李東記',area:'龍潭路',categories:['正餐'],icon:'🍲',address:'雲林縣斗六市龍潭路10號',note:'肉骨茶',source:'https://supertaste.tvbs.com.tw/infocard/31480',sourceName:'食尚玩家（2025）'},
-      {id:'pengtea',name:'烹小茶',short:'烹小茶',area:'龍潭路',categories:['飲料'],icon:'🧋',address:'雲林縣斗六市龍潭路3-2號',note:'茶飲',source:'https://tour.yunlin.gov.tw/main/modules/MySpace/BlogList.php?cn=ZC10365087&pn=9&sn=yunlin',sourceName:'慢遊雲林'},
-      {id:'smile',name:'Mr. Smile 微笑早餐園地 龍潭店',short:'微笑早餐',area:'龍潭路',categories:['早午餐'],icon:'🍳',address:'雲林縣斗六市龍潭路3-16號',note:'早餐；公開名錄資料，出發前請確認',source:'https://footinder.com.tw/雲林縣斗六市/138407/',sourceName:'FooTinder 店家名錄（2023）'},
-      {id:'teas',name:"TEA'S 原味 斗六龍潭店",short:"TEA'S 原味",area:'龍潭路',categories:['飲料'],icon:'🧋',address:'雲林縣斗六市龍潭路14-12號',note:'茶飲',source:'https://drink.footinder.com.tw/uncategorized/33631/',sourceName:'台灣飲料地圖（2025）'},
-      {id:'laobing',name:'烙一手好餅',short:'烙一手好餅',area:'龍潭路',categories:['早午餐','點心'],icon:'🥞',address:'雲林縣斗六市龍潭路與四維路口',note:'餅類點心；攤位位置請先確認',source:'https://food.timetables.tw/restaurant/ChIJ_4_T3xrJbjQRthcNLhlEx1M/',sourceName:'店家名錄'},
-      {id:'kumaball',name:'熊太地瓜球 斗六店',short:'熊太地瓜球',area:'龍潭路',categories:['點心'],icon:'🍠',address:'雲林縣斗六市龍潭路5之9號',note:'地瓜球',source:'https://www.foodpanda.com.tw/restaurant/qd7q/xiong-tai-di-gua-qiu-dou-liu-dian',sourceName:'foodpanda 店家頁'},
-      {id:'chico',name:'CHICO 餐廚',short:'CHICO 餐廚',area:'鎮南路',categories:['正餐','早午餐'],icon:'🍝',address:'雲林縣斗六市鎮南路176號',note:'早午餐、義式與西式料理',source:'https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xmlid=1037321',sourceName:'慢遊雲林'},
-      {id:'wendocurry',name:'溫度咖哩',short:'溫度咖哩',area:'鎮南路',categories:['正餐'],icon:'🍛',address:'雲林縣斗六市鎮南路166號',note:'咖哩飯',source:'https://ericboyworld.blogspot.com/2025/01/wendocurry.html',sourceName:'大男孩的享食世界（2025）'},
-      {id:'milkfish',name:'專吃無刺虱目魚',short:'無刺虱目魚',area:'鎮南路',categories:['正餐'],icon:'🍲',address:'雲林縣斗六市鎮南路288之6號',note:'虱目魚、飯、粥、湯',source:'https://travel.yam.com/article/128552',sourceName:'輕旅行（2023）'},
-      {id:'meishan',name:'梅山米糕',short:'梅山米糕',area:'鎮南路',categories:['正餐'],icon:'🍚',address:'雲林縣斗六市鎮南路90號',note:'米糕',source:'https://ericboyworld.blogspot.com/2025/11/05-5378979.html',sourceName:'大男孩的享食世界（2025）'},
-      {id:'hans',name:"Han's Pizza 翰斯比薩",short:'翰斯比薩',area:'大學路',categories:['正餐','點心'],icon:'🍕',address:'雲林縣斗六市大學路三段',note:'窯烤披薩餐車；停靠位置請先確認',source:'https://tour.yunlin.gov.tw/main/modules/MySpace/BlogList.php?cn=ZC10353694&pn=11&sn=yunlin',sourceName:'慢遊雲林'},
-      {id:'kalugi',name:'卡璐佶咖啡館 雲科大店',short:'卡璐佶',area:'校園內',categories:['正餐','飲料','點心'],icon:'🍽️',address:'雲林縣斗六市大學路三段123號（設計學院荷花池旁）',note:'套餐、飲料、蛋糕',source:CAMPUS_SOURCE,sourceName:'雲科大官方餐飲資訊'},
-      {id:'louisa',name:'路易莎咖啡 雲科大店',short:'路易莎',area:'校園內',categories:['早午餐','飲料'],icon:'☕',address:'雲林縣斗六市大學路三段123號（雲泰表演廳南側）',note:'咖啡、健康餐、輕食',source:CAMPUS_SOURCE,sourceName:'雲科大官方餐飲資訊'},
-      {id:'xinxin',name:'心心複合式餐飲',short:'心心餐飲',area:'校園內',categories:['早午餐','飲料','點心'],icon:'🥪',address:'雲林縣斗六市大學路三段123號（員生餐廳內）',note:'早午餐、飲品；寒暑假及例假日供餐請確認',source:CAMPUS_SOURCE,sourceName:'雲科大官方餐飲資訊'},
-      {id:'qinqin',name:'親親食堂',short:'親親食堂',area:'校園內',categories:['正餐'],icon:'🍜',address:'雲林縣斗六市大學路三段123號（員生餐廳內）',note:'飯麵、水餃；寒暑假及例假日供餐請確認',source:CAMPUS_SOURCE,sourceName:'雲科大官方餐飲資訊'}
-    ];
+  {
+    "id": "datou",
+    "name": "大頭小吃部",
+    "short": "大頭小吃部",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍱",
+    "address": "雲林縣斗六市龍潭路1之79號",
+    "note": "排骨飯、便當",
+    "source": "https://vocus.cc/article/68d774c1fd89780001038d19",
+    "sourceName": "方格子食記（2025）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": {
+        "amount": 45,
+        "item": "排骨飯（小）",
+        "unit": "份",
+        "source": "https://vocus.cc/article/68d774c1fd89780001038d19",
+        "checkedAt": "2026-10-19",
+        "note": "2025-07 用餐記錄；完整便當基準，現場價格可能已調整。"
+      }
+    },
+    "weeklyHours": [
+      [],
+      [
+        {
+          "start": "07:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:00",
+          "end": "19:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "07:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:00",
+          "end": "19:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "07:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:00",
+          "end": "19:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "07:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:00",
+          "end": "19:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "07:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:00",
+          "end": "19:00",
+          "endDayOffset": 0
+        }
+      ],
+      []
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://vocus.cc/article/68d774c1fd89780001038d19",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依公開時刻表；臨時公休另依店家公告",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "roulei",
+    "name": "肉嘞 斗六店",
+    "short": "肉嘞",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍚",
+    "address": "雲林縣斗六市龍潭路1-5號",
+    "note": "燒肉丼飯",
+    "source": "https://taberu-food.com/roulei/",
+    "sourceName": "肉依小姐吃什麼（2023）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "待核對",
+    "statusNote": "同址出現店面招租資訊，營業狀態待重新確認。",
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "additionalSources": [
+      "https://business.591.com.tw/rent/21967378"
+    ]
+  },
+  {
+    "id": "grayspace",
+    "name": "灰色維度早午餐咖啡廳",
+    "short": "灰色維度",
+    "area": "龍潭路",
+    "categories": [
+      "正餐",
+      "早午餐",
+      "飲料"
+    ],
+    "icon": "☕",
+    "address": "雲林縣斗六市龍潭路1-28號1樓",
+    "note": "早午餐、義大利麵、丼飯",
+    "source": "https://www.ftvnews.com.tw/news/detail/2024327w0280",
+    "sourceName": "民視新聞（2024）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null,
+      "早午餐": null,
+      "飲料": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:00",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037747",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依公開時刻表；臨時公休另依店家公告",
+    "accessRoutes": [
+      {
+        "originId": "yuntech-longtan-gate",
+        "mode": "walking",
+        "minutes": 2,
+        "distanceMeters": 171,
+        "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.6926739%2C%22lon%22%3A120.5321455%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+        "checkedAt": "2026-10-19",
+        "verified": true,
+        "accessible": true,
+        "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
+        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+      }
+    ],
+    "location": {
+      "precision": "place-pin",
+      "lat": 23.6926739,
+      "lon": 120.5321455,
+      "source": "https://maps.app.goo.gl/kPZFdfsv2GksSL778",
+      "checkedAt": "2026-10-19",
+      "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037747"
+    }
+  },
+  {
+    "id": "leedong",
+    "name": "李東記肉骨茶 斗六分店",
+    "short": "李東記",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍲",
+    "address": "雲林縣斗六市龍潭路10號",
+    "note": "肉骨茶",
+    "source": "https://supertaste.tvbs.com.tw/infocard/31480",
+    "sourceName": "食尚玩家（2025）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://supertaste.tvbs.com.tw/infocard/31480",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依食尚玩家所載每週時刻，週五公休；臨時異動依店家公告。",
+    "accessRoutes": [
+      {
+        "originId": "yuntech-longtan-gate",
+        "mode": "walking",
+        "minutes": 6,
+        "distanceMeters": 444,
+        "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.6920879%2C%22lon%22%3A120.5294589%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+        "checkedAt": "2026-10-19",
+        "verified": true,
+        "accessible": true,
+        "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
+        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+      }
+    ],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6920879,
+      "lon": 120.5294589,
+      "source": "https://supertaste.tvbs.com.tw/infocard/31480",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "pengtea",
+    "name": "烹小茶",
+    "short": "烹小茶",
+    "area": "龍潭路",
+    "categories": [
+      "飲料"
+    ],
+    "icon": "🧋",
+    "address": "雲林縣斗六市龍潭路3-2號",
+    "note": "茶飲",
+    "source": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xi=1037675",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      []
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xi=1037675",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依公開時刻表；臨時公休另依店家公告",
+    "accessRoutes": [
+      {
+        "originId": "yuntech-longtan-gate",
+        "mode": "walking",
+        "minutes": 4,
+        "distanceMeters": 276,
+        "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.6923962%2C%22lon%22%3A120.5313398%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+        "checkedAt": "2026-10-19",
+        "verified": true,
+        "accessible": true,
+        "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
+        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+      }
+    ],
+    "location": {
+      "precision": "place-pin",
+      "lat": 23.6923962,
+      "lon": 120.5313398,
+      "source": "https://goo.gl/maps/Kbxj2JMGG8wF5dTH9",
+      "listingSource": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xi=1037675",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "smile",
+    "name": "Mr. Smile 微笑早餐園地 龍潭店",
+    "short": "微笑早餐",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐"
+    ],
+    "icon": "🍳",
+    "address": "雲林縣斗六市龍潭路3-16號",
+    "note": "早餐；公開名錄資料，出發前請確認",
+    "source": "https://footinder.com.tw/雲林縣斗六市/138407/",
+    "sourceName": "FooTinder 店家名錄（2023）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "待核對",
+    "statusNote": "舊名錄資料，尚缺近期店家資訊。",
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "teas",
+    "name": "TEA'S 原味 斗六龍潭店",
+    "short": "TEA'S 原味",
+    "area": "龍潭路",
+    "categories": [
+      "飲料"
+    ],
+    "icon": "🧋",
+    "address": "雲林縣斗六市龍潭路14-12號",
+    "note": "茶飲",
+    "source": "https://drink.footinder.com.tw/uncategorized/33631/",
+    "sourceName": "台灣飲料地圖（2025）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "laobing",
+    "name": "烙一手好餅",
+    "short": "烙一手好餅",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐",
+      "點心"
+    ],
+    "icon": "🥞",
+    "address": "雲林縣斗六市龍潭路與四維路口",
+    "note": "餅類點心；攤位位置請先確認",
+    "source": "https://food.timetables.tw/restaurant/ChIJ_4_T3xrJbjQRthcNLhlEx1M/",
+    "sourceName": "店家名錄",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "待核對",
+    "statusNote": "攤位位置與營業狀態待重新確認。",
+    "priceByCategory": {
+      "早午餐": null,
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "kumaball",
+    "name": "熊太地瓜球 斗六店",
+    "short": "熊太地瓜球",
+    "area": "龍潭路",
+    "categories": [
+      "點心"
+    ],
+    "icon": "🍠",
+    "address": "雲林縣斗六市龍潭路5之9號",
+    "note": "地瓜球",
+    "source": "https://www.foodpanda.com.tw/restaurant/qd7q/xiong-tai-di-gua-qiu-dou-liu-dian",
+    "sourceName": "foodpanda 店家頁",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "chico",
+    "name": "CHICO 餐廚",
+    "short": "CHICO 餐廚",
+    "area": "鎮南路",
+    "categories": [
+      "正餐",
+      "早午餐"
+    ],
+    "icon": "🍝",
+    "address": "雲林縣斗六市鎮南路176號",
+    "note": "早午餐、義式與西式料理",
+    "source": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xmlid=1037321",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null,
+      "早午餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "10:00",
+          "end": "15:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [],
+      [
+        {
+          "start": "10:00",
+          "end": "15:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "15:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "15:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "15:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "15:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xmlid=1037321",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依公開時刻表；臨時公休另依店家公告",
+    "accessRoutes": [
+      {
+        "originId": "yuntech-longtan-gate",
+        "mode": "walking",
+        "minutes": 19,
+        "distanceMeters": 1489,
+        "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.700042%2C%22lon%22%3A120.5413793%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+        "checkedAt": "2026-10-19",
+        "verified": true,
+        "accessible": true,
+        "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
+        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+      }
+    ],
+    "location": {
+      "precision": "place-pin",
+      "lat": 23.700042,
+      "lon": 120.5413793,
+      "source": "https://goo.gl/maps/dEW87FhXuASy8ZpS6",
+      "checkedAt": "2026-10-19",
+      "listingSource": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xmlid=1037321"
+    }
+  },
+  {
+    "id": "wendocurry",
+    "name": "溫度咖哩",
+    "short": "溫度咖哩",
+    "area": "鎮南路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍛",
+    "address": "雲林縣斗六市鎮南路166號",
+    "note": "咖哩飯",
+    "source": "https://ericboyworld.blogspot.com/2025/01/wendocurry.html",
+    "sourceName": "大男孩的享食世界（2025）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "milkfish",
+    "name": "專吃無刺虱目魚",
+    "short": "無刺虱目魚",
+    "area": "鎮南路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍲",
+    "address": "雲林縣斗六市鎮南路288之6號",
+    "note": "虱目魚、飯、粥、湯",
+    "source": "https://travel.yam.com/article/128552",
+    "sourceName": "輕旅行（2023）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "meishan",
+    "name": "梅山米糕",
+    "short": "梅山米糕",
+    "area": "鎮南路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍚",
+    "address": "雲林縣斗六市鎮南路90號",
+    "note": "米糕",
+    "source": "https://ericboyworld.blogspot.com/2025/11/05-5378979.html",
+    "sourceName": "大男孩的享食世界（2025）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "hans",
+    "name": "Han's Pizza 翰斯比薩",
+    "short": "翰斯比薩",
+    "area": "大學路",
+    "categories": [
+      "正餐",
+      "點心"
+    ],
+    "icon": "🍕",
+    "address": "雲林縣斗六市大學路三段",
+    "note": "窯烤披薩餐車；停靠位置請先確認",
+    "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/BlogList.php?cn=ZC10353694&pn=11&sn=yunlin",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null,
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "kalugi",
+    "name": "卡璐佶咖啡館 雲科大店",
+    "short": "卡璐佶",
+    "area": "校園內",
+    "categories": [
+      "正餐",
+      "飲料",
+      "點心"
+    ],
+    "icon": "🍽️",
+    "address": "雲林縣斗六市大學路三段123號（設計學院荷花池旁）",
+    "note": "套餐、飲料、蛋糕",
+    "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+    "sourceName": "雲科大官方餐飲資訊",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null,
+      "飲料": null,
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "學期、寒暑假或例假日供餐有差異，適用日期尚未核對。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "hoursRestricted": true
+  },
+  {
+    "id": "louisa",
+    "name": "路易莎咖啡 雲科大店",
+    "short": "路易莎",
+    "area": "校園內",
+    "categories": [
+      "早午餐",
+      "飲料"
+    ],
+    "icon": "☕",
+    "address": "雲林縣斗六市大學路三段123號（雲泰表演廳南側）",
+    "note": "咖啡、健康餐、輕食",
+    "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+    "sourceName": "雲科大官方餐飲資訊",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null,
+      "飲料": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "學期、寒暑假或例假日供餐有差異，適用日期尚未核對。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "hoursRestricted": true
+  },
+  {
+    "id": "xinxin",
+    "name": "心心複合式餐飲",
+    "short": "心心餐飲",
+    "area": "校園內",
+    "categories": [
+      "早午餐",
+      "飲料",
+      "點心"
+    ],
+    "icon": "🥪",
+    "address": "雲林縣斗六市大學路三段123號（員生餐廳內）",
+    "note": "早午餐、飲品；寒暑假及例假日供餐請確認",
+    "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+    "sourceName": "雲科大官方餐飲資訊",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null,
+      "飲料": null,
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "學期、寒暑假或例假日供餐有差異，適用日期尚未核對。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "hoursRestricted": true
+  },
+  {
+    "id": "qinqin",
+    "name": "親親食堂",
+    "short": "親親食堂",
+    "area": "校園內",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍜",
+    "address": "雲林縣斗六市大學路三段123號（員生餐廳內）",
+    "note": "飯麵、水餃；寒暑假及例假日供餐請確認",
+    "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+    "sourceName": "雲科大官方餐飲資訊",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "學期、寒暑假或例假日供餐有差異，適用日期尚未核對。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "hoursRestricted": true
+  },
+  {
+    "id": "yipin",
+    "name": "一品香火鍋",
+    "short": "一品香火鍋",
+    "area": "武昌路",
+    "categories": [
+      "正餐"
+    ],
+    "address": "雲林縣斗六市武昌路182號",
+    "note": "個人火鍋",
+    "source": "https://heidihihi.com/yunlin-douliu-food/",
+    "sourceName": "雙妡媽咪旅行ING（2026）",
+    "icon": "🍽️",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:00",
+          "end": "00:00",
+          "endDayOffset": 1
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "23:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "23:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "23:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "23:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "00:00",
+          "endDayOffset": 1
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "00:00",
+          "endDayOffset": 1
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037489",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依公開時刻表；臨時公休另依店家公告",
+    "accessRoutes": [
+      {
+        "originId": "yuntech-longtan-gate",
+        "mode": "walking",
+        "minutes": 35,
+        "distanceMeters": 2815,
+        "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.7135627%2C%22lon%22%3A120.5433374%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+        "checkedAt": "2026-10-19",
+        "verified": true,
+        "accessible": true,
+        "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
+        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+      }
+    ],
+    "location": {
+      "precision": "place-pin",
+      "lat": 23.7135627,
+      "lon": 120.5433374,
+      "source": "https://goo.gl/maps/xL5fW9Ti1afi7pGh8",
+      "checkedAt": "2026-10-19",
+      "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037489"
+    }
+  },
+  {
+    "id": "erji",
+    "name": "二吉軒豆漿 斗六總店",
+    "short": "二吉軒豆漿",
+    "area": "成功路",
+    "categories": [
+      "早午餐"
+    ],
+    "address": "雲林縣斗六市成功路300號",
+    "note": "豆漿、蛋餅；此筆為成功路總店",
+    "source": "https://heidihihi.com/yunlin-douliu-food/",
+    "sourceName": "雙妡媽咪旅行ING（2026）",
+    "icon": "🍽️",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "changxing",
+    "name": "長興圓仔冰",
+    "short": "長興圓仔冰",
+    "area": "中華路",
+    "categories": [
+      "點心"
+    ],
+    "address": "雲林縣斗六市中華路136號",
+    "note": "圓仔冰、燒麻糬",
+    "source": "https://heidihihi.com/yunlin-douliu-food/",
+    "sourceName": "雙妡媽咪旅行ING（2026）",
+    "icon": "🍽️",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "fourth",
+    "name": "四代目麥芽酥圓仔冰",
+    "short": "四代目麥芽酥圓",
+    "area": "太平路",
+    "categories": [
+      "點心",
+      "飲料"
+    ],
+    "address": "雲林縣斗六市太平路38號",
+    "note": "麥芽酥、圓仔冰；此筆為太平路38號店",
+    "source": "https://heidihihi.com/yunlin-douliu-food/",
+    "sourceName": "雙妡媽咪旅行ING（2026）",
+    "icon": "🍽️",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": {
+        "amount": 20,
+        "item": "純麥芽棒棒糖（原味）",
+        "unit": "份",
+        "source": "https://pos.so-special.com/outposandorder/orderweb2/?dep=doubleplus0119&story=doubleplus",
+        "checkedAt": "2026-10-19",
+        "note": "店家線上菜單最低單份點心；此價格不代表冰品價格。"
+      },
+      "飲料": {
+        "amount": 50,
+        "item": "洛神花茶",
+        "unit": "份",
+        "source": "https://pos.so-special.com/outposandorder/orderweb2/?dep=doubleplus0119&story=doubleplus",
+        "checkedAt": "2026-10-19",
+        "note": "店家線上菜單最低飲品；未含外送費。"
+      }
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://yunlin100.yunlin.gov.tw/News_Content.aspx?n=13091&s=344274",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依公開時刻表；臨時公休另依店家公告",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "gouba",
+    "name": "溝仔垻清涼冰店",
+    "short": "溝仔垻清涼冰店",
+    "area": "仁義路",
+    "categories": [
+      "點心"
+    ],
+    "address": "雲林縣斗六市仁義路144號",
+    "note": "古早味冰品；斗六市外圍聚落",
+    "source": "https://heidihihi.com/yunlin-douliu-food/",
+    "sourceName": "雙妡媽咪旅行ING（2026）",
+    "icon": "🍽️",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    }
+  },
+  {
+    "id": "oldstreet",
+    "name": "古早味老街碗粿",
+    "short": "老街碗粿",
+    "area": "太平路",
+    "categories": [
+      "正餐",
+      "點心"
+    ],
+    "address": "雲林縣斗六市太平路122號",
+    "note": "碗粿、蛋飯、關東煮",
+    "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037259",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null,
+      "點心": {
+        "amount": 25,
+        "item": "碗粿",
+        "unit": "碗",
+        "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037259",
+        "checkedAt": "2026-10-19",
+        "note": "政府觀光介紹所載單碗價格；正餐蛋飯價格尚待核對。"
+      }
+    },
+    "weeklyHours": [
+      [],
+      [
+        {
+          "start": "10:30",
+          "end": "14:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "14:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "14:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "14:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "14:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "14:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037259",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依公開時刻表；臨時公休另依店家公告",
+    "accessRoutes": [
+      {
+        "originId": "yuntech-longtan-gate",
+        "mode": "walking",
+        "minutes": 27,
+        "distanceMeters": 2130,
+        "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.7082001%2C%22lon%22%3A120.5414796%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+        "checkedAt": "2026-10-19",
+        "verified": true,
+        "accessible": true,
+        "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
+        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+      }
+    ],
+    "location": {
+      "precision": "place-pin",
+      "lat": 23.7082001,
+      "lon": 120.5414796,
+      "source": "https://goo.gl/maps/bFMpsQs6AAD9q49a8",
+      "checkedAt": "2026-10-19",
+      "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037259"
+    }
+  },
+  {
+    "id": "aguoshi",
+    "name": "阿國獅魷魚羹",
+    "short": "阿國獅",
+    "area": "大同路",
+    "categories": [
+      "正餐"
+    ],
+    "address": "雲林縣斗六市大同路112號",
+    "note": "魷魚羹與飯麵",
+    "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037258",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "09:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "09:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "09:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [],
+      [
+        {
+          "start": "09:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "09:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "09:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037258",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依公開時刻表；臨時公休另依店家公告",
+    "accessRoutes": [
+      {
+        "originId": "yuntech-longtan-gate",
+        "mode": "walking",
+        "minutes": 33,
+        "distanceMeters": 2577,
+        "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.709481%2C%22lon%22%3A120.544797%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+        "checkedAt": "2026-10-19",
+        "verified": true,
+        "accessible": true,
+        "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
+        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+      }
+    ],
+    "location": {
+      "precision": "place-pin",
+      "lat": 23.709481,
+      "lon": 120.544797,
+      "source": "https://goo.gl/maps/bE2JUwH9ggQSGLSj8",
+      "checkedAt": "2026-10-19",
+      "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037258"
+    }
+  },
+  {
+    "id": "aci",
+    "name": "阿賜豬腳飯",
+    "short": "阿賜豬腳飯",
+    "area": "公正街",
+    "categories": [
+      "正餐"
+    ],
+    "address": "雲林縣斗六市公正街34號",
+    "note": "豬腳飯、梅干扣肉飯、米糕",
+    "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037281",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "16:00",
+          "end": "22:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "16:00",
+          "end": "22:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "16:00",
+          "end": "22:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "16:00",
+          "end": "22:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "16:00",
+          "end": "22:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "16:00",
+          "end": "22:00",
+          "endDayOffset": 0
+        }
+      ],
+      []
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037281",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依公開時刻表；臨時公休另依店家公告",
+    "accessRoutes": [
+      {
+        "originId": "yuntech-longtan-gate",
+        "mode": "walking",
+        "minutes": 31,
+        "distanceMeters": 2476,
+        "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.7094377%2C%22lon%22%3A120.5436973%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+        "checkedAt": "2026-10-19",
+        "verified": true,
+        "accessible": true,
+        "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
+        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+      }
+    ],
+    "location": {
+      "precision": "place-pin",
+      "lat": 23.7094377,
+      "lon": 120.5436973,
+      "source": "https://goo.gl/maps/dUrihZ773yMKYiYY7",
+      "checkedAt": "2026-10-19",
+      "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037281"
+    }
+  },
+  {
+    "id": "shiliuaci",
+    "name": "石榴班阿賜古早味臭豆腐",
+    "short": "石榴班阿賜",
+    "area": "石榴班",
+    "categories": [
+      "點心"
+    ],
+    "address": "雲林縣斗六市中興路43之2號",
+    "note": "臭豆腐、豬血湯；此筆時刻為下午小吃供應時段",
+    "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037845",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "點心": null
+    },
+    "weeklyHours": [
+      [],
+      [
+        {
+          "start": "14:30",
+          "end": "18:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "14:30",
+          "end": "18:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "14:30",
+          "end": "18:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "14:30",
+          "end": "18:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "14:30",
+          "end": "18:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "14:30",
+          "end": "18:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037845",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依公開時刻表；臨時公休另依店家公告",
+    "accessRoutes": [
+      {
+        "originId": "yuntech-longtan-gate",
+        "mode": "walking",
+        "minutes": 83,
+        "distanceMeters": 6750,
+        "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.7237869%2C%22lon%22%3A120.5811043%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+        "checkedAt": "2026-10-19",
+        "verified": true,
+        "accessible": true,
+        "method": "Valhalla pedestrian routing on OpenStreetMap; destination and route instructions reviewed",
+        "note": "依公開步行路網估計，分鐘無條件進位；未實地踏查，實際通行與時間依現場為準。"
+      }
+    ],
+    "location": {
+      "precision": "place-pin",
+      "lat": 23.7237869,
+      "lon": 120.5811043,
+      "source": "https://maps.app.goo.gl/wV5jFepUuajeo1BJA",
+      "checkedAt": "2026-10-19",
+      "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037845"
+    }
+  }
+];
+    // Range evidence is separate from street labels. Pending routes never become zero minutes.
+    const DATASET = {version:'2026-10-19.3', checkedAt:'2026-10-19', city:'斗六市'};
+    const GATE = {id:'yuntech-longtan-gate',name:'雲科龍潭路側校門',verified:true,location:{lat:23.693064,lon:120.533660},source:'https://maps.app.goo.gl/ypxEHj9Yf8EK6Q3MA',checkedAt:'2026-10-19'};
+    const DEFAULTS = {category:'正餐',range:'near',budget:'any',time:'now',at:''};
+    const RANGE_LABELS = {near:'龍潭路附近',far:'遠一點',city:'斗六市區'};
+    const BUDGETS = {any:[1,Infinity],100:[1,100],200:[101,200],300:[201,300],301:[301,Infinity]};
+    const REASONS = {status:'待核對或暫停抽選',routeUnknown:'步行路線待核對',range:'超出範圍',category:'餐點類型不符',priceUnknown:'缺少此類型的基準價格',budget:'基準價格不符',hoursUnknown:'此日期營業資料不明',closed:'此時不在表定營業時段',repeat:'避免連續重複'};
     const $ = id => document.getElementById(id);
-    const state = {category:'全部',area:'全部',candidates:[],spinning:false,rotation:0,lastId:null,history:[]};
-    const palette = ['#007f78','#d6eeea','#f0d4ad','#5baea4','#e9f4f1','#b7dcd5'];
-    function filteredRestaurants(category,area) { return RESTAURANTS.filter(r => (category==='全部'||r.categories.includes(category))&&(area==='全部'||r.area===area)); }
-    function eligibleRestaurants(candidates,lastId,noRepeat) { return noRepeat && candidates.length>1 ? candidates.filter(r=>r.id!==lastId) : candidates; }
+    const state = {filters:{...DEFAULTS},spinning:false,lastId:null,rotation:0,history:[],pool:[],base:[],wheelItems:[],result:null,preserveWheel:false,finish:null};
+
+    // Pure time and filtering helpers; Taiwan wall time is independent of device timezone.
+    function taipeiParts(date) {
+      const p=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(date).map(p=>[p.type,p.value]));
+      const key=`${p.year}-${p.month}-${p.day}`;
+      return {key,day:new Date(key+'T00:00:00Z').getUTCDay(),minute:Number(p.hour)*60+Number(p.minute),input:`${key}T${p.hour}:${p.minute}`};
+    }
+    function parseTaipei(value) {
+      if(!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(value)) return null;
+      const d=new Date(value+':00+08:00');
+      return Number.isFinite(d.getTime())&&taipeiParts(d).input===value ? d : null;
+    }
+    function previousDate(key) { return new Date(new Date(key+'T00:00:00Z').getTime()-86400000).toISOString().slice(0,10); }
+    function minutes(value) { const [h,m]=value.split(':').map(Number);return h*60+m; }
+    function scheduleFor(r,key,day) {
+      if(Object.hasOwn(r.hoursExceptions||{},key)) return r.hoursExceptions[key].periods;
+      if(r.hoursRestricted) return null;
+      return r.weeklyHours?.[day]??null;
+    }
+    function openingStatus(r,date) {
+      if(!date) return {status:'unknown',periods:[]};
+      const t=taipeiParts(date), today=scheduleFor(r,t.key,t.day), explicit=Object.hasOwn(r.hoursExceptions||{},t.key);
+      const yesterday=explicit?[]:scheduleFor(r,previousDate(t.key),(t.day+6)%7);
+      const periods=[];
+      for(const p of today||[]) if(t.minute>=minutes(p.start)&&t.minute<minutes(p.end)+(p.endDayOffset||0)*1440) periods.push(p.start+'–'+(p.endDayOffset?'翌日 ':'')+p.end);
+      for(const p of yesterday||[]) if(p.endDayOffset===1&&t.minute<minutes(p.end)) periods.push('前日 '+p.start+'–'+p.end);
+      if(today===null) return {status:'unknown',periods:[]};
+      if(periods.length) return {status:'open',periods};
+      return {status:yesterday===null?'unknown':'closed',periods:[]};
+    }
+    function referenceTime(filters,now=new Date()) { return filters.time==='at'?parseTaipei(filters.at):now; }
+    function priceOptions(r,category) {
+      const cats=category==='全部'?r.categories:[category];
+      return cats.map(category=>({category,...r.priceByCategory?.[category]})).filter(p=>Number.isInteger(p.amount)&&p.amount>0&&p.source&&p.checkedAt);
+    }
+    function matchingPrices(r,filters) { const [lo,hi]=BUDGETS[filters.budget];return priceOptions(r,filters.category).filter(p=>p.amount>=lo&&p.amount<=hi); }
+    function routeFor(r) {
+      return GATE.verified ? (r.accessRoutes||[]).find(p=>p.originId===GATE.id&&p.mode==='walking'&&p.verified&&p.accessible&&p.source&&p.checkedAt&&Number.isFinite(p.minutes)&&p.minutes>0) : null;
+    }
+    function exclusionReason(r,filters,date) {
+      if(r.status!=='已收錄') return 'status';
+      if(r.city!=='斗六市') return 'range';
+      if(filters.range!=='city') {
+        const route=routeFor(r);
+        if(!route) return 'routeUnknown';
+        if(route.minutes>(filters.range==='near'?15:30)) return 'range';
+      }
+      if(filters.category!=='全部'&&!r.categories.includes(filters.category)) return 'category';
+      if(filters.budget!=='any') {
+        if(!priceOptions(r,filters.category).length) return 'priceUnknown';
+        if(!matchingPrices(r,filters).length) return 'budget';
+      }
+      if(filters.time!=='any') {
+        const s=openingStatus(r,date).status;
+        if(s!=='open') return s==='unknown'?'hoursUnknown':'closed';
+      }
+      return null;
+    }
+    function selectPool(rows,filters,date,lastId,noRepeat) {
+      const counts=Object.fromEntries(Object.keys(REASONS).map(k=>[k,0])),base=[];
+      for(const r of rows) { const why=exclusionReason(r,filters,date);if(why)counts[why]++;else base.push(r); }
+      const pool=noRepeat&&base.length>1?base.filter(r=>r.id!==lastId):base.slice();
+      counts.repeat=base.length-pool.length;
+      return {base,pool,counts};
+    }
     function randomIndex(length) {
       if(!Number.isInteger(length)||length<1) throw new RangeError('At least one candidate is required');
-      if(!window.crypto || !window.crypto.getRandomValues) return Math.floor(Math.random()*length);
-      const buffer=new Uint32Array(1), limit=Math.floor(4294967296/length)*length;
-      do { window.crypto.getRandomValues(buffer); } while(buffer[0]>=limit);
+      if(!window.crypto?.getRandomValues) return Math.floor(Math.random()*length);
+      const buffer=new Uint32Array(1),limit=Math.floor(4294967296/length)*length;
+      do {window.crypto.getRandomValues(buffer);} while(buffer[0]>=limit);
       return buffer[0]%length;
     }
-    function targetRotation(current,index,count) { const target=(360-(index+.5)*360/count)%360; return current+1800+((target-current%360+360)%360); }
-    function queryFor(r) { return r.name+' '+r.address; }
-    function mapUrl(query) { return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(query); }
+    function wheelGroups(items) {
+      const n=items.length,step=n>36?Math.ceil(n/12):1,groups=[];
+      for(let i=0;i<n;i+=step) {
+        const end=Math.min(i+step,n);
+        groups.push({start:i,end,from:i/n,to:end/n,label:n<=12?items[i].short:n<=36?String(i+1).padStart(2,'0'):`${String(i+1).padStart(2,'0')}–${String(end).padStart(2,'0')}`});
+      }
+      return groups;
+    }
+    function targetRotation(current,index,items) {
+      const group=wheelGroups(items).find(g=>index>=g.start&&index<g.end);
+      const target=(360-(group.from+group.to)*180)%360;
+      return current+1800+((target-current%360+360)%360);
+    }
+
+    // Safe DOM and map rendering. User search text is never parsed as HTML.
+    function el(tag,className,text) { const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node; }
+    function link(label,url,className) {
+      const a=el('a',className,label);
+      try {const parsed=new URL(url);if(parsed.protocol==='https:')a.href=parsed.href;} catch {}
+      a.target='_blank';a.rel='noopener noreferrer';return a;
+    }
+    function action(label,handler) { const b=el('button','text-button',label);b.type='button';b.disabled=state.spinning;b.addEventListener('click',handler);return b; }
+    function mapQuery(r) { return r?r.name+' '+r.address:GATE.location.lat+','+GATE.location.lon; }
     function setMap(r) {
-      const query = r ? queryFor(r) : '雲林科技大學附近餐廳';
-      $('map').src='https://www.google.com/maps?q='+encodeURIComponent(query)+'&output=embed&hl=zh-TW';
-      $('map').title='Google 地圖：'+(r?r.name:'雲林科技大學周邊餐廳');
-      $('mapOpen').href=mapUrl(query);
+      const q=encodeURIComponent(mapQuery(r));
+      $('map').src='https://www.google.com/maps?q='+q+'&output=embed&hl=zh-TW';
+      $('map').title='Google 地圖：'+(r?r.name:GATE.name);
+      $('mapOpen').href='https://www.google.com/maps/search/?api=1&query='+q;
     }
-    function makeElement(tag,className,text) { const el=document.createElement(tag); if(className)el.className=className; if(text!==undefined)el.textContent=text; return el; }
-    function externalLink(text,url,className) { const a=makeElement('a',className,text);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a; }
-    function showResult(r,drawn=false) {
-      const box=$('result');box.replaceChildren();box.classList.toggle('won',drawn);
-      box.append(makeElement('p','eyebrow',drawn?'THE WHEEL HAS SPOKEN · 今天就吃這家':'ON YOUR RADAR · 看看這一家'),makeElement('h3','',r.name),makeElement('p','',r.address),makeElement('p','',r.note));
-      const bottom=makeElement('div','result-bottom'),tags=makeElement('div','tags');
-      [r.area,...r.categories].forEach(t=>tags.append(makeElement('span','tag',t)));
-      bottom.append(tags,externalLink('帶我去吃 ↗','https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(queryFor(r)),'direction'));
-      const source=makeElement('p','result-source');source.append(externalLink('資料來源：'+r.sourceName+' ↗',r.source));
-      box.append(bottom,source);setMap(r);
+    function formatTime(date) { return date?taipeiParts(date).input.replace('T',' ')+'（台灣時間）':'日期時間未填妥'; }
+    function renderResult() {
+      if(!state.result)return;
+      const {r,mode,filters,date,index,boundary}=state.result,box=$('result');box.replaceChildren();box.classList.toggle('won',mode==='drawn');
+      box.append(el('p','eyebrow',mode==='drawn'?'本次抽中 · 今天就吃這家':mode==='view'?'正在查看 · 不影響抽選':'上次結果 · 請依目前條件重新抽選'),el('h3','',r.name),el('p','',r.address),el('p','',r.note));
+      if(index!==undefined) box.append(el('p','',`本次轉盤編號 ${String(index+1).padStart(2,'0')}`));
+      if(r.status!=='已收錄') box.append(el('p','notice',r.status+'：'+r.statusNote));
+      const prices=filters.budget==='any'?priceOptions(r,filters.category):matchingPrices(r,filters);
+      if(prices.length) for(const p of prices) {
+        box.append(el('p','price-line',`${p.category}基準：${p.item} NT$${p.amount}／${p.unit}`));
+        const note=el('p','result-source',p.note+' ');note.append(link(`價格來源 · 查閱 ${p.checkedAt} ↗`,p.source));box.append(note);
+      } else box.append(el('p','',filters.budget==='any'?'此類型基準價格尚待補齊。':'此店沒有符合目前預算的已核對基準品項。'));
+      const hours=openingStatus(r,date),timeText=hours.status==='open'?'依表定時間營業':hours.status==='closed'?'此時不在表定營業時段':'此日期營業資料不明';
+      box.append(el('p','',`${formatTime(date)} · ${timeText}${hours.periods.length?' '+hours.periods.join('、'):''}`),el('p','result-source',r.hoursNote));
+      if(r.hoursSource) {const p=el('p','result-source');p.append(link(`時刻來源 · 查閱 ${r.hoursCheckedAt} ↗`,r.hoursSource));box.append(p);}
+      if(boundary)box.append(el('p','notice','抽選期間已跨越營業時刻邊界；本次保留抽選開始時的名單，下次將依新時刻篩選。'));
+      const route=routeFor(r);box.append(el('p','',route?`從龍潭路側校門步行約 ${route.minutes} 分鐘`:'步行路線待核對；請在地圖確認位置。'));
+      if(route) {const evidence=el('p','result-source',route.note+' ');evidence.append(link('步行路線資料 ↗',route.source));box.append(evidence);}
+      const walk=el('p','result-source');walk.append(link('查看從校門出發的步行路線 ↗','https://www.google.com/maps/dir/?api=1&origin='+GATE.location.lat+','+GATE.location.lon+'&destination='+encodeURIComponent(mapQuery(r))+'&travelmode=walking'));box.append(walk);
+      const bottom=el('div','result-bottom'),tags=el('div','tags');[r.area,...r.categories].forEach(t=>tags.append(el('span','tag',t)));
+      bottom.append(tags,link('帶我去吃 ↗','https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(mapQuery(r)),'direction'));box.append(bottom);
+      const source=el('p','result-source');source.append(link(`店家來源 · ${r.sourceName} · 查閱 ${r.checkedAt} ↗`,r.source));box.append(source);
     }
-    function drawWheel() {
-      const canvas=$('wheel'),ctx=canvas.getContext('2d');if(!ctx)return;
-      const items=state.candidates,n=items.length,size=1000,c=size/2,radius=493;
-      ctx.clearRect(0,0,size,size);
-      if(!n){ctx.beginPath();ctx.arc(c,c,radius,0,Math.PI*2);ctx.fillStyle='#e1ede9';ctx.fill();return;}
-      items.forEach((r,i)=>{
-        const start=-Math.PI/2+i*Math.PI*2/n,end=start+Math.PI*2/n;
-        ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,radius,start,end);ctx.closePath();ctx.fillStyle=palette[i%palette.length];ctx.fill();ctx.strokeStyle='#ffffff';ctx.lineWidth=3;ctx.stroke();
-        ctx.save();ctx.translate(c,c);ctx.rotate((start+end)/2);ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillStyle=i%palette.length===0?'#ffffff':'#193b3a';ctx.font=`700 ${n>14?26:32}px "Microsoft JhengHei", sans-serif`;ctx.fillText(r.short,radius-36,0,300);ctx.restore();
-      });
-    }
-    function renderDirectory() {
-      const term=$('search').value.trim().toLocaleLowerCase();
-      const list=state.candidates.filter(r=>(r.name+r.address+r.note).toLocaleLowerCase().includes(term));
-      $('listCount').textContent=`目前顯示 ${list.length} 家 / 轉盤共有 ${state.candidates.length} 個選項`;
-      const grid=$('restaurantGrid');grid.replaceChildren();
-      if(!list.length){grid.append(makeElement('p','no-results','沒有符合的店家，試著清除搜尋或更換上方篩選。'));return;}
-      list.forEach(r=>{
-        const card=makeElement('article','restaurant-card'),icon=makeElement('span','food-symbol',r.icon);icon.setAttribute('aria-hidden','true');
-        const info=makeElement('div','restaurant-info');info.append(makeElement('h3','',r.name),makeElement('p','',r.area+' · '+r.categories.join(' / ')),makeElement('p','',r.address));
-        const actions=makeElement('div','card-actions'),view=makeElement('button','','查看位置 ↗');view.type='button';view.disabled=state.spinning;view.setAttribute('aria-label','查看'+r.name+'的位置');view.addEventListener('click',()=>{if(state.spinning)return;showResult(r);$('mapTitle').scrollIntoView({behavior:'smooth',block:'start'});});
-        actions.append(externalLink('資料來源 ↗',r.source),view);info.append(actions);card.append(icon,info);grid.append(card);
-      });
-    }
-    function refresh() {
+    function viewRestaurant(r) {
       if(state.spinning)return;
-      state.candidates=filteredRestaurants(state.category,state.area);
-      document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===state.category)));
-      $('candidateCount').textContent=state.candidates.length+' 個選項';$('wheelEmpty').hidden=state.candidates.length>0;$('spin').disabled=!state.candidates.length;
-      $('spinLabel').textContent=state.candidates.length?'轉一下，決定吃什麼':'換個條件，再來試試';
-      $('oddsNote').textContent=state.candidates.length===1?'只有一家，就決定是它！':'每個選項都有機會';
-      $('wheel').style.transition='none';$('wheel').style.transform='rotate(0deg)';state.rotation=0;
-      drawWheel();renderDirectory();
-    }
-    function setBusy(busy) {
-      state.spinning=busy;$('spin').disabled=busy||!state.candidates.length;
-      document.querySelectorAll('.chip,#area,#noRepeat,#search,#emptyReset,.card-actions button,#history button').forEach(el=>el.disabled=busy);
-      $('wheel').setAttribute('aria-busy',String(busy));
+      state.result={r,mode:'view',filters:{...state.filters},date:referenceTime(state.filters)};
+      renderResult();setMap(r);
+      $('liveStatus').textContent='正在查看 '+r.name+'。位置已更新，可前往結果區查看。';
     }
     function renderHistory() {
-      const history=$('history');history.replaceChildren();history.className='history';history.style.margin='0';
-      state.history.forEach(r=>{const b=makeElement('button','',r.name);b.type='button';b.addEventListener('click',()=>{if(!state.spinning)showResult(r);});history.append(b);});
+      $('history').replaceChildren();
+      if(!state.history.length){$('history').textContent='還沒有紀錄，第一餐交給你。';return;}
+      state.history.forEach(r=>$('history').append(action(r.short,()=>viewRestaurant(r))));
+    }
+    function renderDirectory() {
+      const rows=$('listMode').value==='all'?RESTAURANTS:state.pool,q=$('search').value.trim().toLocaleLowerCase();
+      const visible=rows.filter(r=>(r.name+' '+r.address).toLocaleLowerCase().includes(q));
+      $('listCount').textContent=`${$('listMode').value==='all'?'全部已收錄':'下次可抽'} ${rows.length} 家 · 搜尋顯示 ${visible.length} 家（搜尋不改變轉盤）`;
+      const grid=$('restaurantGrid');grid.replaceChildren();
+      for(const r of visible) {
+        const card=el('article','restaurant-card'),body=el('div','restaurant-info');
+        body.append(el('h3','',r.name),el('p','',r.address),el('p','',r.categories.join(' · ')+' · '+r.area));
+        const missing=[];if(!routeFor(r))missing.push('路線待補');if(!priceOptions(r,'全部').length)missing.push('價格待補');if(!r.weeklyHours||r.hoursRestricted)missing.push('時刻待補');
+        if(missing.length)body.append(el('p','',missing.join(' · ')));
+        if(r.status!=='已收錄')body.append(el('p','notice',r.status+'：'+r.statusNote));
+        const actions=el('div','card-actions');actions.append(action('查看位置 ↗',()=>viewRestaurant(r)),link('來源 ↗',r.source));body.append(actions);card.append(body);grid.append(card);
+      }
+      if(!visible.length) {
+        const empty=el('div','no-results','這份名單沒有符合的店家。');
+        if(q)empty.append(action('清除搜尋',()=>{$('search').value='';renderDirectory();}));
+        empty.append(action('瀏覽全部已收錄',()=>{$('listMode').value='all';$('search').value='';renderDirectory();}));grid.append(empty);
+      }
+    }
+    let canvasAvailable=true;
+    function drawWheel(items) {
+      state.wheelItems=items.slice();state.rotation=0;
+      const canvas=$('wheel');canvas.style.transition='none';canvas.style.transform='rotate(0deg)';
+      let ctx;try{ctx=canvas.getContext('2d');}catch{}canvasAvailable=!!ctx;
+      $('canvasFallback').hidden=canvasAvailable;
+      if(ctx) {
+        const palette=['#007f78','#d6eeea','#f0d4ad','#b7dcd5','#e9f4f1','#6bb8ae'];
+        ctx.clearRect(0,0,1000,1000);
+        const groups=wheelGroups(items);
+        groups.forEach((g,i)=>{
+          const start=g.from*Math.PI*2-Math.PI/2,end=g.to*Math.PI*2-Math.PI/2;
+          ctx.beginPath();ctx.moveTo(500,500);ctx.arc(500,500,492,start,end);ctx.closePath();ctx.fillStyle=palette[i%palette.length];ctx.fill();ctx.strokeStyle='#ffffff';ctx.lineWidth=3;ctx.stroke();
+          ctx.save();ctx.translate(500,500);ctx.rotate((start+end)/2);ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillStyle=i%palette.length===0?'#fff':'#193b3a';ctx.font=`700 ${items.length<=12?30:28}px sans-serif`;ctx.fillText(g.label,450,0,310);ctx.restore();
+        });
+        if(!items.length){ctx.beginPath();ctx.arc(500,500,492,0,Math.PI*2);ctx.fillStyle='#d6eeea';ctx.fill();}
+      }
+      $('wheel').setAttribute('aria-label',`餐廳轉盤，共 ${items.length} 家；完整名單可展開下方「本次轉盤名單」。`);
+      $('legend').replaceChildren();items.forEach((r,i)=>$('legend').append(el('li','',`${String(i+1).padStart(2,'0')} · ${r.name}`)));
+      $('groupNote').textContent=items.length>36?'以編號分組顯示，扇形大小依店家數分配；每家店的抽中機率相同。':items.length>12?'轉盤以編號顯示，展開名單查看完整店名。':'每個扇形代表一家店，每家抽中機率相同。';
+    }
+    function summaryText(date) {
+      const f=state.filters,time=f.time==='any'?'不限時間':f.time==='at'?formatTime(date):'現在依表定營業 · '+formatTime(date);
+      return `${f.category} · ${RANGE_LABELS[f.range]} · ${$('budget').selectedOptions[0].textContent} · ${time}`;
+    }
+    function updateCounts(selection,date) {
+      $('candidateCount').textContent=state.preserveWheel?`本次 ${state.wheelItems.length} 家／下次可抽 ${selection.pool.length} 家`:`可抽 ${selection.pool.length} 家`;
+      $('filterSummary').textContent=summaryText(date);
+      $('rangeHelp').textContent=state.filters.range==='city'?'包含斗六市完整行政區；收錄名單持續補充。':`固定從雲科龍潭路側校門出發，步行約 ${state.filters.range==='near'?15:30} 分鐘內。${RESTAURANTS.some(r=>routeFor(r))?'僅納入已核對路線。':'起點已確定，店家步行路線尚待核對，目前此範圍沒有可抽名單。'}`;
+      $('timeError').hidden=!(state.filters.time==='at'&&!date);
+      $('spin').disabled=state.spinning||!selection.pool.length||!$('timeError').hidden;
+      $('spinLabel').textContent=state.spinning?'正在決定下一餐…':selection.pool.length?'轉一下，決定吃什麼':'沒有符合條件的店家';
+      $('wheelEmpty').hidden=!!state.wheelItems.length;
+      $('oddsNote').textContent=selection.pool.length===1?'目前僅一家，允許重複抽選':selection.counts.repeat?'下次將排除上次抽中的店家':'每家等機率抽選';
+      const reasons=$('exclusionList');reasons.replaceChildren();
+      Object.entries(selection.counts).filter(([,v])=>v).forEach(([k,v])=>reasons.append(el('li','',`${REASONS[k]}：${v} 家`)));
+      $('diagnosticsSummary').textContent=`名單 ${RESTAURANTS.length} 家 → 符合條件 ${selection.base.length} 家 → 下次可抽 ${selection.pool.length} 家`;
+      $('emptyActions').hidden=!!selection.pool.length;
+      $('emptyMessage').textContent=state.filters.range!=='city'&&!RESTAURANTS.some(r=>routeFor(r)&&routeFor(r).minutes<=(state.filters.range==='near'?15:30))?'目前缺少符合此步行範圍的已核對路線，可自行切換斗六市區查看其他選擇。':'這組條件目前沒有可抽的店家。可調整預算、時間或範圍，其他條件會保留。';
+    }
+    function refresh({changed=false,preserve=state.preserveWheel}={}) {
+      if(state.spinning)return;
+      const date=referenceTime(state.filters),selection=selectPool(RESTAURANTS,state.filters,date,state.lastId,$('noRepeat').checked);
+      state.pool=selection.pool;state.base=selection.base;
+      if(changed){state.preserveWheel=false;preserve=false;if(state.result?.mode==='drawn'){state.result.mode='previous';renderResult();}}
+      if(!preserve)drawWheel(state.pool);
+      updateCounts(selection,date);renderDirectory();
+    }
+    function applyFilters() {
+      if(state.spinning)return;
+      state.filters.budget=$('budget').value;state.filters.time=$('timeMode').value;state.filters.at=$('atTime').value;
+      $('atControl').hidden=state.filters.time!=='at';refresh({changed:true});
+    }
+    function setFilter(key,value) {
+      if(state.spinning)return;
+      state.filters[key]=value;syncControls();refresh({changed:true});
+    }
+    function syncControls() {
+      document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===state.filters.category)));
+      document.querySelectorAll('[data-range]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.range===state.filters.range)));
+      $('budget').value=state.filters.budget;$('timeMode').value=state.filters.time;$('atTime').value=state.filters.at||taipeiParts(new Date()).input;$('atControl').hidden=state.filters.time!=='at';
+    }
+    function resetFilters() {if(state.spinning)return;state.filters={...DEFAULTS};syncControls();refresh({changed:true});}
+    function lockControls(locked) {
+      $('filterFields').disabled=locked;
+      document.querySelectorAll('#noRepeat,#listMode,#search,#resetFilters,#emptyActions button,#restaurantGrid button,#history button').forEach(b=>b.disabled=locked);
+      $('roulette').setAttribute('aria-busy',String(locked));
     }
     function spin() {
-      if(state.spinning||!state.candidates.length)return;
-      const pool=eligibleRestaurants(state.candidates,state.lastId,$('noRepeat').checked),winner=pool[randomIndex(pool.length)];
-      const index=state.candidates.findIndex(r=>r.id===winner.id),wheel=$('wheel');
-      setBusy(true);$('spinLabel').textContent='美味正在轉過來…';
-      const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches,duration=reduced?0:4200;
-      const next=targetRotation(state.rotation,index,state.candidates.length);state.rotation=next;
-      let finished=false,timer;
-      const finish=()=>{if(finished)return;finished=true;clearTimeout(timer);wheel.removeEventListener('transitionend',onEnd);state.lastId=winner.id;state.history=[winner,...state.history].slice(0,5);showResult(winner,true);setBusy(false);renderHistory();$('spinLabel').textContent='再轉一次，換個靈感';};
-      const onEnd=e=>{if(e.target===wheel&&e.propertyName==='transform')finish();};
-      wheel.style.transition=duration?`transform ${duration}ms cubic-bezier(.12,.65,.12,1)`:'none';
-      // Flush the reset transform before starting a new transition.
-      void wheel.offsetWidth;wheel.addEventListener('transitionend',onEnd);wheel.style.transform=`rotate(${next}deg)`;
-      timer=setTimeout(finish,duration?duration+150:0);
+      if(state.spinning)return;
+      refresh({preserve:false});
+      if(!state.pool.length||!$('timeError').hidden)return;
+      const items=state.pool.slice(),filters={...state.filters},date=referenceTime(filters),index=randomIndex(items.length),r=items[index];
+      const before=selectPool(RESTAURANTS,filters,date,null,false).base.map(r=>r.id).join('|');
+      state.spinning=true;state.preserveWheel=false;lockControls(true);$('spin').disabled=true;$('spinLabel').textContent='正在決定下一餐…';
+      $('liveStatus').textContent='正在抽選，請稍候。';
+      let done=false,timer;
+      const finish=()=>{
+        if(done)return;done=true;clearTimeout(timer);$('wheel').removeEventListener('transitionend',onTransition);
+        state.spinning=false;state.finish=null;state.preserveWheel=true;state.lastId=r.id;state.history.unshift(r);state.history=state.history.slice(0,5);
+        const after=selectPool(RESTAURANTS,filters,new Date(),null,false).base.map(r=>r.id).join('|');
+        state.result={r,mode:'drawn',filters,date,index,boundary:filters.time==='now'&&before!==after};
+        renderResult();setMap(r);renderHistory();lockControls(false);refresh({preserve:true});
+        $('liveStatus').textContent=`本次抽中 ${r.name}。${r.address}。${state.result.boundary?'營業時刻已變更，請確認店家資訊。':''}`;
+      };
+      const onTransition=e=>{if(e.target===$('wheel')&&e.propertyName==='transform')finish();};
+      state.finish=finish;
+      const target=targetRotation(0,index,items);state.rotation=target;
+      if(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches||!canvasAvailable) { $('wheel').style.transform=`rotate(${target}deg)`;finish();return; }
+      // Force the reset to paint before starting a new frozen-wheel animation.
+      void $('wheel').offsetWidth;
+      $('wheel').style.transition='transform 4.2s cubic-bezier(.12,.68,.12,1)';$('wheel').addEventListener('transitionend',onTransition);$('wheel').style.transform=`rotate(${target}deg)`;
+      timer=setTimeout(finish,4500);
     }
-    document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>{if(state.spinning)return;state.category=button.dataset.category;refresh();}));
-    $('area').addEventListener('change',()=>{state.area=$('area').value;refresh();});
-    $('emptyReset').addEventListener('click',()=>{state.category='全部';state.area='全部';$('area').value='全部';$('search').value='';refresh();});
-    $('search').addEventListener('input',renderDirectory);$('spin').addEventListener('click',spin);$('totalCount').textContent=RESTAURANTS.length;refresh();
+    function tick() {
+      if(state.filters.time!=='now'||state.spinning)return;
+      const before=state.base.map(r=>r.id).join('|');
+      refresh();
+      if(state.result?.mode==='drawn'&&before!==state.base.map(r=>r.id).join('|')) {
+        state.result.mode='previous';renderResult();
+        $('liveStatus').textContent='表定營業時刻已更新，請依目前條件重新抽選。';
+      }
+    }
+    function init() {
+      $('totalCount').textContent=RESTAURANTS.length;
+      $('coverage').textContent=`目前收錄 ${RESTAURANTS.length} 家，涵蓋校園周邊、市區、溝壩與石榴班；並非斗六市完整普查。`;
+      $('dataCoverage').textContent=`${RESTAURANTS.length} 家收錄 · ${RESTAURANTS.filter(r=>Object.values(r.priceByCategory).some(Boolean)).length} 家有基準價格 · ${RESTAURANTS.filter(r=>r.weeklyHours&&!r.hoursRestricted).length} 家有每週時刻 · ${RESTAURANTS.filter(r=>routeFor(r)).length} 家有已核對步行路線`;
+      document.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>setFilter('category',b.dataset.category)));
+      document.querySelectorAll('[data-range]').forEach(b=>b.addEventListener('click',()=>setFilter('range',b.dataset.range)));
+      ['budget','timeMode','atTime'].forEach(id=>$(id).addEventListener('change',applyFilters));
+      $('noRepeat').addEventListener('change',()=>refresh({changed:true}));$('spin').addEventListener('click',spin);$('resetFilters').addEventListener('click',resetFilters);
+      $('widenRange').addEventListener('click',()=>setFilter('range','city'));$('clearBudget').addEventListener('click',()=>setFilter('budget','any'));$('clearTime').addEventListener('click',()=>setFilter('time','any'));
+      $('search').addEventListener('input',renderDirectory);$('listMode').addEventListener('change',renderDirectory);
+      document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick();});setInterval(tick,60000);
+      syncControls();setMap(null);refresh();
+    }
+    init();
   </script>
 </body>
 </html>

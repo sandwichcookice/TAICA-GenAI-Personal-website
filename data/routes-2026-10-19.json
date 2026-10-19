@@ -1,0 +1,1665 @@
+{
+  "grayspace": {
+    "name": "灰色維度早午餐咖啡廳",
+    "checkedAt": "2026-10-19",
+    "locationSource": "https://maps.app.goo.gl/kPZFdfsv2GksSL778",
+    "request": {
+      "locations": [
+        {
+          "lat": 23.693064,
+          "lon": 120.53366
+        },
+        {
+          "lat": 23.6926739,
+          "lon": 120.5321455
+        }
+      ],
+      "costing": "pedestrian",
+      "units": "kilometers",
+      "language": "en-US"
+    },
+    "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.6926739%2C%22lon%22%3A120.5321455%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+    "response": {
+      "trip": {
+        "locations": [
+          {
+            "type": "break",
+            "lat": 23.693064,
+            "lon": 120.53366,
+            "original_index": 0
+          },
+          {
+            "type": "break",
+            "lat": 23.692673,
+            "lon": 120.532145,
+            "original_index": 1
+          }
+        ],
+        "legs": [
+          {
+            "maneuvers": [
+              {
+                "type": 1,
+                "instruction": "Walk west on 龍潭路/雲196.",
+                "verbal_succinct_transition_instruction": "Walk west.",
+                "verbal_pre_transition_instruction": "Walk west on 龍潭路, 雲196.",
+                "verbal_post_transition_instruction": "Continue for 200 meters.",
+                "street_names": [
+                  "龍潭路",
+                  "雲196"
+                ],
+                "bearing_after": 253,
+                "time": 108.604,
+                "length": 0.165,
+                "cost": 110.654,
+                "begin_shape_index": 0,
+                "end_shape_index": 6,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left.",
+                "verbal_transition_alert_instruction": "Turn left.",
+                "verbal_succinct_transition_instruction": "Turn left. Then You will arrive at your destination.",
+                "verbal_pre_transition_instruction": "Turn left. Then You will arrive at your destination.",
+                "verbal_post_transition_instruction": "Continue for less than 10 meters.",
+                "bearing_before": 255,
+                "bearing_after": 177,
+                "time": 5.365,
+                "length": 0.006,
+                "cost": 10.365,
+                "begin_shape_index": 6,
+                "end_shape_index": 7,
+                "verbal_multi_cue": true,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 4,
+                "instruction": "You have arrived at your destination.",
+                "verbal_transition_alert_instruction": "You will arrive at your destination.",
+                "verbal_pre_transition_instruction": "You have arrived at your destination.",
+                "bearing_before": 177,
+                "time": 0.0,
+                "length": 0.0,
+                "cost": 0.0,
+                "begin_shape_index": 7,
+                "end_shape_index": 7,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              }
+            ],
+            "summary": {
+              "has_time_restrictions": false,
+              "has_toll": false,
+              "has_highway": false,
+              "has_ferry": false,
+              "min_lat": 23.692673,
+              "min_lon": 120.532125,
+              "max_lat": 23.693065,
+              "max_lon": 120.533696,
+              "time": 113.969,
+              "length": 0.171,
+              "cost": 121.019
+            },
+            "shape": "sobel@akx{dFh@vCXfCjFjf@z@vEpDpZvBpNzBG"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 23.692673,
+          "min_lon": 120.532125,
+          "max_lat": 23.693065,
+          "max_lon": 120.533696,
+          "time": 113.969,
+          "length": 0.171,
+          "cost": 121.019
+        },
+        "status_message": "Found route between points",
+        "status": 0,
+        "units": "kilometers",
+        "language": "en-US"
+      }
+    }
+  },
+  "leedong": {
+    "name": "李東記肉骨茶 斗六分店",
+    "checkedAt": "2026-10-19",
+    "locationSource": "https://supertaste.tvbs.com.tw/infocard/31480",
+    "request": {
+      "locations": [
+        {
+          "lat": 23.693064,
+          "lon": 120.53366
+        },
+        {
+          "lat": 23.6920879,
+          "lon": 120.5294589
+        }
+      ],
+      "costing": "pedestrian",
+      "units": "kilometers",
+      "language": "en-US"
+    },
+    "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.6920879%2C%22lon%22%3A120.5294589%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+    "response": {
+      "trip": {
+        "locations": [
+          {
+            "type": "break",
+            "lat": 23.693064,
+            "lon": 120.53366,
+            "original_index": 0
+          },
+          {
+            "type": "break",
+            "lat": 23.692087,
+            "lon": 120.529458,
+            "side_of_street": "right",
+            "original_index": 1
+          }
+        ],
+        "legs": [
+          {
+            "maneuvers": [
+              {
+                "type": 1,
+                "instruction": "Walk west on 龍潭路/雲196.",
+                "verbal_succinct_transition_instruction": "Walk west.",
+                "verbal_pre_transition_instruction": "Walk west on 龍潭路, 雲196.",
+                "verbal_post_transition_instruction": "Continue for 400 meters.",
+                "street_names": [
+                  "龍潭路",
+                  "雲196"
+                ],
+                "bearing_after": 253,
+                "time": 312.737,
+                "length": 0.444,
+                "cost": 324.074,
+                "begin_shape_index": 0,
+                "end_shape_index": 13,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 5,
+                "instruction": "Your destination is on the right.",
+                "verbal_transition_alert_instruction": "Your destination will be on the right.",
+                "verbal_pre_transition_instruction": "Your destination is on the right.",
+                "bearing_before": 243,
+                "time": 0.0,
+                "length": 0.0,
+                "cost": 0.0,
+                "begin_shape_index": 13,
+                "end_shape_index": 13,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              }
+            ],
+            "summary": {
+              "has_time_restrictions": false,
+              "has_toll": false,
+              "has_highway": false,
+              "has_ferry": false,
+              "min_lat": 23.691967,
+              "min_lon": 120.529525,
+              "max_lat": 23.693065,
+              "max_lon": 120.533696,
+              "time": 312.737,
+              "length": 0.444,
+              "cost": 324.074
+            },
+            "shape": "sobel@akx{dFh@vCXfCjFjf@z@vEpDpZvBpNhEhZfFx\\~ApKbJtm@pDrMpGhQbEbL"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 23.691967,
+          "min_lon": 120.529525,
+          "max_lat": 23.693065,
+          "max_lon": 120.533696,
+          "time": 312.737,
+          "length": 0.444,
+          "cost": 324.074
+        },
+        "status_message": "Found route between points",
+        "status": 0,
+        "units": "kilometers",
+        "language": "en-US"
+      }
+    }
+  },
+  "pengtea": {
+    "name": "烹小茶",
+    "checkedAt": "2026-10-19",
+    "locationSource": "https://goo.gl/maps/Kbxj2JMGG8wF5dTH9",
+    "request": {
+      "locations": [
+        {
+          "lat": 23.693064,
+          "lon": 120.53366
+        },
+        {
+          "lat": 23.6923962,
+          "lon": 120.5313398
+        }
+      ],
+      "costing": "pedestrian",
+      "units": "kilometers",
+      "language": "en-US"
+    },
+    "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.6923962%2C%22lon%22%3A120.5313398%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+    "response": {
+      "trip": {
+        "locations": [
+          {
+            "type": "break",
+            "lat": 23.693064,
+            "lon": 120.53366,
+            "original_index": 0
+          },
+          {
+            "type": "break",
+            "lat": 23.692396,
+            "lon": 120.531339,
+            "side_of_street": "left",
+            "original_index": 1
+          }
+        ],
+        "legs": [
+          {
+            "maneuvers": [
+              {
+                "type": 1,
+                "instruction": "Walk west on 龍潭路/雲196.",
+                "verbal_succinct_transition_instruction": "Walk west.",
+                "verbal_pre_transition_instruction": "Walk west on 龍潭路, 雲196.",
+                "verbal_post_transition_instruction": "Continue for 300 meters.",
+                "street_names": [
+                  "龍潭路",
+                  "雲196"
+                ],
+                "bearing_after": 253,
+                "time": 193.861,
+                "length": 0.261,
+                "cost": 205.197,
+                "begin_shape_index": 0,
+                "end_shape_index": 8,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left.",
+                "verbal_transition_alert_instruction": "Turn left.",
+                "verbal_succinct_transition_instruction": "Turn left. Then Your destination will be on the left.",
+                "verbal_pre_transition_instruction": "Turn left. Then Your destination will be on the left.",
+                "verbal_post_transition_instruction": "Continue for 20 meters.",
+                "bearing_before": 255,
+                "bearing_after": 170,
+                "time": 12.192,
+                "length": 0.015,
+                "cost": 17.192,
+                "begin_shape_index": 8,
+                "end_shape_index": 9,
+                "verbal_multi_cue": true,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 6,
+                "instruction": "Your destination is on the left.",
+                "verbal_transition_alert_instruction": "Your destination will be on the left.",
+                "verbal_pre_transition_instruction": "Your destination is on the left.",
+                "bearing_before": 170,
+                "time": 0.0,
+                "length": 0.0,
+                "cost": 0.0,
+                "begin_shape_index": 9,
+                "end_shape_index": 9,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              }
+            ],
+            "summary": {
+              "has_time_restrictions": false,
+              "has_toll": false,
+              "has_highway": false,
+              "has_ferry": false,
+              "min_lat": 23.692379,
+              "min_lon": 120.531211,
+              "max_lat": 23.693065,
+              "max_lon": 120.533696,
+              "time": 206.053,
+              "length": 0.276,
+              "cost": 222.389
+            },
+            "shape": "sobel@akx{dFh@vCXfCjFjf@z@vEpDpZvBpNhEhZfFx\\tGw@"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 23.692379,
+          "min_lon": 120.531211,
+          "max_lat": 23.693065,
+          "max_lon": 120.533696,
+          "time": 206.053,
+          "length": 0.276,
+          "cost": 222.389
+        },
+        "status_message": "Found route between points",
+        "status": 0,
+        "units": "kilometers",
+        "language": "en-US"
+      }
+    }
+  },
+  "chico": {
+    "name": "CHICO 餐廚",
+    "checkedAt": "2026-10-19",
+    "locationSource": "https://goo.gl/maps/dEW87FhXuASy8ZpS6",
+    "request": {
+      "locations": [
+        {
+          "lat": 23.693064,
+          "lon": 120.53366
+        },
+        {
+          "lat": 23.700042,
+          "lon": 120.5413793
+        }
+      ],
+      "costing": "pedestrian",
+      "units": "kilometers",
+      "language": "en-US"
+    },
+    "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.700042%2C%22lon%22%3A120.5413793%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+    "response": {
+      "trip": {
+        "locations": [
+          {
+            "type": "break",
+            "lat": 23.693064,
+            "lon": 120.53366,
+            "original_index": 0
+          },
+          {
+            "type": "break",
+            "lat": 23.700042,
+            "lon": 120.541379,
+            "side_of_street": "left",
+            "original_index": 1
+          }
+        ],
+        "legs": [
+          {
+            "maneuvers": [
+              {
+                "type": 1,
+                "instruction": "Walk east on 龍潭路/雲196.",
+                "verbal_succinct_transition_instruction": "Walk east.",
+                "verbal_pre_transition_instruction": "Walk east on 龍潭路, 雲196.",
+                "verbal_post_transition_instruction": "Continue for 500 meters.",
+                "street_names": [
+                  "龍潭路",
+                  "雲196"
+                ],
+                "bearing_after": 75,
+                "time": 371.517,
+                "length": 0.468,
+                "cost": 381.428,
+                "begin_shape_index": 0,
+                "end_shape_index": 10,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left onto 中山路/3/台3線.",
+                "verbal_transition_alert_instruction": "Turn left onto 中山路.",
+                "verbal_succinct_transition_instruction": "Turn left.",
+                "verbal_pre_transition_instruction": "Turn left onto 中山路, 3.",
+                "verbal_post_transition_instruction": "Continue for 300 meters.",
+                "street_names": [
+                  "中山路",
+                  "3",
+                  "台3線"
+                ],
+                "bearing_before": 84,
+                "bearing_after": 354,
+                "time": 211.821,
+                "length": 0.297,
+                "cost": 216.821,
+                "begin_shape_index": 10,
+                "end_shape_index": 22,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 9,
+                "instruction": "Bear right onto 大學路二段/3/台3線.",
+                "verbal_transition_alert_instruction": "Bear right onto 大學路二段.",
+                "verbal_succinct_transition_instruction": "Bear right.",
+                "verbal_pre_transition_instruction": "Bear right onto 大學路二段, 3.",
+                "verbal_post_transition_instruction": "Continue for 400 meters.",
+                "street_names": [
+                  "大學路二段",
+                  "3",
+                  "台3線"
+                ],
+                "bearing_before": 359,
+                "bearing_after": 79,
+                "time": 316.117,
+                "length": 0.445,
+                "cost": 316.117,
+                "begin_shape_index": 22,
+                "end_shape_index": 28,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left onto 鎮南路/雲197.",
+                "verbal_transition_alert_instruction": "Turn left onto 鎮南路.",
+                "verbal_succinct_transition_instruction": "Turn left.",
+                "verbal_pre_transition_instruction": "Turn left onto 鎮南路, 雲197.",
+                "verbal_post_transition_instruction": "Continue for 300 meters.",
+                "street_names": [
+                  "鎮南路",
+                  "雲197"
+                ],
+                "bearing_before": 78,
+                "bearing_after": 345,
+                "time": 211.943,
+                "length": 0.278,
+                "cost": 214.188,
+                "begin_shape_index": 28,
+                "end_shape_index": 40,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 6,
+                "instruction": "Your destination is on the left.",
+                "verbal_transition_alert_instruction": "Your destination will be on the left.",
+                "verbal_pre_transition_instruction": "Your destination is on the left.",
+                "bearing_before": 349,
+                "time": 0.0,
+                "length": 0.0,
+                "cost": 0.0,
+                "begin_shape_index": 40,
+                "end_shape_index": 40,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              }
+            ],
+            "summary": {
+              "has_time_restrictions": false,
+              "has_toll": false,
+              "has_highway": false,
+              "has_ferry": false,
+              "min_lat": 23.693065,
+              "min_lon": 120.533696,
+              "max_lat": 23.700067,
+              "max_lon": 120.542215,
+              "time": 1111.4,
+              "length": 1.489,
+              "cost": 1128.555
+            },
+            "shape": "sobel@akx{dFaNy}@qLa{@YkBSuAi@oCgJik@_Og}@aEkZS{COqDmCNgHRme@lAiO^aGNkAD}AF{\\t@cX~@}Tx@a@@aFDi@oFk@sFkDsY{]krCcLsdAk@aFyG`ByKtBsCpA_Ez@sKbCwi@vLkCj@o\\vDmG`AqGbA{ARcIbA"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 23.693065,
+          "min_lon": 120.533696,
+          "max_lat": 23.700067,
+          "max_lon": 120.542215,
+          "time": 1111.4,
+          "length": 1.489,
+          "cost": 1128.555
+        },
+        "status_message": "Found route between points",
+        "status": 0,
+        "units": "kilometers",
+        "language": "en-US"
+      }
+    }
+  },
+  "yipin": {
+    "name": "一品香火鍋",
+    "checkedAt": "2026-10-19",
+    "locationSource": "https://goo.gl/maps/xL5fW9Ti1afi7pGh8",
+    "request": {
+      "locations": [
+        {
+          "lat": 23.693064,
+          "lon": 120.53366
+        },
+        {
+          "lat": 23.7135627,
+          "lon": 120.5433374
+        }
+      ],
+      "costing": "pedestrian",
+      "units": "kilometers",
+      "language": "en-US"
+    },
+    "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.7135627%2C%22lon%22%3A120.5433374%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+    "response": {
+      "trip": {
+        "locations": [
+          {
+            "type": "break",
+            "lat": 23.693064,
+            "lon": 120.53366,
+            "original_index": 0
+          },
+          {
+            "type": "break",
+            "lat": 23.713562,
+            "lon": 120.543337,
+            "original_index": 1
+          }
+        ],
+        "legs": [
+          {
+            "maneuvers": [
+              {
+                "type": 1,
+                "instruction": "Walk east on 龍潭路/雲196.",
+                "verbal_succinct_transition_instruction": "Walk east.",
+                "verbal_pre_transition_instruction": "Walk east on 龍潭路, 雲196.",
+                "verbal_post_transition_instruction": "Continue for 500 meters.",
+                "street_names": [
+                  "龍潭路",
+                  "雲196"
+                ],
+                "bearing_after": 75,
+                "time": 371.517,
+                "length": 0.468,
+                "cost": 381.428,
+                "begin_shape_index": 0,
+                "end_shape_index": 10,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left onto 中山路/3/台3線. Continue on 中山路.",
+                "verbal_transition_alert_instruction": "Turn left onto 中山路.",
+                "verbal_succinct_transition_instruction": "Turn left.",
+                "verbal_pre_transition_instruction": "Turn left onto 中山路, 3.",
+                "verbal_post_transition_instruction": "Continue on 中山路 for 1.5 kilometers.",
+                "street_names": [
+                  "中山路"
+                ],
+                "begin_street_names": [
+                  "中山路",
+                  "3",
+                  "台3線"
+                ],
+                "bearing_before": 84,
+                "bearing_after": 354,
+                "time": 996.152,
+                "length": 1.384,
+                "cost": 1007.2,
+                "begin_shape_index": 10,
+                "end_shape_index": 65,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 24,
+                "instruction": "Keep left to take 中山路/雲51/雲197.",
+                "verbal_transition_alert_instruction": "Keep left to take 中山路.",
+                "verbal_pre_transition_instruction": "Keep left to take 中山路, 雲51.",
+                "verbal_post_transition_instruction": "Continue for 20 meters.",
+                "street_names": [
+                  "中山路",
+                  "雲51",
+                  "雲197"
+                ],
+                "bearing_before": 23,
+                "bearing_after": 30,
+                "time": 13.411,
+                "length": 0.019,
+                "cost": 13.411,
+                "begin_shape_index": 65,
+                "end_shape_index": 66,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 23,
+                "instruction": "Keep right to stay on 中山路/雲51.",
+                "verbal_transition_alert_instruction": "Keep right to stay on 中山路.",
+                "verbal_pre_transition_instruction": "Keep right to stay on 中山路, 雲51.",
+                "verbal_post_transition_instruction": "Continue for 500 meters.",
+                "street_names": [
+                  "中山路",
+                  "雲51"
+                ],
+                "bearing_before": 30,
+                "bearing_after": 30,
+                "time": 343.55,
+                "length": 0.452,
+                "cost": 351.995,
+                "begin_shape_index": 66,
+                "end_shape_index": 78,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 22,
+                "instruction": "Keep straight to stay on 中山路/雲51.",
+                "verbal_transition_alert_instruction": "Keep straight to stay on 中山路.",
+                "verbal_pre_transition_instruction": "Keep straight to stay on 中山路, 雲51.",
+                "verbal_post_transition_instruction": "Continue for 100 meters.",
+                "street_names": [
+                  "中山路",
+                  "雲51"
+                ],
+                "bearing_before": 28,
+                "bearing_after": 40,
+                "time": 89.517,
+                "length": 0.114,
+                "cost": 89.517,
+                "begin_shape_index": 78,
+                "end_shape_index": 81,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left onto 斗六門/雲51.",
+                "verbal_transition_alert_instruction": "Turn left onto 斗六門.",
+                "verbal_succinct_transition_instruction": "Turn left. Then Turn right onto the walkway.",
+                "verbal_pre_transition_instruction": "Turn left onto 斗六門, 雲51. Then Turn right onto the walkway.",
+                "verbal_post_transition_instruction": "Continue for less than 10 meters.",
+                "street_names": [
+                  "斗六門",
+                  "雲51"
+                ],
+                "bearing_before": 46,
+                "bearing_after": 325,
+                "time": 2.117,
+                "length": 0.003,
+                "cost": 4.235,
+                "begin_shape_index": 81,
+                "end_shape_index": 82,
+                "verbal_multi_cue": true,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto the walkway.",
+                "verbal_transition_alert_instruction": "Turn right onto the walkway.",
+                "verbal_succinct_transition_instruction": "Turn right. Then Turn right onto the walkway.",
+                "verbal_pre_transition_instruction": "Turn right onto the walkway. Then Turn right onto the walkway.",
+                "verbal_post_transition_instruction": "Continue for 10 meters.",
+                "bearing_before": 325,
+                "bearing_after": 55,
+                "time": 9.176,
+                "length": 0.013,
+                "cost": 14.176,
+                "begin_shape_index": 82,
+                "end_shape_index": 83,
+                "rough": true,
+                "verbal_multi_cue": true,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto the walkway.",
+                "verbal_transition_alert_instruction": "Turn right onto the walkway.",
+                "verbal_succinct_transition_instruction": "Turn right.",
+                "verbal_pre_transition_instruction": "Turn right onto the walkway.",
+                "verbal_post_transition_instruction": "Continue for 50 meters.",
+                "bearing_before": 55,
+                "bearing_after": 124,
+                "time": 36.931,
+                "length": 0.054,
+                "cost": 36.931,
+                "begin_shape_index": 83,
+                "end_shape_index": 93,
+                "rough": true,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto the walkway.",
+                "verbal_transition_alert_instruction": "Turn right onto the walkway.",
+                "verbal_succinct_transition_instruction": "Turn right. Then Turn left onto 斗六門.",
+                "verbal_pre_transition_instruction": "Turn right onto the walkway. Then Turn left onto 斗六門.",
+                "verbal_post_transition_instruction": "Continue for 20 meters.",
+                "bearing_before": 335,
+                "bearing_after": 58,
+                "time": 10.39,
+                "length": 0.016,
+                "cost": 10.39,
+                "begin_shape_index": 93,
+                "end_shape_index": 94,
+                "rough": true,
+                "verbal_multi_cue": true,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left onto 斗六門/雲51.",
+                "verbal_transition_alert_instruction": "Turn left onto 斗六門.",
+                "verbal_succinct_transition_instruction": "Turn left. Then Turn right onto 鎮北路.",
+                "verbal_pre_transition_instruction": "Turn left onto 斗六門, 雲51. Then Turn right onto 鎮北路.",
+                "verbal_post_transition_instruction": "Continue for less than 10 meters.",
+                "street_names": [
+                  "斗六門",
+                  "雲51"
+                ],
+                "bearing_before": 58,
+                "bearing_after": 326,
+                "time": 5.647,
+                "length": 0.008,
+                "cost": 16.294,
+                "begin_shape_index": 94,
+                "end_shape_index": 95,
+                "verbal_multi_cue": true,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto 鎮北路/雲51.",
+                "verbal_transition_alert_instruction": "Turn right onto 鎮北路.",
+                "verbal_succinct_transition_instruction": "Turn right.",
+                "verbal_pre_transition_instruction": "Turn right onto 鎮北路, 雲51.",
+                "verbal_post_transition_instruction": "Continue for 300 meters.",
+                "street_names": [
+                  "鎮北路",
+                  "雲51"
+                ],
+                "bearing_before": 326,
+                "bearing_after": 26,
+                "time": 184.075,
+                "length": 0.261,
+                "cost": 185.814,
+                "begin_shape_index": 95,
+                "end_shape_index": 105,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto 武昌路.",
+                "verbal_transition_alert_instruction": "Turn right onto 武昌路.",
+                "verbal_succinct_transition_instruction": "Turn right.",
+                "verbal_pre_transition_instruction": "Turn right onto 武昌路.",
+                "verbal_post_transition_instruction": "Continue for 20 meters.",
+                "street_names": [
+                  "武昌路"
+                ],
+                "bearing_before": 353,
+                "bearing_after": 60,
+                "time": 14.828,
+                "length": 0.021,
+                "cost": 19.828,
+                "begin_shape_index": 105,
+                "end_shape_index": 106,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 4,
+                "instruction": "You have arrived at your destination.",
+                "verbal_transition_alert_instruction": "You will arrive at your destination.",
+                "verbal_pre_transition_instruction": "You have arrived at your destination.",
+                "bearing_before": 60,
+                "time": 0.0,
+                "length": 0.0,
+                "cost": 0.0,
+                "begin_shape_index": 106,
+                "end_shape_index": 106,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              }
+            ],
+            "summary": {
+              "has_time_restrictions": false,
+              "has_toll": false,
+              "has_highway": false,
+              "has_ferry": false,
+              "min_lat": 23.693065,
+              "min_lon": 120.533696,
+              "max_lat": 23.713598,
+              "max_lon": 120.543375,
+              "time": 2077.318,
+              "length": 2.815,
+              "cost": 2131.225
+            },
+            "shape": "sobel@akx{dFaNy}@qLa{@YkBSuAi@oCgJik@_Og}@aEkZS{COqDmCNgHRme@lAiO^aGNkAD}AF{\\t@cX~@}Tx@a@@aFDuCIeCIgFSaBGgn@uByGSmIQcJQcAE}@Ek]oA_Us@gk@gB_GQs@CmV_@uT]yc@sE_H}@{JkByGmAqJoAiGqAgGsA}UcFmDu@yA[_PeDaO{CaLcCoH_B{Fa@iAc@eu@qMsHeBiSuDuJ_AcNa@wNwAcJyAgKiDsA_@mAc@kH{DaLcGgGiDu_@{Sm`@oU}W}NsF}C_a@{TwN{HwCaBsEqC_VoM}MoGcFsEoIcHy[e_@c@ZgCsEbAaBd@sB?_B@Ye@{BuAwBsAs@sB]uBLu@Z}CoG}B|AqGyDiIx@wIZsg@jDsDOyEPmb@zAkBHqGv@mMz@{DeJ"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 23.693065,
+          "min_lon": 120.533696,
+          "max_lat": 23.713598,
+          "max_lon": 120.543375,
+          "time": 2077.318,
+          "length": 2.815,
+          "cost": 2131.225
+        },
+        "status_message": "Found route between points",
+        "status": 0,
+        "units": "kilometers",
+        "language": "en-US"
+      }
+    }
+  },
+  "oldstreet": {
+    "name": "古早味老街碗粿",
+    "checkedAt": "2026-10-19",
+    "locationSource": "https://goo.gl/maps/bFMpsQs6AAD9q49a8",
+    "request": {
+      "locations": [
+        {
+          "lat": 23.693064,
+          "lon": 120.53366
+        },
+        {
+          "lat": 23.7082001,
+          "lon": 120.5414796
+        }
+      ],
+      "costing": "pedestrian",
+      "units": "kilometers",
+      "language": "en-US"
+    },
+    "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.7082001%2C%22lon%22%3A120.5414796%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+    "response": {
+      "trip": {
+        "locations": [
+          {
+            "type": "break",
+            "lat": 23.693064,
+            "lon": 120.53366,
+            "original_index": 0
+          },
+          {
+            "type": "break",
+            "lat": 23.7082,
+            "lon": 120.541479,
+            "side_of_street": "left",
+            "original_index": 1
+          }
+        ],
+        "legs": [
+          {
+            "maneuvers": [
+              {
+                "type": 1,
+                "instruction": "Walk east on 龍潭路/雲196.",
+                "verbal_succinct_transition_instruction": "Walk east.",
+                "verbal_pre_transition_instruction": "Walk east on 龍潭路, 雲196.",
+                "verbal_post_transition_instruction": "Continue for 500 meters.",
+                "street_names": [
+                  "龍潭路",
+                  "雲196"
+                ],
+                "bearing_after": 75,
+                "time": 371.517,
+                "length": 0.468,
+                "cost": 381.428,
+                "begin_shape_index": 0,
+                "end_shape_index": 10,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left onto 中山路/3/台3線. Continue on 中山路.",
+                "verbal_transition_alert_instruction": "Turn left onto 中山路.",
+                "verbal_succinct_transition_instruction": "Turn left.",
+                "verbal_pre_transition_instruction": "Turn left onto 中山路, 3.",
+                "verbal_post_transition_instruction": "Continue on 中山路 for 1.5 kilometers.",
+                "street_names": [
+                  "中山路"
+                ],
+                "begin_street_names": [
+                  "中山路",
+                  "3",
+                  "台3線"
+                ],
+                "bearing_before": 84,
+                "bearing_after": 354,
+                "time": 996.152,
+                "length": 1.384,
+                "cost": 1007.2,
+                "begin_shape_index": 10,
+                "end_shape_index": 65,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 23,
+                "instruction": "Keep right to take 太平路.",
+                "verbal_transition_alert_instruction": "Keep right to take 太平路.",
+                "verbal_pre_transition_instruction": "Keep right to take 太平路.",
+                "verbal_post_transition_instruction": "Continue for 300 meters.",
+                "street_names": [
+                  "太平路"
+                ],
+                "bearing_before": 23,
+                "bearing_after": 55,
+                "time": 215.564,
+                "length": 0.277,
+                "cost": 220.564,
+                "begin_shape_index": 65,
+                "end_shape_index": 70,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 6,
+                "instruction": "Your destination is on the left.",
+                "verbal_transition_alert_instruction": "Your destination will be on the left.",
+                "verbal_pre_transition_instruction": "Your destination is on the left.",
+                "bearing_before": 38,
+                "time": 0.0,
+                "length": 0.0,
+                "cost": 0.0,
+                "begin_shape_index": 70,
+                "end_shape_index": 70,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              }
+            ],
+            "summary": {
+              "has_time_restrictions": false,
+              "has_toll": false,
+              "has_highway": false,
+              "has_ferry": false,
+              "min_lat": 23.693065,
+              "min_lon": 120.533696,
+              "max_lat": 23.708141,
+              "max_lon": 120.541562,
+              "time": 1583.235,
+              "length": 2.13,
+              "cost": 1609.193
+            },
+            "shape": "sobel@akx{dFaNy}@qLa{@YkBSuAi@oCgJik@_Og}@aEkZS{COqDmCNgHRme@lAiO^aGNkAD}AF{\\t@cX~@}Tx@a@@aFDuCIeCIgFSaBGgn@uByGSmIQcJQcAE}@Ek]oA_Us@gk@gB_GQs@CmV_@uT]yc@sE_H}@{JkByGmAqJoAiGqAgGsA}UcFmDu@yA[_PeDaO{CaLcCoH_B{Fa@iAc@eu@qMsHeBiSuDuJ_AcNa@wNwAcJyAgKiDsA_@mAc@m[}k@qWeTqGuHel@ae@wBeB"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 23.693065,
+          "min_lon": 120.533696,
+          "max_lat": 23.708141,
+          "max_lon": 120.541562,
+          "time": 1583.235,
+          "length": 2.13,
+          "cost": 1609.193
+        },
+        "status_message": "Found route between points",
+        "status": 0,
+        "units": "kilometers",
+        "language": "en-US"
+      }
+    }
+  },
+  "aguoshi": {
+    "name": "阿國獅魷魚羹",
+    "checkedAt": "2026-10-19",
+    "locationSource": "https://goo.gl/maps/bE2JUwH9ggQSGLSj8",
+    "request": {
+      "locations": [
+        {
+          "lat": 23.693064,
+          "lon": 120.53366
+        },
+        {
+          "lat": 23.709481,
+          "lon": 120.544797
+        }
+      ],
+      "costing": "pedestrian",
+      "units": "kilometers",
+      "language": "en-US"
+    },
+    "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.709481%2C%22lon%22%3A120.544797%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+    "response": {
+      "trip": {
+        "locations": [
+          {
+            "type": "break",
+            "lat": 23.693064,
+            "lon": 120.53366,
+            "original_index": 0
+          },
+          {
+            "type": "break",
+            "lat": 23.709481,
+            "lon": 120.544797,
+            "side_of_street": "right",
+            "original_index": 1
+          }
+        ],
+        "legs": [
+          {
+            "maneuvers": [
+              {
+                "type": 1,
+                "instruction": "Walk east on 龍潭路/雲196.",
+                "verbal_succinct_transition_instruction": "Walk east.",
+                "verbal_pre_transition_instruction": "Walk east on 龍潭路, 雲196.",
+                "verbal_post_transition_instruction": "Continue for 500 meters.",
+                "street_names": [
+                  "龍潭路",
+                  "雲196"
+                ],
+                "bearing_after": 75,
+                "time": 371.517,
+                "length": 0.468,
+                "cost": 381.428,
+                "begin_shape_index": 0,
+                "end_shape_index": 10,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left onto 中山路/3/台3線. Continue on 中山路.",
+                "verbal_transition_alert_instruction": "Turn left onto 中山路.",
+                "verbal_succinct_transition_instruction": "Turn left.",
+                "verbal_pre_transition_instruction": "Turn left onto 中山路, 3.",
+                "verbal_post_transition_instruction": "Continue on 中山路 for 1.5 kilometers.",
+                "street_names": [
+                  "中山路"
+                ],
+                "begin_street_names": [
+                  "中山路",
+                  "3",
+                  "台3線"
+                ],
+                "bearing_before": 84,
+                "bearing_after": 354,
+                "time": 996.152,
+                "length": 1.384,
+                "cost": 1007.2,
+                "begin_shape_index": 10,
+                "end_shape_index": 65,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 23,
+                "instruction": "Keep right to take 太平路.",
+                "verbal_transition_alert_instruction": "Keep right to take 太平路.",
+                "verbal_pre_transition_instruction": "Keep right to take 太平路.",
+                "verbal_post_transition_instruction": "Continue for 500 meters.",
+                "street_names": [
+                  "太平路"
+                ],
+                "bearing_before": 23,
+                "bearing_after": 55,
+                "time": 371.811,
+                "length": 0.497,
+                "cost": 376.811,
+                "begin_shape_index": 65,
+                "end_shape_index": 75,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto 大同路.",
+                "verbal_transition_alert_instruction": "Turn right onto 大同路.",
+                "verbal_succinct_transition_instruction": "Turn right.",
+                "verbal_pre_transition_instruction": "Turn right onto 大同路.",
+                "verbal_post_transition_instruction": "Continue for 200 meters.",
+                "street_names": [
+                  "大同路"
+                ],
+                "bearing_before": 28,
+                "bearing_after": 116,
+                "time": 181.774,
+                "length": 0.227,
+                "cost": 196.896,
+                "begin_shape_index": 75,
+                "end_shape_index": 82,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 5,
+                "instruction": "Your destination is on the right.",
+                "verbal_transition_alert_instruction": "Your destination will be on the right.",
+                "verbal_pre_transition_instruction": "Your destination is on the right.",
+                "bearing_before": 90,
+                "time": 0.0,
+                "length": 0.0,
+                "cost": 0.0,
+                "begin_shape_index": 82,
+                "end_shape_index": 82,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              }
+            ],
+            "summary": {
+              "has_time_restrictions": false,
+              "has_toll": false,
+              "has_highway": false,
+              "has_ferry": false,
+              "min_lat": 23.693065,
+              "min_lon": 120.533696,
+              "max_lat": 23.709844,
+              "max_lon": 120.544797,
+              "time": 1921.257,
+              "length": 2.577,
+              "cost": 1962.337
+            },
+            "shape": "sobel@akx{dFaNy}@qLa{@YkBSuAi@oCgJik@_Og}@aEkZS{COqDmCNgHRme@lAiO^aGNkAD}AF{\\t@cX~@}Tx@a@@aFDuCIeCIgFSaBGgn@uByGSmIQcJQcAE}@Ek]oA_Us@gk@gB_GQs@CmV_@uT]yc@sE_H}@{JkByGmAqJoAiGqAgGsA}UcFmDu@yA[_PeDaO{CaLcCoH_B{Fa@iAc@eu@qMsHeBiSuDuJ_AcNa@wNwAcJyAgKiDsA_@mAc@m[}k@qWeTqGuHel@ae@cXkTmO}G}WsLyBaA{b@aSaCiAp@mBdGuWhAaHlAeYJc^HqZ@}M"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 23.693065,
+          "min_lon": 120.533696,
+          "max_lat": 23.709844,
+          "max_lon": 120.544797,
+          "time": 1921.257,
+          "length": 2.577,
+          "cost": 1962.337
+        },
+        "status_message": "Found route between points",
+        "status": 0,
+        "units": "kilometers",
+        "language": "en-US"
+      }
+    }
+  },
+  "aci": {
+    "name": "阿賜豬腳飯",
+    "checkedAt": "2026-10-19",
+    "locationSource": "https://goo.gl/maps/dUrihZ773yMKYiYY7",
+    "request": {
+      "locations": [
+        {
+          "lat": 23.693064,
+          "lon": 120.53366
+        },
+        {
+          "lat": 23.7094377,
+          "lon": 120.5436973
+        }
+      ],
+      "costing": "pedestrian",
+      "units": "kilometers",
+      "language": "en-US"
+    },
+    "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.7094377%2C%22lon%22%3A120.5436973%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+    "response": {
+      "trip": {
+        "locations": [
+          {
+            "type": "break",
+            "lat": 23.693064,
+            "lon": 120.53366,
+            "original_index": 0
+          },
+          {
+            "type": "break",
+            "lat": 23.709437,
+            "lon": 120.543697,
+            "side_of_street": "left",
+            "original_index": 1
+          }
+        ],
+        "legs": [
+          {
+            "maneuvers": [
+              {
+                "type": 1,
+                "instruction": "Walk east on 龍潭路/雲196.",
+                "verbal_succinct_transition_instruction": "Walk east.",
+                "verbal_pre_transition_instruction": "Walk east on 龍潭路, 雲196.",
+                "verbal_post_transition_instruction": "Continue for 500 meters.",
+                "street_names": [
+                  "龍潭路",
+                  "雲196"
+                ],
+                "bearing_after": 75,
+                "time": 371.517,
+                "length": 0.468,
+                "cost": 381.428,
+                "begin_shape_index": 0,
+                "end_shape_index": 10,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left onto 中山路/3/台3線. Continue on 中山路.",
+                "verbal_transition_alert_instruction": "Turn left onto 中山路.",
+                "verbal_succinct_transition_instruction": "Turn left.",
+                "verbal_pre_transition_instruction": "Turn left onto 中山路, 3.",
+                "verbal_post_transition_instruction": "Continue on 中山路 for 1.5 kilometers.",
+                "street_names": [
+                  "中山路"
+                ],
+                "begin_street_names": [
+                  "中山路",
+                  "3",
+                  "台3線"
+                ],
+                "bearing_before": 84,
+                "bearing_after": 354,
+                "time": 996.152,
+                "length": 1.384,
+                "cost": 1007.2,
+                "begin_shape_index": 10,
+                "end_shape_index": 65,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 23,
+                "instruction": "Keep right to take 太平路.",
+                "verbal_transition_alert_instruction": "Keep right to take 太平路.",
+                "verbal_pre_transition_instruction": "Keep right to take 太平路.",
+                "verbal_post_transition_instruction": "Continue for 500 meters.",
+                "street_names": [
+                  "太平路"
+                ],
+                "bearing_before": 23,
+                "bearing_after": 55,
+                "time": 371.811,
+                "length": 0.497,
+                "cost": 376.811,
+                "begin_shape_index": 65,
+                "end_shape_index": 75,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto 大同路.",
+                "verbal_transition_alert_instruction": "Turn right onto 大同路.",
+                "verbal_succinct_transition_instruction": "Turn right.",
+                "verbal_pre_transition_instruction": "Turn right onto 大同路.",
+                "verbal_post_transition_instruction": "Continue for 100 meters.",
+                "street_names": [
+                  "大同路"
+                ],
+                "bearing_before": 28,
+                "bearing_after": 116,
+                "time": 73.101,
+                "length": 0.107,
+                "cost": 78.101,
+                "begin_shape_index": 75,
+                "end_shape_index": 79,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto 公正街.",
+                "verbal_transition_alert_instruction": "Turn right onto 公正街.",
+                "verbal_succinct_transition_instruction": "Turn right.",
+                "verbal_pre_transition_instruction": "Turn right onto 公正街.",
+                "verbal_post_transition_instruction": "Continue for 20 meters.",
+                "street_names": [
+                  "公正街"
+                ],
+                "bearing_before": 96,
+                "bearing_after": 182,
+                "time": 18.093,
+                "length": 0.019,
+                "cost": 25.808,
+                "begin_shape_index": 79,
+                "end_shape_index": 80,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 6,
+                "instruction": "Your destination is on the left.",
+                "verbal_transition_alert_instruction": "Your destination will be on the left.",
+                "verbal_pre_transition_instruction": "Your destination is on the left.",
+                "bearing_before": 182,
+                "time": 0.0,
+                "length": 0.0,
+                "cost": 0.0,
+                "begin_shape_index": 80,
+                "end_shape_index": 80,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              }
+            ],
+            "summary": {
+              "has_time_restrictions": false,
+              "has_toll": false,
+              "has_highway": false,
+              "has_ferry": false,
+              "min_lat": 23.693065,
+              "min_lon": 120.533696,
+              "max_lat": 23.709844,
+              "max_lon": 120.543618,
+              "time": 1830.677,
+              "length": 2.476,
+              "cost": 1869.35
+            },
+            "shape": "sobel@akx{dFaNy}@qLa{@YkBSuAi@oCgJik@_Og}@aEkZS{COqDmCNgHRme@lAiO^aGNkAD}AF{\\t@cX~@}Tx@a@@aFDuCIeCIgFSaBGgn@uByGSmIQcJQcAE}@Ek]oA_Us@gk@gB_GQs@CmV_@uT]yc@sE_H}@{JkByGmAqJoAiGqAgGsA}UcFmDu@yA[_PeDaO{CaLcCoH_B{Fa@iAc@eu@qMsHeBiSuDuJ_AcNa@wNwAcJyAgKiDsA_@mAc@m[}k@qWeTqGuHel@ae@cXkTmO}G}WsLyBaA{b@aSaCiAp@mBdGuWhAaHlAeYxIJ"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 23.693065,
+          "min_lon": 120.533696,
+          "max_lat": 23.709844,
+          "max_lon": 120.543618,
+          "time": 1830.677,
+          "length": 2.476,
+          "cost": 1869.35
+        },
+        "status_message": "Found route between points",
+        "status": 0,
+        "units": "kilometers",
+        "language": "en-US"
+      }
+    }
+  },
+  "shiliuaci": {
+    "name": "石榴班阿賜古早味臭豆腐",
+    "checkedAt": "2026-10-19",
+    "locationSource": "https://maps.app.goo.gl/wV5jFepUuajeo1BJA",
+    "request": {
+      "locations": [
+        {
+          "lat": 23.693064,
+          "lon": 120.53366
+        },
+        {
+          "lat": 23.7237869,
+          "lon": 120.5811043
+        }
+      ],
+      "costing": "pedestrian",
+      "units": "kilometers",
+      "language": "en-US"
+    },
+    "source": "https://valhalla1.openstreetmap.de/route?json=%7B%22locations%22%3A%5B%7B%22lat%22%3A23.693064%2C%22lon%22%3A120.53366%7D%2C%7B%22lat%22%3A23.7237869%2C%22lon%22%3A120.5811043%7D%5D%2C%22costing%22%3A%22pedestrian%22%2C%22units%22%3A%22kilometers%22%2C%22language%22%3A%22en-US%22%7D",
+    "response": {
+      "trip": {
+        "locations": [
+          {
+            "type": "break",
+            "lat": 23.693064,
+            "lon": 120.53366,
+            "original_index": 0
+          },
+          {
+            "type": "break",
+            "lat": 23.723786,
+            "lon": 120.581104,
+            "side_of_street": "right",
+            "original_index": 1
+          }
+        ],
+        "legs": [
+          {
+            "maneuvers": [
+              {
+                "type": 1,
+                "instruction": "Walk east on 龍潭路/雲196.",
+                "verbal_succinct_transition_instruction": "Walk east.",
+                "verbal_pre_transition_instruction": "Walk east on 龍潭路, 雲196.",
+                "verbal_post_transition_instruction": "Continue for 500 meters.",
+                "street_names": [
+                  "龍潭路",
+                  "雲196"
+                ],
+                "bearing_after": 75,
+                "time": 371.517,
+                "length": 0.468,
+                "cost": 381.428,
+                "begin_shape_index": 0,
+                "end_shape_index": 10,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left onto 中山路/3/台3線.",
+                "verbal_transition_alert_instruction": "Turn left onto 中山路.",
+                "verbal_succinct_transition_instruction": "Turn left.",
+                "verbal_pre_transition_instruction": "Turn left onto 中山路, 3.",
+                "verbal_post_transition_instruction": "Continue for 300 meters.",
+                "street_names": [
+                  "中山路",
+                  "3",
+                  "台3線"
+                ],
+                "bearing_before": 84,
+                "bearing_after": 354,
+                "time": 211.821,
+                "length": 0.297,
+                "cost": 216.821,
+                "begin_shape_index": 10,
+                "end_shape_index": 22,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 9,
+                "instruction": "Bear right onto 大學路二段/3/台3線. Continue on 3/台3線.",
+                "verbal_transition_alert_instruction": "Bear right onto 大學路二段.",
+                "verbal_succinct_transition_instruction": "Bear right.",
+                "verbal_pre_transition_instruction": "Bear right onto 大學路二段, 3.",
+                "verbal_post_transition_instruction": "Continue on 3, 台3線 for 3 kilometers.",
+                "street_names": [
+                  "3",
+                  "台3線"
+                ],
+                "begin_street_names": [
+                  "大學路二段",
+                  "3",
+                  "台3線"
+                ],
+                "bearing_before": 359,
+                "bearing_after": 79,
+                "time": 2149.741,
+                "length": 2.916,
+                "cost": 2180.183,
+                "begin_shape_index": 22,
+                "end_shape_index": 69,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto 文化路/3/台3線. Continue on 3/台3線.",
+                "verbal_transition_alert_instruction": "Turn right onto 文化路.",
+                "verbal_succinct_transition_instruction": "Turn right.",
+                "verbal_pre_transition_instruction": "Turn right onto 文化路, 3.",
+                "verbal_post_transition_instruction": "Continue on 3, 台3線 for 2.5 kilometers.",
+                "street_names": [
+                  "3",
+                  "台3線"
+                ],
+                "begin_street_names": [
+                  "文化路",
+                  "3",
+                  "台3線"
+                ],
+                "bearing_before": 5,
+                "bearing_after": 76,
+                "time": 1727.27,
+                "length": 2.394,
+                "cost": 1740.109,
+                "begin_shape_index": 69,
+                "end_shape_index": 109,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left onto 振興路.",
+                "verbal_transition_alert_instruction": "Turn left onto 振興路.",
+                "verbal_succinct_transition_instruction": "Turn left.",
+                "verbal_pre_transition_instruction": "Turn left onto 振興路.",
+                "verbal_post_transition_instruction": "Continue for 200 meters.",
+                "street_names": [
+                  "振興路"
+                ],
+                "bearing_before": 69,
+                "bearing_after": 340,
+                "time": 175.058,
+                "length": 0.247,
+                "cost": 180.058,
+                "begin_shape_index": 109,
+                "end_shape_index": 112,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto 南環路.",
+                "verbal_transition_alert_instruction": "Turn right onto 南環路.",
+                "verbal_succinct_transition_instruction": "Turn right.",
+                "verbal_pre_transition_instruction": "Turn right onto 南環路.",
+                "verbal_post_transition_instruction": "Continue for 300 meters.",
+                "street_names": [
+                  "南環路"
+                ],
+                "bearing_before": 329,
+                "bearing_after": 41,
+                "time": 218.99,
+                "length": 0.281,
+                "cost": 238.951,
+                "begin_shape_index": 112,
+                "end_shape_index": 122,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 15,
+                "instruction": "Turn left to stay on 南環路.",
+                "verbal_transition_alert_instruction": "Turn left to stay on 南環路.",
+                "verbal_succinct_transition_instruction": "Turn left.",
+                "verbal_pre_transition_instruction": "Turn left to stay on 南環路.",
+                "verbal_post_transition_instruction": "Continue for 100 meters.",
+                "street_names": [
+                  "南環路"
+                ],
+                "bearing_before": 96,
+                "bearing_after": 22,
+                "time": 84.706,
+                "length": 0.12,
+                "cost": 84.706,
+                "begin_shape_index": 122,
+                "end_shape_index": 123,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 10,
+                "instruction": "Turn right onto 中興路/雲55.",
+                "verbal_transition_alert_instruction": "Turn right onto 中興路.",
+                "verbal_succinct_transition_instruction": "Turn right.",
+                "verbal_pre_transition_instruction": "Turn right onto 中興路, 雲55.",
+                "verbal_post_transition_instruction": "Continue for 30 meters.",
+                "street_names": [
+                  "中興路",
+                  "雲55"
+                ],
+                "bearing_before": 22,
+                "bearing_after": 113,
+                "time": 19.664,
+                "length": 0.025,
+                "cost": 24.664,
+                "begin_shape_index": 123,
+                "end_shape_index": 124,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              },
+              {
+                "type": 5,
+                "instruction": "Your destination is on the right.",
+                "verbal_transition_alert_instruction": "Your destination will be on the right.",
+                "verbal_pre_transition_instruction": "Your destination is on the right.",
+                "bearing_before": 113,
+                "time": 0.0,
+                "length": 0.0,
+                "cost": 0.0,
+                "begin_shape_index": 124,
+                "end_shape_index": 124,
+                "travel_mode": "pedestrian",
+                "travel_type": "foot"
+              }
+            ],
+            "summary": {
+              "has_time_restrictions": false,
+              "has_toll": false,
+              "has_highway": false,
+              "has_ferry": false,
+              "min_lat": 23.693065,
+              "min_lon": 120.533696,
+              "max_lat": 23.723923,
+              "max_lon": 120.581126,
+              "time": 4958.77,
+              "length": 6.75,
+              "cost": 5046.923
+            },
+            "shape": "sobel@akx{dFaNy}@qLa{@YkBSuAi@oCgJik@_Og}@aEkZS{COqDmCNgHRme@lAiO^aGNkAD}AF{\\t@cX~@}Tx@a@@aFDi@oFk@sFkDsY{]krCcLsdAk@aFwAmGuGoYiLa`@mSwh@m_@ay@wKwWaTik@sOeg@iDwMWsAwYqlA_CqJkGkWci@atBmMo]qReh@s[wo@qZmg@wUm[s@_AiCgEmHeKaCkCuXaSoLoGcNyDgQmG{HkCaH{BaCo@yKsCuzAid@av@uS_NgCya@{HgCk@}|AmWml@gHyR}AqdAoGiv@eDwAgKex@svC{DkHuCuFg@iCoQaq@{@aD}CmKmAcE_We{@oQwk@c@sAqUk}@eJw]sFuRWcBg]_qAcAqDmHk[a@kAw^q|AkIwZuOeo@yMeg@mIm]c[wpAcc@ecBe@aCoAqFqm@adC}FoUwCmKcBkHcFoR_Pon@yHoZoA_FU{@_DeMwKkb@cqAb_@md@jMwI`F_C}AaUk[_BiDIaBd@cI|@{LvBcUtE_g@|Cm\\CoBw}@qZlDiM"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 23.693065,
+          "min_lon": 120.533696,
+          "max_lat": 23.723923,
+          "max_lon": 120.581126,
+          "time": 4958.77,
+          "length": 6.75,
+          "cost": 5046.923
+        },
+        "status_message": "Found route between points",
+        "status": 0,
+        "units": "kilometers",
+        "language": "en-US"
+      }
+    }
+  }
+}

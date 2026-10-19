@@ -1,0 +1,17 @@
+{
+  "name": "yuntech-food-wheel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static dining roulette for YunTech and Douliu",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "test:browser": "node tests/browser.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0",
+    "playwright-core": "1.64.1"
+  }
+}
