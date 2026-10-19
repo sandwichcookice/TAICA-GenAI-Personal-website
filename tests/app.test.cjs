@@ -39,11 +39,11 @@ test('published walking evidence matches the fixed gate, destination and rounded
 });
 test('real nearby meals are available at dinner and remain empty after closing',t=>{
  const {w,get,$}=setup(t),rows=get('RESTAURANTS'),f={...options,range:'near'};
- assert.deepEqual(plain(w.selectPool(rows,f,w.parseTaipei('2026-10-19T18:00'),null,false).pool.map(r=>r.id)),['grayspace','leedong']);
- assert.equal(w.selectPool(rows,f,w.parseTaipei('2026-10-19T23:00'),null,false).pool.length,0);
+ assert.deepEqual(plain(w.selectPool(rows,f,w.parseTaipei('2026-10-19T18:00'),null,false).pool.map(r=>r.id)),['datou','grayspace','leedong','viet','meiwei','nantou','chicken','myshop','seetea','edo','pengfood','hokkaido','mrblack']);
+ assert.equal(w.selectPool(rows,f,w.parseTaipei('2026-10-20T00:01'),null,false).pool.length,0);
  get("state.filters={...DEFAULTS,time:'at',at:'2026-10-19T18:00'};syncControls();refresh()");$('spin').click();
  assert.match($('oddsNote').textContent,/排除上次/);assert.doesNotMatch($('oddsNote').textContent,/允許重複/);
- get("state.filters.at='2026-10-19T23:00';syncControls();refresh({changed:true})");
+ get("state.filters.at='2026-10-20T00:01';syncControls();refresh({changed:true})");
  assert.equal($('spin').disabled,true);assert.doesNotMatch($('emptyMessage').textContent,/目前缺少符合此步行範圍/);
  assert.equal(get('state.filters.range'),'near');
 });
@@ -54,15 +54,17 @@ test('corrected restaurant pins keep 31-minute and 33-minute walks outside the f
  assert.ok(!pool.includes('aci'));assert.ok(!pool.includes('aguoshi'));
 });
 
-test('default decisions and honest route-empty recovery',t=>{
- const {$,get,range}=setup(t);
+test('default area remains usable without walking routes and keeps explicit time filters',t=>{
+ const {$,get,change,range}=setup(t);
  assert.deepEqual(plain(get('state.filters')),{category:'正餐',range:'near',budget:'any',time:'now',at:''});
- assert.equal(get('GATE.verified'),true);get('RESTAURANTS.forEach(r=>r.accessRoutes=[])');get('refresh()');assert.equal(get('state.pool.length'),0);assert.equal($('spin').disabled,true);
- assert.match($('emptyMessage').textContent,/路線/);range('city');assert.equal(get('state.filters.time'),'now');assert.equal(get('state.filters.category'),'正餐');
- $('resetFilters').click();assert.equal(get('state.filters.range'),'near');
+ assert.equal(get('GATE.verified'),true);change('timeMode','at');change('atTime','2026-10-19T18:00');
+ const before=get('state.pool.map(r=>r.id).join()');get('RESTAURANTS.forEach(r=>r.accessRoutes=[])');get('refresh()');
+ assert.equal(get('state.pool.map(r=>r.id).join()'),before);assert.equal($('spin').disabled,false);
+ range('city');assert.equal(get('state.filters.time'),'at');assert.equal(get('state.filters.category'),'正餐');
+ $('resetFilters').click();assert.equal(get('state.filters.range'),'near');assert.equal(get('state.filters.time'),'now');
 });
 test('all public records have unique identity, sources and honest optional fields',t=>{
- const {get}=setup(t),rows=get('RESTAURANTS');assert.equal(rows.length,27);assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
+ const {get}=setup(t),rows=get('RESTAURANTS');assert.equal(rows.length,60);assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
  for(const r of rows){assert.equal(r.city,'斗六市');assert.ok(r.address.startsWith('雲林縣斗六市'));assert.equal(new URL(r.source).protocol,'https:');assert.match(r.checkedAt,/^\d{4}-\d{2}-\d{2}$/);for(const p of Object.values(r.priceByCategory))if(p){assert.ok(p.amount>0);assert.ok(p.source);assert.ok(p.item);assert.ok(p.checkedAt);}}
 });
 test('Taiwan time conversion and impossible date validation',t=>{
@@ -104,12 +106,16 @@ test('unknown price is allowed only with unlimited budget; zero is not free',t=>
   const r=record({priceByCategory:{正餐:p}});assert.equal(w.exclusionReason(r,options,date),null);assert.equal(w.exclusionReason(r,{...options,budget:'100'},date),'priceUnknown');
  }
 });
-test('range evidence: 15/30 inclusive; unknown, inaccessible, wrong-origin and outside-city excluded',t=>{
- const {w,get}=setup(t);get('GATE.verified=true');const date=w.parseTaipei(options.at);
- function withRoute(minutes,extra={}) {return record({accessRoutes:[{originId:'yuntech-longtan-gate',mode:'walking',verified:true,accessible:true,minutes,source:'https://example.test/route',checkedAt:'2026-10-19',...extra}]});}
- for(const [m,near,far] of [[15,null,null],[16,'range',null],[30,'range',null],[31,'range','range']]){assert.equal(w.exclusionReason(withRoute(m),{...options,range:'near'},date),near);assert.equal(w.exclusionReason(withRoute(m),{...options,range:'far'},date),far);}
- for(const extra of [{verified:false},{accessible:false},{originId:'other'},{source:null},{minutes:0}])assert.equal(w.exclusionReason(withRoute(5,extra),{...options,range:'near'},date),'routeUnknown');
- assert.equal(w.exclusionReason(record(),{...options,range:'near'},date),'routeUnknown');assert.equal(w.exclusionReason(record({city:'古坑鄉'}),options,date),'range');
+test('near uses sourced geographic membership; far is its union with verified 30-minute walks',t=>{
+ const {w,get}=setup(t),date=w.parseTaipei(options.at);
+ const area={included:true,source:'https://example.test/address',checkedAt:'2026-10-19'};
+ function withRoute(minutes,extra={}) {return record({longtanArea:{...area,included:false},accessRoutes:[{originId:'yuntech-longtan-gate',mode:'walking',verified:true,accessible:true,minutes,source:'https://example.test/route',checkedAt:'2026-10-19',...extra}]});}
+ for(const m of [15,16,30,31]){assert.equal(w.exclusionReason(withRoute(m),{...options,range:'near'},date),'range');assert.equal(w.exclusionReason(withRoute(m),{...options,range:'far'},date),m<=30?null:'range');}
+ for(const range of ['near','far'])assert.equal(w.exclusionReason(record({longtanArea:area}),{...options,range},date),null);
+ for(const areaValue of [null,{included:true},{...area,source:null}])assert.equal(w.exclusionReason(record({longtanArea:areaValue}),{...options,range:'near'},date),'areaUnknown');
+ for(const extra of [{verified:false},{accessible:false},{originId:'other'},{source:null},{minutes:0}])assert.equal(w.exclusionReason(withRoute(5,extra),{...options,range:'far'},date),'routeUnknown');
+ assert.equal(w.exclusionReason(record({city:'古坑鄉',longtanArea:area}),{...options,range:'near'},date),'range');
+ const ids=get("RESTAURANTS.filter(inLongtanArea).map(r=>r.id)");assert.ok(ids.includes('gouba'));assert.ok(ids.includes('myshop'));assert.ok(!ids.includes('chico'));assert.ok(!ids.includes('hans'));
 });
 test('filter composition and first exclusion counts never double count',t=>{
  const {w}=setup(t),date=w.parseTaipei(options.at),rows=[record({id:'a'}),record({id:'b',status:'停業'}),record({id:'c',categories:['點心']}),record({id:'d',priceByCategory:{}}),record({id:'e',weeklyHours:null}),record({id:'f',weeklyHours:schedule([])})];
@@ -147,7 +153,7 @@ test('filter change marks old result and redraws eligible slices',t=>{
 test('search is text-only and never changes draw pool; full directory includes pending data',t=>{
  const {$,get,d,w,available,change}=setup(t);available();const before=get('state.pool.map(r=>r.id).join()');
  $('search').value='<img src=x onerror=alert(1)>';$('search').dispatchEvent(new w.Event('input'));assert.equal(d.querySelectorAll('#restaurantGrid img').length,0);assert.equal(get('state.pool.map(r=>r.id).join()'),before);
- $('search').value='';change('listMode','all');assert.equal(d.querySelectorAll('.restaurant-card').length,27);assert.match($('restaurantGrid').textContent,/待核對/);
+ $('search').value='';change('listMode','all');assert.equal(d.querySelectorAll('.restaurant-card').length,60);assert.match($('restaurantGrid').textContent,/待核對/);
 });
 test('viewing a card or history changes map without affecting draw state',t=>{
  const {$,get,d,available}=setup(t);available();$('spin').click();const last=get('state.lastId'),history=get('state.history.map(r=>r.id).join()');d.querySelector('.card-actions button').click();assert.match($('result').textContent,/正在查看/);assert.equal(get('state.lastId'),last);d.querySelector('#history button').click();assert.equal(get('state.history.map(r=>r.id).join()'),history);
@@ -175,10 +181,33 @@ test('Canvas failure does not block text drawing; map/source links are safe',t=>
  const {$,w,d,available,get}=setup(t,{canvas:false});available();assert.equal($('canvasFallback').hidden,false);$('spin').click();assert.equal(get('state.history.length'),1);assert.ok(d.querySelector('.direction').href.startsWith('https://www.google.com/maps/dir/'));d.querySelectorAll('a[target="_blank"]').forEach(a=>assert.match(a.rel,/noopener/));assert.equal(w.link('unsafe','javascript:alert(1)').hasAttribute('href'),false);
 });
 test('fresh page keeps shared defaults, no stored personal settings',t=>{
- const {$,w,get,available}=setup(t);available();$('spin').click();assert.equal(w.localStorage.length,0);assert.equal(w.sessionStorage.length,0);assert.equal(get('DATASET.version'),'2026-10-19.3');
+ const {$,w,get,available}=setup(t);available();$('spin').click();assert.equal(w.localStorage.length,0);assert.equal(w.sessionStorage.length,0);assert.equal(get('DATASET.version'),'2026-10-19.4');
 });
 
 test('a later time-boundary refresh relabels a completed draw without adding history',t=>{
  const {$,get,w,range}=setup(t);range('city');
  get("RESTAURANTS.forEach(r=>r.weeklyHours=null);RESTAURANTS[0].weeklyHours=Array.from({length:7},()=>[{start:'00:00',end:'00:00',endDayOffset:1}])");w.tick();$('spin').click();assert.equal(get('state.result.mode'),'drawn');get('RESTAURANTS[0].weeklyHours=null');w.tick();assert.equal(get('state.result.mode'),'previous');assert.equal(get('state.history.length'),1);assert.match($('liveStatus').textContent,/時刻已更新/);
+});
+
+test('near directory shows closed and pending shops independently of wheel filters',t=>{
+ const {$,get,change,d}=setup(t);assert.equal($('listMode').value,'near');
+ assert.equal(d.querySelectorAll('.restaurant-card').length,get('RESTAURANTS.filter(inLongtanArea).length'));
+ change('timeMode','at');change('atTime','2026-10-20T00:01');assert.equal(get('state.pool.length'),0);
+ assert.equal(d.querySelectorAll('.restaurant-card').length,47);change('listMode','eligible');assert.equal(d.querySelectorAll('.restaurant-card').length,0);
+});
+test('delivery schedules are identified in result and never used as on-site prices',t=>{
+ const {get,$}=setup(t);get("state.filters.time='at';state.filters.at='2026-10-19T18:00';viewRestaurant(RESTAURANTS.find(r=>r.id==='viet'))");
+ assert.match($('result').textContent,/外送平台供餐時段/);assert.match($('result').textContent,/內用／外帶請先/);
+ assert.equal(get("RESTAURANTS.find(r=>r.id==='viet').priceByCategory.正餐"),null);
+ assert.equal($('result').hidden,false);assert.match($('quickResult').textContent,/越南料理/);
+});
+
+test('new weekly schedules retain source weekdays and correctly convert midnight',t=>{
+ const {get}=setup(t),rows=get('RESTAURANTS'),evidence=JSON.parse(readFileSync(join(__dirname,'../data/longtan-2026-10-19.json'),'utf8'));
+ for(const e of evidence.weeklySources){
+  const r=rows.find(r=>r.id===e.id),expected=Array.from({length:7},()=>[]);
+  if(e.kind==='delivery')for(const p of e.openingHoursSpecification){for(const d of Array.isArray(p.dayOfWeek)?p.dayOfWeek:[p.dayOfWeek])expected[['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'].indexOf(d)].push(period(p.opens,p.closes,Number(p.closes<=p.opens)));}
+  else for(const text of e.openingHoursList){const d='日一二三四五六'.indexOf(text[2]);for(const m of text.matchAll(/(\d{2}:\d{2})-(\d{2}:\d{2})/g))expected[d].push(period(m[1],m[2],Number(m[2]<=m[1])));}
+  assert.deepEqual(plain(r.weeklyHours),expected,r.id);assert.equal(r.hoursSource,e.source);
+ }
 });

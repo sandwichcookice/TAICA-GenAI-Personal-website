@@ -28,16 +28,30 @@
     .filter-panel{border-top:1px solid var(--line);padding:22px 0;margin-bottom:20px}fieldset{border:0;margin:0;padding:0;min-width:0}.filter-row{display:flex;align-items:center;gap:18px;margin-bottom:14px}.filter-label{font-size:14px;min-width:70px;font-weight:700}.help{font-size:14px;color:var(--muted);margin:8px 0;overflow-wrap:anywhere}.advanced{margin-top:16px;border-top:1px solid var(--line);padding-top:8px}summary{min-height:44px;cursor:pointer;padding:10px 0;font-size:14px}.advanced-fields{display:flex;flex-wrap:wrap;gap:16px;margin:6px 0}.advanced-fields label{display:flex;flex-direction:column;gap:6px;font-size:14px;flex:1;min-width:180px}.advanced-fields input{border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);padding:8px;max-width:100%;min-width:0}.filter-bottom{display:flex;align-items:center;gap:15px;justify-content:space-between}.filter-bottom .help{flex:1}.filter-bottom button{flex-shrink:0}.diagnostics{font-size:14px}.diagnostics ul{display:flex;gap:8px 24px;flex-wrap:wrap;padding-left:22px}.empty-actions{padding:14px 18px;border:1px solid #bccecb;background:#e7f1ee;border-radius:12px;margin-top:12px}.empty-actions p{font-size:14px;margin-top:0}.notice{color:#7c4013!important;font-weight:600}.counter{font-size:13px;text-align:right}.spin-subline,.history,.history button,.map-header a,.map-help,.data-note,.text-button,.card-actions a,.card-actions button{font-size:14px}.text-button,.card-actions button,.history button,.direction,.repeat-label,.card-actions a{min-height:44px;display:inline-flex;align-items:center}.repeat-label input{min-width:18px;min-height:18px}.result p,.restaurant-info p,.tag{font-size:14px}.result-source{font-size:13px!important}.result .eyebrow{font-size:12px}.restaurant-info h3{font-size:16px}.result-bottom{flex-wrap:wrap}.price-line{font-weight:700;color:var(--ink)!important}.result-jump{font-size:14px;display:block;padding:12px 0;min-height:44px;text-align:center}.wheel-legend{border-top:1px solid var(--line)}.wheel-legend ol{list-style:none;max-height:220px;overflow:auto;margin:0;padding:0;font-size:14px}.wheel-legend li{padding:5px 0;overflow-wrap:anywhere}.list-mode{display:flex;align-items:center;gap:12px;margin-bottom:16px;font-size:14px}.map-panel{min-width:0}.map-frame{flex:none;height:330px}.map-header{flex-wrap:wrap}.map-header a{min-height:44px;display:inline-flex;align-items:center}.restaurant-grid{align-items:start}.intro-note{font-size:14px!important}.restaurant-info p{margin:8px 0}.result{scroll-margin-top:20px}.spin:disabled{cursor:not-allowed}
     @media(max-width:800px){.playground{grid-template-columns:1fr}.wheel-shell{width:min(100%,380px)}.map-panel .result{order:-1;border-bottom:1px solid var(--line)}.map-frame{height:300px}.map-header{padding:10px 18px}.map-frame iframe{min-height:300px}.map-help{border-bottom:0}.result h3{font-size:24px}.result-bottom{flex-direction:row}.result{min-height:0}.result-source{font-size:13px!important}.map-header a{display:inline-flex}.spin-subline{font-size:14px}}
     @media(max-width:620px){.filter-row{align-items:flex-start;flex-direction:column;gap:8px}.filter-bottom{align-items:flex-start;flex-direction:column;gap:0}.chip{font-size:14px;padding:8px 13px}.roulette{padding:16px}.wheel-stage{min-height:0}.wheel-shell{width:100%}.advanced-fields{flex-direction:column}.advanced-fields label{min-width:0}.restaurant-info h3{font-size:16px}.restaurant-info p,.card-actions a,.history button{font-size:14px}.map-frame{height:260px;min-height:260px}.map-frame iframe{min-height:260px}.result-bottom{align-items:flex-start}.result-jump{font-weight:700}.intro p{font-size:14px}.map-header a{display:inline-flex}.intro h1{font-size:clamp(28px,8vw,36px)}.panel-heading{align-items:flex-start}.counter{max-width:50%}.result-source a{overflow-wrap:anywhere}.diagnostics ul{display:block}.directory-heading p{font-size:14px}}
+
+    /* The first screen is dedicated to the wheel, draw button and map. */
+    .nav{height:64px}.intro{padding:22px 0 18px;align-items:center}.intro .eyebrow{display:none}.intro h1{font-size:32px;margin-bottom:4px}.intro-note strong{font-size:26px}.intro-note br{display:block}.intro-note{max-width:270px;font-size:12px!important;line-height:1.4}.intro-note strong{margin-right:8px}
+    .playground{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;height:clamp(420px,calc(100svh - 230px),560px)}
+    .roulette{padding:20px;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:14px;border-radius:18px;min-width:0}.wheel-stage{min-height:0;margin:0;padding:12px 0 18px;overflow:hidden}.wheel-shell{width:min(100%,375px,calc(100svh - 420px));height:auto;aspect-ratio:1}.spin{min-height:58px;padding:12px 16px}.panel-heading{align-items:center}.counter{max-width:none;white-space:nowrap}.map-panel{border-radius:18px}.map-header{padding:12px 18px;flex-wrap:nowrap}.map-header h2{white-space:nowrap}.map-header a{font-size:12px}.map-frame{flex:1;height:auto;min-height:0}.map-frame iframe{min-height:0}.map-help{font-size:12px;border:0;padding:8px 18px}
+    .hero-caption{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 2px 22px;font-size:14px;color:var(--muted)}.hero-caption a{min-height:36px;display:inline-flex;align-items:center}.hero-caption>a:last-child{white-space:nowrap;color:var(--brand)}#quickResult{text-decoration:none}#quickResult.picked{color:var(--brand);font-weight:750;font-size:17px}.result{border:1px solid var(--line);border-radius:16px;background:white;margin:0 0 24px;min-height:0}.result h3{font-size:26px}.filter-panel{padding:26px 0;margin:0;scroll-margin-top:20px}.filter-panel h2{font-size:21px;margin:0 0 22px}.spin-subline{margin:20px 0 12px}.wheel-legend{margin-top:12px}.directory{margin-top:26px}
+    @media(max-width:800px){.wrap{padding:0 22px}.playground{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:14px;height:440px}.roulette{padding:14px;gap:10px}.wheel-stage{padding:12px 0}.wheel-shell{height:auto;width:min(100%,250px)}.map-header{align-items:flex-start;flex-direction:column;gap:0;padding:12px}.map-header a{min-height:32px}.map-frame,.map-frame iframe{min-height:0}.hub{width:60px;height:60px}.counter{font-size:12px}.panel-heading h2{font-size:12px}.spin{font-size:16px}.intro-note{display:none}.result{padding:20px}.hero-caption{font-size:12px}.map-help{padding:8px 12px}}
+    @media(max-width:620px){.wrap{padding:0 16px}.nav{height:60px}.nav-right{gap:12px;font-size:11px}.brand{font-size:16px}.brand-mark{width:30px;height:30px}.intro{padding:18px 0 14px}.intro h1{font-size:28px}.intro p{font-size:12px}.playground{height:auto;grid-template-columns:1fr;gap:14px}.roulette{height:auto;padding:16px;grid-template-rows:auto auto auto}.wheel-stage{padding:14px 0 18px}.wheel-shell{width:min(100%,300px);height:auto}.map-panel{height:310px}.map-header{flex-direction:row;align-items:center;padding:10px 14px}.map-frame{min-height:0}.map-frame iframe{min-height:0}.map-help{font-size:11px}.hero-caption{align-items:flex-start;padding-bottom:20px}.counter,.panel-heading h2{font-size:13px}.spin{font-size:17px}.result h3{font-size:23px}.filter-panel{padding-top:22px}.filter-panel h2{font-size:20px}.hub{width:64px;height:64px}}
   </style>
 </head>
 <body>
   <a href="#main" class="skip">跳至抽選轉盤</a>
-  <header><div class="wrap nav"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">食</span>雲科吃什麼<span style="color:var(--accent)">.</span></a><nav class="nav-right" aria-label="主要導覽"><a href="#directory">口袋名單 ↗</a><span class="location"><span class="dot"></span>YUNTECH · 斗六</span></nav></div></header>
+  <header><div class="wrap nav"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">食</span>雲科吃什麼<span style="color:var(--accent)">.</span></a><nav class="nav-right" aria-label="主要導覽"><a href="#directory">口袋名單 ↗</a><a href="#settings">調整條件</a><span class="location"><span class="dot"></span>YUNTECH · 斗六</span></nav></div></header>
   <noscript>請啟用 JavaScript 使用轉盤與店家名單。你也可以<a href="https://www.google.com/maps/search/?api=1&amp;query=雲林科技大學附近餐廳">直接在 Google 地圖找餐廳</a>。</noscript>
   <main class="wrap" id="main">
     <section class="intro" aria-labelledby="title"><div><p class="eyebrow">LESS THINKING, MORE EATING.</p><h1>今天，<span>吃點什麼？</span></h1><p>選擇困難先放一邊，讓轉盤幫你決定下一餐。</p></div><p class="intro-note"><strong id="totalCount">—</strong>個口袋選項<br>從雲科出發，探索斗六</p></section>
-    <section class="filter-panel" aria-label="抽選條件">
-      <fieldset id="filterFields"><legend class="sr-only">選擇餐點、範圍、預算與時間</legend>
+    <div class="playground">
+      <section class="roulette" id="roulette" aria-labelledby="wheelTitle"><div class="panel-heading"><h2 id="wheelTitle">01 / 把選擇交給轉盤</h2><span class="counter" id="candidateCount">計算中</span></div><div class="wheel-stage"><div class="wheel-shell"><div class="pointer" aria-hidden="true"></div><canvas id="wheel" width="1000" height="1000" role="img" aria-label="餐廳轉盤，候選店家列於下方口袋名單">餐廳轉盤</canvas><div class="hub" aria-hidden="true"><strong>開飯</strong><small>LET'S EAT</small></div></div><div class="wheel-empty" id="wheelEmpty" hidden><strong>還沒有符合的店家</strong><p><a href="#settings">調整下方條件</a>，或查看附近完整名單。</p></div></div><p id="canvasFallback" class="help" hidden>轉盤圖形無法顯示，仍可按下抽選並查看文字結果。</p><button class="spin" id="spin"><span class="spin-icon" aria-hidden="true">⟳</span><span id="spinLabel">轉一下，決定吃什麼</span><span aria-hidden="true">↗</span></button></section>
+      <section class="map-panel" aria-labelledby="mapTitle"><div class="map-header"><h2 id="mapTitle">02 / 這家在哪裡？</h2><a id="mapOpen" href="https://www.google.com/maps/search/?api=1&amp;query=雲林科技大學附近餐廳" target="_blank" rel="noopener noreferrer">開啟 Google 地圖 ↗</a></div><div class="map-frame"><iframe id="map" title="Google 地圖：雲林科技大學周邊餐廳" src="https://www.google.com/maps?q=%E9%9B%B2%E6%9E%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E9%99%84%E8%BF%91%E9%A4%90%E5%BB%B3&amp;output=embed&amp;hl=zh-TW" loading="eager" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><p class="map-help">地圖需連線；若未顯示，可使用上方連結查看。</p></section>
+    </div>
+    <div class="hero-caption"><a id="quickResult" href="#settings">正餐 · 龍潭路附近 · 依表定營業時間抽選</a><a href="#settings">調整條件 ↓</a></div>
+    <div class="result" id="result" hidden tabindex="-1"><p class="eyebrow">YOUR NEXT GOOD MEAL</p><h3>下一餐的靈感，轉一下就有。</h3><p>抽出店家後，這裡會顯示地址與導航。</p><p>也可以從下方名單挑一家，在地圖上看看。</p><span class="welcome-art" aria-hidden="true">↗</span></div>
+    <section class="filter-panel" id="settings" aria-label="抽選條件">
+      <h2>照你的口味，調整一下。</h2><fieldset id="filterFields"><legend class="sr-only">選擇餐點、範圍、預算與時間</legend>
         <div class="filter-row"><span class="filter-label" id="categoryLabel">今天想吃</span><div class="chips" role="group" aria-labelledby="categoryLabel">
           <button class="chip" data-category="全部" aria-pressed="false">都可以</button><button class="chip" data-category="正餐" aria-pressed="true">正餐</button><button class="chip" data-category="早午餐" aria-pressed="false">早午餐</button><button class="chip" data-category="點心" aria-pressed="false">點心</button><button class="chip" data-category="飲料" aria-pressed="false">喝一杯</button>
         </div></div>
@@ -48,20 +62,16 @@
           <label for="budget">一人預算<select id="budget"><option value="any">預算不限</option><option value="100">100 元內</option><option value="200">101–200 元</option><option value="300">201–300 元</option><option value="301">301 元以上</option></select></label>
           <label for="timeMode">什麼時候吃<select id="timeMode"><option value="now">現在依表定營業</option><option value="any">不限時間</option><option value="at">指定日期時間</option></select></label>
           <label id="atControl" for="atTime" hidden>日期時間（台灣）<input id="atTime" type="datetime-local" aria-describedby="timeError"></label>
-        </div><p id="timeError" class="notice" role="alert" hidden>請填寫有效的台灣日期與時間。</p><p class="help">預算依各類型基準品項；營業依公開時刻表，不含臨時異動。啟用條件時會排除資料不明的店家。</p></details>
-      </fieldset>
+        </div><p id="timeError" class="notice" role="alert" hidden>請填寫有效的台灣日期與時間。</p><p class="help">預算依各類型基準品項；營業依公開時刻表（部分採外送平台供餐時段），不含臨時異動。啟用條件時會排除資料不明的店家。</p></details>
+      <div class="spin-subline"><label class="repeat-label"><input type="checkbox" id="noRepeat" checked>避免連續抽到同一家</label><span id="oddsNote">每個選項都有機會</span></div><details class="wheel-legend"><summary>本次轉盤名單</summary><p id="groupNote" class="help"></p><ol id="legend"></ol></details></fieldset>
       <div class="filter-bottom"><p id="filterSummary" class="help"></p><button id="resetFilters" class="text-button">恢復預設條件</button></div>
       <details class="diagnostics"><summary id="diagnosticsSummary">計算候選中</summary><p class="help">依狀態、範圍、類型、預算、時間依序篩選；每家只計入第一個排除原因。</p><ul id="exclusionList"></ul></details>
       <div id="emptyActions" class="empty-actions" hidden><p id="emptyMessage"></p><div class="chips"><button class="chip" id="widenRange">擴大至斗六市區</button><button class="chip" id="clearBudget">改為預算不限</button><button class="chip" id="clearTime">改為不限時間</button></div></div>
     </section>
-    <div class="playground">
-      <section class="roulette" id="roulette" aria-labelledby="wheelTitle"><div class="panel-heading"><h2 id="wheelTitle">01 / 把選擇交給轉盤</h2><span class="counter" id="candidateCount">計算中</span></div><div class="wheel-stage"><div class="wheel-shell"><div class="pointer" aria-hidden="true"></div><canvas id="wheel" width="1000" height="1000" role="img" aria-label="餐廳轉盤，候選店家列於下方口袋名單">餐廳轉盤</canvas><div class="hub" aria-hidden="true"><strong>開飯</strong><small>LET'S EAT</small></div></div><div class="wheel-empty" id="wheelEmpty" hidden><strong>還沒有符合的店家</strong><p>請在上方調整條件，或查看下方完整名單。</p></div></div><p id="canvasFallback" class="help" hidden>轉盤圖形無法顯示，仍可按下抽選並查看文字結果。</p><button class="spin" id="spin"><span class="spin-icon" aria-hidden="true">⟳</span><span id="spinLabel">轉一下，決定吃什麼</span><span aria-hidden="true">↗</span></button><div class="spin-subline"><label class="repeat-label"><input type="checkbox" id="noRepeat" checked>避免連續抽到同一家</label><span id="oddsNote">每個選項都有機會</span></div><a class="result-jump" href="#result">查看結果與位置 ↓</a><details class="wheel-legend"><summary>本次轉盤名單</summary><p id="groupNote" class="help"></p><ol id="legend"></ol></details></section>
-      <section class="map-panel" aria-labelledby="mapTitle"><div class="map-header"><h2 id="mapTitle">02 / 這家在哪裡？</h2><a id="mapOpen" href="https://www.google.com/maps/search/?api=1&amp;query=雲林科技大學附近餐廳" target="_blank" rel="noopener noreferrer">開啟 Google 地圖 ↗</a></div><div class="map-frame"><iframe id="map" title="Google 地圖：雲林科技大學周邊餐廳" src="https://www.google.com/maps?q=%E9%9B%B2%E6%9E%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8%E9%99%84%E8%BF%91%E9%A4%90%E5%BB%B3&amp;output=embed&amp;hl=zh-TW" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><p class="map-help">地圖需連線；若未顯示，可使用上方連結查看。</p><div class="result" id="result" tabindex="-1"><p class="eyebrow">YOUR NEXT GOOD MEAL</p><h3>下一餐的靈感，轉一下就有。</h3><p>抽出店家後，這裡會顯示地址與導航。</p><p>也可以從下方名單挑一家，在地圖上看看。</p><span class="welcome-art" aria-hidden="true">↗</span></div></section>
-    </div>
     <p id="liveStatus" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
     <div class="history" aria-label="最近抽選"><span class="history-label">剛剛抽過</span><span id="history" class="history-empty">還沒有紀錄，第一餐交給你。</span></div>
-    <section class="directory" id="directory" aria-labelledby="directoryTitle"><div class="directory-heading"><div><h2 id="directoryTitle">你的下一餐，都在這裡。</h2><p id="listCount">瀏覽口袋名單，也可以直接查看位置。</p></div><label class="search-wrap"><input id="search" type="search" aria-label="搜尋店名或地址，只篩選下方名單" placeholder="搜尋店名、地址…（僅搜尋名單）" maxlength="100"></label></div><label class="list-mode" for="listMode">瀏覽範圍 <select id="listMode"><option value="eligible">下次可抽</option><option value="all">全部已收錄</option></select></label><div id="restaurantGrid" class="restaurant-grid"></div></section>
-    <details class="data-note"><summary>關於名單與資料 · 查閱 2026.10.19</summary><p id="coverage"></p><p id="dataCoverage"></p><p>每家附有公開來源；查閱日期不代表實地確認營業。步行分鐘依 OpenStreetMap 路網與 Valhalla 計算，未實地踏查。步行路線、基準價格與每週時刻仍在逐筆補齊，未知資料會依條件排除。校內餐飲受學期或假期影響，日期適用性未確認時視為未知。</p><p>價格表示一份已記錄基準品項，不代表整份菜單都在預算內；現場售價與最後供餐時間請向店家確認。營業判斷一律使用台灣時間，每分鐘更新，並非即時營業回報。抽選期間固定名單，下一次重新篩選。</p><p>所有人共用相同名單，不儲存個人偏好；最近五次抽選只保留於當次頁面。搜尋僅影響下方名單。Google 地圖使用店名與地址搜尋，可能需要自行確認校內櫃位或餐車位置；嵌入地圖會向 Google 發出第三方請求。</p><p>步行資料：<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors（ODbL）</a> · <a href="https://valhalla.github.io/valhalla/" target="_blank" rel="noopener noreferrer">Valhalla</a> · <a href="DATA.md">資料維護紀錄</a></p></details>
+    <section class="directory" id="directory" aria-labelledby="directoryTitle"><div class="directory-heading"><div><h2 id="directoryTitle">你的下一餐，都在這裡。</h2><p id="listCount">瀏覽口袋名單，也可以直接查看位置。</p></div><label class="search-wrap"><input id="search" type="search" aria-label="搜尋店名或地址，只篩選下方名單" placeholder="搜尋店名、地址…（僅搜尋名單）" maxlength="100"></label></div><label class="list-mode" for="listMode">瀏覽範圍 <select id="listMode"><option value="near">龍潭路附近全部</option><option value="eligible">下次可抽</option><option value="all">斗六全部已收錄</option></select></label><div id="restaurantGrid" class="restaurant-grid"></div></section>
+    <details class="data-note"><summary>關於名單與資料 · 查閱 2026.10.19</summary><p id="coverage"></p><p id="dataCoverage"></p><p>每家附有公開來源；查閱日期不代表實地確認營業。步行分鐘依 OpenStreetMap 路網與 Valhalla 計算，未實地踏查。龍潭路附近依大學路以南的地址位置判定，缺少步行路線不影響此範圍。基準價格與每週時刻仍在補齊，未知資料會依啟用的條件排除。外送平台時段不等於實體店完整營業時間，已於店家資訊標示。校內餐飲受學期或假期影響，日期適用性未確認時視為未知。</p><p>價格表示一份已記錄基準品項，不代表整份菜單都在預算內；現場售價與最後供餐時間請向店家確認。營業判斷一律使用台灣時間，每分鐘更新，並非即時營業回報。抽選期間固定名單，下一次重新篩選。</p><p>所有人共用相同名單，不儲存個人偏好；最近五次抽選只保留於當次頁面。搜尋僅影響下方名單。Google 地圖使用店名與地址搜尋，可能需要自行確認校內櫃位或餐車位置；嵌入地圖會向 Google 發出第三方請求。</p><p>步行資料：<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors（ODbL）</a> · <a href="https://valhalla.github.io/valhalla/" target="_blank" rel="noopener noreferrer">Valhalla</a> · <a href="DATA.md">資料維護紀錄</a></p></details>
   </main>
   <footer><div class="wrap footer-inner"><strong>雲科吃什麼. <span style="font-weight:400">讓每一餐，多一點期待。</span></strong><span>MADE FOR HUNGRY DAYS · YUNTECH</span></div></footer>
   <script>
@@ -165,6 +175,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://vocus.cc/article/68d774c1fd89780001038d19",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -198,7 +214,13 @@
     },
     "additionalSources": [
       "https://business.591.com.tw/rent/21967378"
-    ]
+    ],
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://taberu-food.com/roulei/",
+      "checkedAt": "2026-10-19"
+    }
   },
   {
     "id": "grayspace",
@@ -300,6 +322,12 @@
       "source": "https://maps.app.goo.gl/kPZFdfsv2GksSL778",
       "checkedAt": "2026-10-19",
       "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037747"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://www.ftvnews.com.tw/news/detail/2024327w0280",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -421,6 +449,12 @@
       "lon": 120.5294589,
       "source": "https://supertaste.tvbs.com.tw/infocard/31480",
       "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://supertaste.tvbs.com.tw/infocard/31480",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -513,6 +547,12 @@
       "source": "https://goo.gl/maps/Kbxj2JMGG8wF5dTH9",
       "listingSource": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xi=1037675",
       "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xi=1037675",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -543,6 +583,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://footinder.com.tw/雲林縣斗六市/138407/",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -573,6 +619,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://drink.footinder.com.tw/uncategorized/33631/",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -605,6 +657,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://food.timetables.tw/restaurant/ChIJ_4_T3xrJbjQRthcNLhlEx1M/",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -622,8 +680,8 @@
     "sourceName": "foodpanda 店家頁",
     "city": "斗六市",
     "checkedAt": "2026-10-19",
-    "status": "已收錄",
-    "statusNote": null,
+    "status": "待核對",
+    "statusNote": "公開頁面有店址差異，外送平台標示自 2026-10-01 停止上架；實體店現況待確認，不參與抽選。",
     "priceByCategory": {
       "點心": null
     },
@@ -635,7 +693,14 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
-    }
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://www.foodpanda.com.tw/restaurant/qd7q/xiong-tai-di-gua-qiu-dou-liu-dian",
+      "checkedAt": "2026-10-19"
+    },
+    "statusSource": "https://www.ubereats.com/tw/store/熊太地瓜球-斗六店/obik__PTX2eGsrRTWZ8itA"
   },
   {
     "id": "chico",
@@ -759,6 +824,12 @@
       "source": "https://goo.gl/maps/dEW87FhXuASy8ZpS6",
       "checkedAt": "2026-10-19",
       "listingSource": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xmlid=1037321"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xmlid=1037321",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -789,6 +860,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://ericboyworld.blogspot.com/2025/01/wendocurry.html",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -819,6 +896,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": null,
+      "basis": "大學路沿線攤位／門牌位置仍待確認南北側",
+      "source": "https://travel.yam.com/article/128552",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -849,6 +932,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://ericboyworld.blogspot.com/2025/11/05-5378979.html",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -881,6 +970,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": null,
+      "basis": "大學路沿線攤位／門牌位置仍待確認南北側",
+      "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/BlogList.php?cn=ZC10353694&pn=11&sn=yunlin",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -916,7 +1011,13 @@
     "location": {
       "precision": "address"
     },
-    "hoursRestricted": true
+    "hoursRestricted": true,
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+      "checkedAt": "2026-10-19"
+    }
   },
   {
     "id": "louisa",
@@ -949,7 +1050,13 @@
     "location": {
       "precision": "address"
     },
-    "hoursRestricted": true
+    "hoursRestricted": true,
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+      "checkedAt": "2026-10-19"
+    }
   },
   {
     "id": "xinxin",
@@ -984,7 +1091,13 @@
     "location": {
       "precision": "address"
     },
-    "hoursRestricted": true
+    "hoursRestricted": true,
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+      "checkedAt": "2026-10-19"
+    }
   },
   {
     "id": "qinqin",
@@ -1015,7 +1128,13 @@
     "location": {
       "precision": "address"
     },
-    "hoursRestricted": true
+    "hoursRestricted": true,
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+      "checkedAt": "2026-10-19"
+    }
   },
   {
     "id": "yipin",
@@ -1113,6 +1232,12 @@
       "source": "https://goo.gl/maps/xL5fW9Ti1afi7pGh8",
       "checkedAt": "2026-10-19",
       "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037489"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://heidihihi.com/yunlin-douliu-food/",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -1143,6 +1268,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://heidihihi.com/yunlin-douliu-food/",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -1173,6 +1304,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://heidihihi.com/yunlin-douliu-food/",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -1269,6 +1406,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://heidihihi.com/yunlin-douliu-food/",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -1299,6 +1442,12 @@
     "accessRoutes": [],
     "location": {
       "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南",
+      "source": "https://heidihihi.com/yunlin-douliu-food/",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -1429,6 +1578,12 @@
       "source": "https://goo.gl/maps/bFMpsQs6AAD9q49a8",
       "checkedAt": "2026-10-19",
       "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037259"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037259",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -1520,6 +1675,12 @@
       "source": "https://goo.gl/maps/bE2JUwH9ggQSGLSj8",
       "checkedAt": "2026-10-19",
       "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037258"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037258",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -1611,6 +1772,12 @@
       "source": "https://goo.gl/maps/dUrihZ773yMKYiYY7",
       "checkedAt": "2026-10-19",
       "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037281"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037281",
+      "checkedAt": "2026-10-19"
     }
   },
   {
@@ -1702,16 +1869,2387 @@
       "source": "https://maps.app.goo.gl/wV5jFepUuajeo1BJA",
       "checkedAt": "2026-10-19",
       "listingSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037845"
+    },
+    "longtanArea": {
+      "included": false,
+      "basis": "地址位於大學路以北／其他斗六區域",
+      "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037845",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "viet",
+    "name": "雲科大 越南料理",
+    "short": "雲科大",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路5號",
+    "note": "河粉、炒飯與越南料理",
+    "source": "https://www.ubereats.com/tw/store/雲科大-越南料理/Di1_vyONVVayfyxzTn1PUQ",
+    "sourceName": "Uber Eats 店家頁",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "20:30",
+          "endDayOffset": 0
+        }
+      ],
+      []
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://www.ubereats.com/tw/store/雲科大-越南料理/Di1_vyONVVayfyxzTn1PUQ",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依 Uber Eats 公開供餐時段篩選；平台接單時間可能短於實體店營業時間，內用／外帶請先向店家確認。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6923477,
+      "lon": 120.5302549,
+      "source": "https://www.ubereats.com/tw/store/雲科大-越南料理/Di1_vyONVVayfyxzTn1PUQ",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.ubereats.com/tw/store/雲科大-越南料理/Di1_vyONVVayfyxzTn1PUQ",
+      "checkedAt": "2026-10-19"
+    },
+    "hoursBasis": "delivery"
+  },
+  {
+    "id": "meiwei",
+    "name": "美味食堂丨斗六必吃鍋氣炒飯炒麵",
+    "short": "美味食堂丨斗六必吃",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路9號",
+    "note": "炒飯、炒麵與便當",
+    "source": "https://www.ubereats.com/tw/store/美味食堂丨斗六必吃鍋氣炒飯炒麵/Z5YMQS3EW6y4yzj_ZkcDsA",
+    "sourceName": "Uber Eats 店家頁",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:00",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://www.ubereats.com/tw/store/美味食堂丨斗六必吃鍋氣炒飯炒麵/Z5YMQS3EW6y4yzj_ZkcDsA",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依 Uber Eats 公開供餐時段篩選；平台接單時間可能短於實體店營業時間，內用／外帶請先向店家確認。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6921404,
+      "lon": 120.5296304,
+      "source": "https://www.ubereats.com/tw/store/美味食堂丨斗六必吃鍋氣炒飯炒麵/Z5YMQS3EW6y4yzj_ZkcDsA",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.ubereats.com/tw/store/美味食堂丨斗六必吃鍋氣炒飯炒麵/Z5YMQS3EW6y4yzj_ZkcDsA",
+      "checkedAt": "2026-10-19"
+    },
+    "hoursBasis": "delivery"
+  },
+  {
+    "id": "riceball",
+    "name": "雲科飯糰 原傳香超二代雲科店",
+    "short": "雲科飯糰",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路1-20號",
+    "note": "飯糰與早餐",
+    "source": "https://www.ubereats.com/tw/store/雲科飯糰-原傳香超二代雲科店/bdkVrymAWFOYeeRbyev6DQ",
+    "sourceName": "Uber Eats 店家頁",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "05:00",
+          "end": "13:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "05:00",
+          "end": "13:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "05:00",
+          "end": "13:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "05:00",
+          "end": "13:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "05:00",
+          "end": "13:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "05:00",
+          "end": "13:00",
+          "endDayOffset": 0
+        }
+      ],
+      []
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://www.ubereats.com/tw/store/雲科飯糰-原傳香超二代雲科店/bdkVrymAWFOYeeRbyev6DQ",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依 Uber Eats 公開供餐時段篩選；平台接單時間可能短於實體店營業時間，內用／外帶請先向店家確認。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.692723,
+      "lon": 120.5321877,
+      "source": "https://www.ubereats.com/tw/store/雲科飯糰-原傳香超二代雲科店/bdkVrymAWFOYeeRbyev6DQ",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.ubereats.com/tw/store/雲科飯糰-原傳香超二代雲科店/bdkVrymAWFOYeeRbyev6DQ",
+      "checkedAt": "2026-10-19"
+    },
+    "hoursBasis": "delivery"
+  },
+  {
+    "id": "nantou",
+    "name": "南投詹意麵 I 雞腿排飯 I 爌肉飯",
+    "short": "南投詹意麵",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路5號",
+    "note": "意麵、爌肉飯與宵夜",
+    "source": "https://www.ubereats.com/tw/store/南投詹意麵-i-雞腿排飯-i-爌肉飯/MJS4KcwlVTWwqOEcZW2kSw",
+    "sourceName": "Uber Eats 店家頁",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "16:30",
+          "end": "23:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "23:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "23:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "23:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "23:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "23:30",
+          "endDayOffset": 0
+        }
+      ],
+      []
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://www.ubereats.com/tw/store/南投詹意麵-i-雞腿排飯-i-爌肉飯/MJS4KcwlVTWwqOEcZW2kSw",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依 Uber Eats 公開供餐時段篩選；平台接單時間可能短於實體店營業時間，內用／外帶請先向店家確認。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6922083,
+      "lon": 120.530188,
+      "source": "https://www.ubereats.com/tw/store/南投詹意麵-i-雞腿排飯-i-爌肉飯/MJS4KcwlVTWwqOEcZW2kSw",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.ubereats.com/tw/store/南投詹意麵-i-雞腿排飯-i-爌肉飯/MJS4KcwlVTWwqOEcZW2kSw",
+      "checkedAt": "2026-10-19"
+    },
+    "hoursBasis": "delivery"
+  },
+  {
+    "id": "minong",
+    "name": "朝氣美濃商行 斗六雲科店",
+    "short": "朝氣美濃商行",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路8號",
+    "note": "早餐與漢堡",
+    "source": "https://www.ubereats.com/tw/store/朝氣美濃商行-斗六雲科店/1qhM2VrTWyaJ1atXON-xrw",
+    "sourceName": "Uber Eats 店家頁",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "待核對",
+    "statusNote": "外送平台已停止上架，實體店現況待確認；不參與抽選。",
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.ubereats.com/tw/store/朝氣美濃商行-斗六雲科店/1qhM2VrTWyaJ1atXON-xrw",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "chicken",
+    "name": "炸雞大獅 斗六雲科店 台式炸雞",
+    "short": "炸雞大獅",
+    "area": "龍潭路",
+    "categories": [
+      "正餐",
+      "點心"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路14-13號",
+    "note": "炸雞、雞排與蓋飯",
+    "source": "https://www.ubereats.com/tw/store/炸雞大獅-斗六雲科店-台式炸雞/7kBOEAlZVOyAgub_V9T80g",
+    "sourceName": "Uber Eats 店家頁",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null,
+      "點心": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:00",
+          "end": "20:45",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:45",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:45",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:45",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:45",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:45",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "20:45",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://www.ubereats.com/tw/store/炸雞大獅-斗六雲科店-台式炸雞/7kBOEAlZVOyAgub_V9T80g",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依 Uber Eats 公開供餐時段篩選；平台接單時間可能短於實體店營業時間，內用／外帶請先向店家確認。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6916932,
+      "lon": 120.5288032,
+      "source": "https://www.ubereats.com/tw/store/炸雞大獅-斗六雲科店-台式炸雞/7kBOEAlZVOyAgub_V9T80g",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.ubereats.com/tw/store/炸雞大獅-斗六雲科店-台式炸雞/7kBOEAlZVOyAgub_V9T80g",
+      "checkedAt": "2026-10-19"
+    },
+    "hoursBasis": "delivery"
+  },
+  {
+    "id": "han",
+    "name": "韓風食堂",
+    "short": "韓風食堂",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路5-6號",
+    "note": "韓式飯麵料理",
+    "source": "https://www.ubereats.com/tw/store/韓風食堂/6aKGOZ0SW1e5Nydrx60tjQ",
+    "sourceName": "Uber Eats 店家頁",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "待核對",
+    "statusNote": "外送平台已停止上架，實體店現況待確認；不參與抽選。",
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.ubereats.com/tw/store/韓風食堂/6aKGOZ0SW1e5Nydrx60tjQ",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "wayne",
+    "name": "偉恩市場 Wayne Market",
+    "short": "偉恩市場",
+    "area": "龍潭北路",
+    "categories": [
+      "早午餐",
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭北路3號1樓",
+    "note": "美式料理；原偉恩洋行的新店址",
+    "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037843",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null,
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "09:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ],
+      [],
+      [
+        {
+          "start": "09:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "09:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "09:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "09:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "09:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037843",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭北路生活圈",
+      "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037843",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "happy",
+    "name": "幸福珈琲館",
+    "short": "幸福珈琲館",
+    "area": "龍潭路",
+    "categories": [
+      "飲料",
+      "點心"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路1-31號",
+    "note": "咖啡與甜點",
+    "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037588",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null,
+      "點心": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037588",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "來源列 11:00–21:00、不定時公休；出發前請確認店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037588",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "myshop",
+    "name": "我的店簡餐店",
+    "short": "我的店簡餐店",
+    "area": "仁義路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市仁義路9-6號",
+    "note": "飯麵簡餐",
+    "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037545",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [],
+      [
+        {
+          "start": "10:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      []
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037545",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的仁義路生活圈",
+      "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037545",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "shuyuan",
+    "name": "舒院・私宅咖啡",
+    "short": "舒院・私宅咖啡",
+    "area": "四維路",
+    "categories": [
+      "飲料",
+      "點心"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市四維路56號",
+    "note": "咖啡、甜點與庭院空間",
+    "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037350",
+    "sourceName": "慢遊雲林",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null,
+      "點心": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "12:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "start": "12:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "12:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "12:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "12:00",
+          "end": "17:00",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037350",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的四維路生活圈",
+      "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037350",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "seetea",
+    "name": "SEE TEA 戲茶",
+    "short": "SEE",
+    "area": "八德路",
+    "categories": [
+      "正餐",
+      "飲料"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市八德路78號",
+    "note": "餐食與茶飲",
+    "source": "https://yunlin-events.puffermeme.com.tw/v5_township.php?township=douliu",
+    "sourceName": "雲林生活指南／縣府開放資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null,
+      "飲料": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ],
+      [],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://yunlin-events.puffermeme.com.tw/v5_township.php?township=douliu",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的八德路生活圈",
+      "source": "https://yunlin-events.puffermeme.com.tw/v5_township.php?township=douliu",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "liao",
+    "name": "廖家蒸餃",
+    "short": "廖家蒸餃",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路與四維路交叉口",
+    "note": "蒸餃、湯包與酸辣湯",
+    "source": "https://yingoyingo.pixnet.net/blog/posts/1034086617",
+    "sourceName": "yingoyingo 食記（2025）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": {
+        "amount": 80,
+        "item": "招牌蒸餃（10 顆）",
+        "unit": "籠",
+        "source": "https://yingoyingo.pixnet.net/blog/posts/1034086617",
+        "checkedAt": "2026-10-19",
+        "note": "2025 食記所載價格；現場售價可能調整。"
+      }
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "2025 食記列 11:00–13:30、17:00–19:30，未載每週公休日；週表待核對。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://yingoyingo.pixnet.net/blog/posts/1034086617",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "homi",
+    "name": "Homi House 咖啡",
+    "short": "Homi",
+    "area": "龍潭路",
+    "categories": [
+      "飲料",
+      "點心"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路40號",
+    "note": "咖啡與下午茶",
+    "source": "https://yingoyingo.pixnet.net/blog/posts/1034086617",
+    "sourceName": "yingoyingo 食記（2025）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null,
+      "點心": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "10:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ],
+      [],
+      [
+        {
+          "start": "10:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "20:00",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://yingoyingo.pixnet.net/blog/posts/1034086617",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://yingoyingo.pixnet.net/blog/posts/1034086617",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "edo",
+    "name": "大江戶日本料理",
+    "short": "大江戶日本料理",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路14-14號",
+    "note": "日本料理；預約優先，出發前請聯絡店家",
+    "source": "https://ifoodie.tw/restaurant/5d9bd22dd6895d2318c1ae03-%E5%A4%A7%E6%B1%9F%E6%88%B6%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86",
+    "sourceName": "愛食記店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:30",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:30",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:30",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:30",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:30",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:30",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:30",
+          "end": "21:00",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://ifoodie.tw/restaurant/5d9bd22dd6895d2318c1ae03-%E5%A4%A7%E6%B1%9F%E6%88%B6%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6916869,
+      "lon": 120.528702,
+      "source": "https://ifoodie.tw/restaurant/5d9bd22dd6895d2318c1ae03-%E5%A4%A7%E6%B1%9F%E6%88%B6%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://ifoodie.tw/restaurant/5d9bd22dd6895d2318c1ae03-%E5%A4%A7%E6%B1%9F%E6%88%B6%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "pengfood",
+    "name": "烹小鮮",
+    "short": "烹小鮮",
+    "area": "八德路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市八德路88號",
+    "note": "中式料理",
+    "source": "https://ifoodie.tw/restaurant/5594df73c03a100cde35b259-%E7%83%B9%E5%B0%8F%E9%AE%AE",
+    "sourceName": "愛食記店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://ifoodie.tw/restaurant/5594df73c03a100cde35b259-%E7%83%B9%E5%B0%8F%E9%AE%AE",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6921446,
+      "lon": 120.5284761,
+      "source": "https://ifoodie.tw/restaurant/5594df73c03a100cde35b259-%E7%83%B9%E5%B0%8F%E9%AE%AE",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的八德路生活圈",
+      "source": "https://ifoodie.tw/restaurant/5594df73c03a100cde35b259-%E7%83%B9%E5%B0%8F%E9%AE%AE",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "chunxi",
+    "name": "春囍Have a nice day",
+    "short": "春囍Have",
+    "area": "八德路",
+    "categories": [
+      "早午餐",
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市八德路82號",
+    "note": "早午餐與宵夜",
+    "source": "https://ifoodie.tw/restaurant/5a79eead2756dd3ded778815-%E6%98%A5%E5%9B%8DHave-a-nice-day",
+    "sourceName": "愛食記店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null,
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "10:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "20:30",
+          "end": "00:00",
+          "endDayOffset": 1
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "20:30",
+          "end": "00:00",
+          "endDayOffset": 1
+        }
+      ],
+      [],
+      [
+        {
+          "start": "10:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "20:30",
+          "end": "00:00",
+          "endDayOffset": 1
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "20:30",
+          "end": "00:00",
+          "endDayOffset": 1
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "20:30",
+          "end": "00:00",
+          "endDayOffset": 1
+        }
+      ],
+      [
+        {
+          "start": "10:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        },
+        {
+          "start": "20:30",
+          "end": "00:00",
+          "endDayOffset": 1
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://ifoodie.tw/restaurant/5a79eead2756dd3ded778815-%E6%98%A5%E5%9B%8DHave-a-nice-day",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6922813,
+      "lon": 120.5284467,
+      "source": "https://ifoodie.tw/restaurant/5a79eead2756dd3ded778815-%E6%98%A5%E5%9B%8DHave-a-nice-day",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的八德路生活圈",
+      "source": "https://ifoodie.tw/restaurant/5a79eead2756dd3ded778815-%E6%98%A5%E5%9B%8DHave-a-nice-day",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "weike",
+    "name": "濰克早午餐-斗六店",
+    "short": "濰克早午餐-斗六店",
+    "area": "龍潭北路",
+    "categories": [
+      "早午餐",
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭北路16之13號",
+    "note": "早餐與早午餐",
+    "source": "https://ifoodie.tw/restaurant/58fa4b2a2756dd27428b504e-%E6%BF%B0%E5%85%8B%E6%97%A9%E5%8D%88%E9%A4%90-%E6%96%97%E5%85%AD%E5%BA%97",
+    "sourceName": "愛食記店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null,
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "07:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "08:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "08:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "08:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "08:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "08:00",
+          "end": "14:00",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "07:30",
+          "end": "14:00",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://ifoodie.tw/restaurant/58fa4b2a2756dd27428b504e-%E6%BF%B0%E5%85%8B%E6%97%A9%E5%8D%88%E9%A4%90-%E6%96%97%E5%85%AD%E5%BA%97",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.691899499999998,
+      "lon": 120.5276603,
+      "source": "https://ifoodie.tw/restaurant/58fa4b2a2756dd27428b504e-%E6%BF%B0%E5%85%8B%E6%97%A9%E5%8D%88%E9%A4%90-%E6%96%97%E5%85%AD%E5%BA%97",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭北路生活圈",
+      "source": "https://ifoodie.tw/restaurant/58fa4b2a2756dd27428b504e-%E6%BF%B0%E5%85%8B%E6%97%A9%E5%8D%88%E9%A4%90-%E6%96%97%E5%85%AD%E5%BA%97",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "origin",
+    "name": "原域咖啡-雲科二店",
+    "short": "原域咖啡-雲科二店",
+    "area": "龍潭路",
+    "categories": [
+      "飲料",
+      "點心"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路3之1號",
+    "note": "咖啡與輕食",
+    "source": "https://ifoodie.tw/restaurant/5a073bd12756dd72f4291aaf-%E5%8E%9F%E5%9F%9F%E5%92%96%E5%95%A1-%E9%9B%B2%E7%A7%91%E4%BA%8C%E5%BA%97",
+    "sourceName": "愛食記店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null,
+      "點心": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "10:30",
+          "end": "17:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "17:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "17:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "17:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "17:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "17:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "10:30",
+          "end": "17:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://ifoodie.tw/restaurant/5a073bd12756dd72f4291aaf-%E5%8E%9F%E5%9F%9F%E5%92%96%E5%95%A1-%E9%9B%B2%E7%A7%91%E4%BA%8C%E5%BA%97",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6923839,
+      "lon": 120.53136579999999,
+      "source": "https://ifoodie.tw/restaurant/5a073bd12756dd72f4291aaf-%E5%8E%9F%E5%9F%9F%E5%92%96%E5%95%A1-%E9%9B%B2%E7%A7%91%E4%BA%8C%E5%BA%97",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://ifoodie.tw/restaurant/5a073bd12756dd72f4291aaf-%E5%8E%9F%E5%9F%9F%E5%92%96%E5%95%A1-%E9%9B%B2%E7%A7%91%E4%BA%8C%E5%BA%97",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "hokkaido",
+    "name": "旭北海道昆布鍋",
+    "short": "旭北海道昆布鍋",
+    "area": "中山路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市中山路623號",
+    "note": "昆布湯底火鍋",
+    "source": "https://ifoodie.tw/restaurant/59ee2f582756dd291ec63166-%E6%97%AD%E5%8C%97%E6%B5%B7%E9%81%93%E6%98%86%E5%B8%83%E9%8D%8B",
+    "sourceName": "愛食記店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "14:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [],
+      [
+        {
+          "start": "11:00",
+          "end": "14:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "14:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "14:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "17:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "21:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://ifoodie.tw/restaurant/59ee2f582756dd291ec63166-%E6%97%AD%E5%8C%97%E6%B5%B7%E9%81%93%E6%98%86%E5%B8%83%E9%8D%8B",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6934329,
+      "lon": 120.5383366,
+      "source": "https://ifoodie.tw/restaurant/59ee2f582756dd291ec63166-%E6%97%AD%E5%8C%97%E6%B5%B7%E9%81%93%E6%98%86%E5%B8%83%E9%8D%8B",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的中山路生活圈",
+      "source": "https://ifoodie.tw/restaurant/59ee2f582756dd291ec63166-%E6%97%AD%E5%8C%97%E6%B5%B7%E9%81%93%E6%98%86%E5%B8%83%E9%8D%8B",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "mrblack",
+    "name": "黑先生飯館Mr.Black",
+    "short": "黑先生飯館Mr.B",
+    "area": "仁義路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市仁義路13之8號",
+    "note": "飯食與中式料理",
+    "source": "https://ifoodie.tw/restaurant/60463467873d7975311c3f09-%E9%BB%91%E5%85%88%E7%94%9F%E9%A3%AF%E9%A4%A8Mr-Black",
+    "sourceName": "愛食記店家資料",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": [
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ],
+      [
+        {
+          "start": "11:00",
+          "end": "13:30",
+          "endDayOffset": 0
+        },
+        {
+          "start": "16:30",
+          "end": "19:30",
+          "endDayOffset": 0
+        }
+      ]
+    ],
+    "hoursExceptions": {},
+    "hoursSource": "https://ifoodie.tw/restaurant/60463467873d7975311c3f09-%E9%BB%91%E5%85%88%E7%94%9F%E9%A3%AF%E9%A4%A8Mr-Black",
+    "hoursCheckedAt": "2026-10-19",
+    "hoursNote": "依來源公開時刻表；臨時公休另依店家公告。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "published-point",
+      "lat": 23.6880243,
+      "lon": 120.5384202,
+      "source": "https://ifoodie.tw/restaurant/60463467873d7975311c3f09-%E9%BB%91%E5%85%88%E7%94%9F%E9%A3%AF%E9%A4%A8Mr-Black",
+      "checkedAt": "2026-10-19"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的仁義路生活圈",
+      "source": "https://ifoodie.tw/restaurant/60463467873d7975311c3f09-%E9%BB%91%E5%85%88%E7%94%9F%E9%A3%AF%E9%A4%A8Mr-Black",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "yoshi",
+    "name": "早安有喜 斗六店",
+    "short": "早安有喜",
+    "area": "八德路",
+    "categories": [
+      "早午餐",
+      "正餐",
+      "飲料"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市八德路72號1樓",
+    "note": "蛋餅、漢堡、飯食與茶飲",
+    "source": "https://douliou.yoshi.net.tw/m_pos/menu?plateform=%E5%A4%96%E5%B8%B6",
+    "sourceName": "早安有喜官方點餐頁",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": {
+        "amount": 99,
+        "item": "香草豚肉漢堡",
+        "unit": "份",
+        "source": "https://douliou.yoshi.net.tw/m_pos/menu?plateform=%E5%A4%96%E5%B8%B6",
+        "checkedAt": "2026-10-19",
+        "note": "官方外帶菜單價格，不含套餐加購。"
+      },
+      "正餐": null,
+      "飲料": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的八德路生活圈",
+      "source": "https://douliou.yoshi.net.tw/m_pos/menu?plateform=%E5%A4%96%E5%B8%B6",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "right",
+    "name": "右邊粉漿醬蛋餅",
+    "short": "右邊粉漿醬蛋餅",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路9號",
+    "note": "粉漿蛋餅與蘿蔔糕",
+    "source": "https://www.foodpanda.com.tw/chain/cd1qu/you-bian-fen-jiang-jiang-dan-bing",
+    "sourceName": "foodpanda 店家頁（含 2026 評論）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.foodpanda.com.tw/chain/cd1qu/you-bian-fen-jiang-jiang-dan-bing",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "oden",
+    "name": "味道關東煮 斗六店",
+    "short": "味道關東煮",
+    "area": "四維路",
+    "categories": [
+      "正餐",
+      "點心"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市四維路76號",
+    "note": "關東煮、飯、麵與冬粉",
+    "source": "https://www.findglocal.com/TW/Douliu/140794092741656/味道關東煮「斗六店」",
+    "sourceName": "店家社群公開貼文彙整",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null,
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的四維路生活圈",
+      "source": "https://www.findglocal.com/TW/Douliu/140794092741656/味道關東煮「斗六店」",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "mwd",
+    "name": "麥味登 斗六龍潭店",
+    "short": "麥味登",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路13-4號",
+    "note": "漢堡、蛋餅與早餐",
+    "source": "https://www.chickpt.com.tw/company/BZQ1oaD4A0qx",
+    "sourceName": "麥味登龍潭店公開商家頁",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.chickpt.com.tw/company/BZQ1oaD4A0qx",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "shanyue",
+    "name": "善月水映",
+    "short": "善月水映",
+    "area": "龍潭北路",
+    "categories": [
+      "飲料"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭北路16之11號",
+    "note": "手作茶飲",
+    "source": "https://www.ylepb.gov.tw/df_ufiles/c/113年雲林縣一般廢棄物資源循環及減量推廣計畫期末報告.pdf",
+    "sourceName": "雲林縣環保局 113 年度店家名錄",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭北路生活圈",
+      "source": "https://www.ylepb.gov.tw/df_ufiles/c/113年雲林縣一般廢棄物資源循環及減量推廣計畫期末報告.pdf",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "ganna",
+    "name": "甘乃滴冷泡飲 斗六店",
+    "short": "甘乃滴冷泡飲",
+    "area": "仁義路",
+    "categories": [
+      "飲料"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市仁義路38號",
+    "note": "冷泡茶飲",
+    "source": "https://www.ylepb.gov.tw/df_ufiles/c/113年雲林縣一般廢棄物資源循環及減量推廣計畫期末報告.pdf",
+    "sourceName": "雲林縣環保局 113 年度店家名錄",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "飲料": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的仁義路生活圈",
+      "source": "https://www.ylepb.gov.tw/df_ufiles/c/113年雲林縣一般廢棄物資源循環及減量推廣計畫期末報告.pdf",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "techbreakfast",
+    "name": "科大早餐車",
+    "short": "科大早餐車",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路1-51號",
+    "note": "早餐餐車",
+    "source": "https://www.ylepb.gov.tw/df_ufiles/c/113年雲林縣一般廢棄物資源循環及減量推廣計畫期末報告.pdf",
+    "sourceName": "雲林縣環保局 113 年度店家名錄",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.ylepb.gov.tw/df_ufiles/c/113年雲林縣一般廢棄物資源循環及減量推廣計畫期末報告.pdf",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "aki",
+    "name": "阿基好丼",
+    "short": "阿基好丼",
+    "area": "龍潭北路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭北路16-8號1樓",
+    "note": "丼飯",
+    "source": "https://www.nccc.com.tw/wps/wcm/connect/9bcd944c-9798-4835-9c82-ecb97cd5eddf/餐飲業.pdf?CVID=ph4wS4F&MOD=AJPERES",
+    "sourceName": "聯合信用卡處理中心特店名錄（2026）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭北路生活圈",
+      "source": "https://www.nccc.com.tw/wps/wcm/connect/9bcd944c-9798-4835-9c82-ecb97cd5eddf/餐飲業.pdf?CVID=ph4wS4F&MOD=AJPERES",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "daji",
+    "name": "大吉祥香豆腐",
+    "short": "大吉祥香豆腐",
+    "area": "四維路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市四維路68號",
+    "note": "香豆腐、鴨血與主食",
+    "source": "https://yingoyingo.pixnet.net/blog/posts/1034156475",
+    "sourceName": "yingoyingo 斗六美食整理（2024）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "已收錄",
+    "statusNote": null,
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的四維路生活圈",
+      "source": "https://yingoyingo.pixnet.net/blog/posts/1034156475",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "julin",
+    "name": "巨林漢堡",
+    "short": "巨林漢堡",
+    "area": "龍潭路",
+    "categories": [
+      "早午餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路6號",
+    "note": "漢堡與早餐",
+    "source": "https://ifoodie.tw/post/604a474fbaf6d30471549d98",
+    "sourceName": "快樂的過每一天食記（2021）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "待核對",
+    "statusNote": "僅找到較早食記，現況與時刻待核對。",
+    "priceByCategory": {
+      "早午餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://ifoodie.tw/post/604a474fbaf6d30471549d98",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "chongming",
+    "name": "重明鳥雞白湯拉麵",
+    "short": "重明鳥雞白湯拉麵",
+    "area": "龍潭路",
+    "categories": [
+      "正餐"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路5之7號",
+    "note": "雞白湯拉麵",
+    "source": "https://www.ptt.cc/bbs/Food/M.1639286755.A.F9C.html",
+    "sourceName": "公開食記（2021）",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "待核對",
+    "statusNote": "僅找到較早食記，現況與時刻待核對。",
+    "priceByCategory": {
+      "正餐": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://www.ptt.cc/bbs/Food/M.1639286755.A.F9C.html",
+      "checkedAt": "2026-10-19"
+    }
+  },
+  {
+    "id": "shizai",
+    "name": "蒔洅咖啡廳",
+    "short": "蒔洅咖啡廳",
+    "area": "龍潭路",
+    "categories": [
+      "飲料",
+      "點心"
+    ],
+    "icon": "🍴",
+    "address": "雲林縣斗六市龍潭路16號",
+    "note": "咖啡與冰沙",
+    "source": "https://food.timetables.tw/restaurant/ChIJIdy079fJbjQRvZR7KSsOjeE/",
+    "sourceName": "公開餐廳目錄",
+    "city": "斗六市",
+    "checkedAt": "2026-10-19",
+    "status": "待核對",
+    "statusNote": "目錄資料較舊，現況與時刻待核對。",
+    "priceByCategory": {
+      "飲料": null,
+      "點心": null
+    },
+    "weeklyHours": null,
+    "hoursExceptions": {},
+    "hoursSource": null,
+    "hoursCheckedAt": null,
+    "hoursNote": "每週時刻待核對；不限時間時可查看已收錄店家。",
+    "accessRoutes": [],
+    "location": {
+      "precision": "address"
+    },
+    "longtanArea": {
+      "included": true,
+      "basis": "地址位於大學路以南的龍潭路生活圈",
+      "source": "https://food.timetables.tw/restaurant/ChIJIdy079fJbjQRvZR7KSsOjeE/",
+      "checkedAt": "2026-10-19"
     }
   }
 ];
-    // Range evidence is separate from street labels. Pending routes never become zero minutes.
-    const DATASET = {version:'2026-10-19.3', checkedAt:'2026-10-19', city:'斗六市'};
+    // Geographic membership and walking routes are independent, source-backed facts.
+    const DATASET = {version:'2026-10-19.4', checkedAt:'2026-10-19', city:'斗六市'};
     const GATE = {id:'yuntech-longtan-gate',name:'雲科龍潭路側校門',verified:true,location:{lat:23.693064,lon:120.533660},source:'https://maps.app.goo.gl/ypxEHj9Yf8EK6Q3MA',checkedAt:'2026-10-19'};
     const DEFAULTS = {category:'正餐',range:'near',budget:'any',time:'now',at:''};
     const RANGE_LABELS = {near:'龍潭路附近',far:'遠一點',city:'斗六市區'};
     const BUDGETS = {any:[1,Infinity],100:[1,100],200:[101,200],300:[201,300],301:[301,Infinity]};
-    const REASONS = {status:'待核對或暫停抽選',routeUnknown:'步行路線待核對',range:'超出範圍',category:'餐點類型不符',priceUnknown:'缺少此類型的基準價格',budget:'基準價格不符',hoursUnknown:'此日期營業資料不明',closed:'此時不在表定營業時段',repeat:'避免連續重複'};
+    const REASONS = {status:'待核對或暫停抽選',areaUnknown:'地區位置待核對',routeUnknown:'步行路線待核對',range:'超出範圍',category:'餐點類型不符',priceUnknown:'缺少此類型的基準價格',budget:'基準價格不符',hoursUnknown:'此日期營業資料不明',closed:'此時不在表定營業時段',repeat:'避免連續重複'};
     const $ = id => document.getElementById(id);
     const state = {filters:{...DEFAULTS},spinning:false,lastId:null,rotation:0,history:[],pool:[],base:[],wheelItems:[],result:null,preserveWheel:false,finish:null};
 
@@ -1753,13 +4291,15 @@
     function routeFor(r) {
       return GATE.verified ? (r.accessRoutes||[]).find(p=>p.originId===GATE.id&&p.mode==='walking'&&p.verified&&p.accessible&&p.source&&p.checkedAt&&Number.isFinite(p.minutes)&&p.minutes>0) : null;
     }
+    function inLongtanArea(r) { const a=r.longtanArea;return r.city==='斗六市'&&a?.included===true&&!!a.source&&!!a.checkedAt; }
     function exclusionReason(r,filters,date) {
       if(r.status!=='已收錄') return 'status';
       if(r.city!=='斗六市') return 'range';
-      if(filters.range!=='city') {
+      if(filters.range==='near'&&!inLongtanArea(r)) return r.longtanArea?.included===false?'range':'areaUnknown';
+      if(filters.range==='far'&&!inLongtanArea(r)) {
         const route=routeFor(r);
         if(!route) return 'routeUnknown';
-        if(route.minutes>(filters.range==='near'?15:30)) return 'range';
+        if(route.minutes>30) return 'range';
       }
       if(filters.category!=='全部'&&!r.categories.includes(filters.category)) return 'category';
       if(filters.budget!=='any') {
@@ -1790,7 +4330,7 @@
       const n=items.length,step=n>36?Math.ceil(n/12):1,groups=[];
       for(let i=0;i<n;i+=step) {
         const end=Math.min(i+step,n);
-        groups.push({start:i,end,from:i/n,to:end/n,label:n<=12?items[i].short:n<=36?String(i+1).padStart(2,'0'):`${String(i+1).padStart(2,'0')}–${String(end).padStart(2,'0')}`});
+        groups.push({start:i,end,from:i/n,to:end/n,label:n<=18?items[i].short:n<=36?String(i+1).padStart(2,'0'):`${String(i+1).padStart(2,'0')}–${String(end).padStart(2,'0')}`});
       }
       return groups;
     }
@@ -1818,16 +4358,19 @@
     function formatTime(date) { return date?taipeiParts(date).input.replace('T',' ')+'（台灣時間）':'日期時間未填妥'; }
     function renderResult() {
       if(!state.result)return;
-      const {r,mode,filters,date,index,boundary}=state.result,box=$('result');box.replaceChildren();box.classList.toggle('won',mode==='drawn');
+      $('result').hidden=false;
+      const {r,mode,filters,date,index,boundary}=state.result,box=$('result');
+      $('wheelTitle').textContent=(mode==='drawn'?'今天就吃':mode==='view'?'正在查看':'上次抽中')+'｜'+r.short;$('wheelTitle').title=r.name;
+      $('quickResult').textContent=(mode==='drawn'?'今天就吃：':mode==='view'?'正在查看：':'上次抽中：')+r.name+' · 詳細資訊 ↓';$('quickResult').href='#result';$('quickResult').classList.add('picked');box.replaceChildren();box.classList.toggle('won',mode==='drawn');
       box.append(el('p','eyebrow',mode==='drawn'?'本次抽中 · 今天就吃這家':mode==='view'?'正在查看 · 不影響抽選':'上次結果 · 請依目前條件重新抽選'),el('h3','',r.name),el('p','',r.address),el('p','',r.note));
       if(index!==undefined) box.append(el('p','',`本次轉盤編號 ${String(index+1).padStart(2,'0')}`));
-      if(r.status!=='已收錄') box.append(el('p','notice',r.status+'：'+r.statusNote));
+      if(r.status!=='已收錄') {box.append(el('p','notice',r.status+'：'+r.statusNote));if(r.statusSource)box.append(link('狀態資料來源 ↗',r.statusSource,'result-source'));}
       const prices=filters.budget==='any'?priceOptions(r,filters.category):matchingPrices(r,filters);
       if(prices.length) for(const p of prices) {
         box.append(el('p','price-line',`${p.category}基準：${p.item} NT$${p.amount}／${p.unit}`));
         const note=el('p','result-source',p.note+' ');note.append(link(`價格來源 · 查閱 ${p.checkedAt} ↗`,p.source));box.append(note);
       } else box.append(el('p','',filters.budget==='any'?'此類型基準價格尚待補齊。':'此店沒有符合目前預算的已核對基準品項。'));
-      const hours=openingStatus(r,date),timeText=hours.status==='open'?'依表定時間營業':hours.status==='closed'?'此時不在表定營業時段':'此日期營業資料不明';
+      const hours=openingStatus(r,date),timeText=hours.status==='open'?(r.hoursBasis==='delivery'?'符合外送平台供餐時段（到店請確認）':'依表定時間營業'):hours.status==='closed'?'此時不在表定營業時段':'此日期營業資料不明';
       box.append(el('p','',`${formatTime(date)} · ${timeText}${hours.periods.length?' '+hours.periods.join('、'):''}`),el('p','result-source',r.hoursNote));
       if(r.hoursSource) {const p=el('p','result-source');p.append(link(`時刻來源 · 查閱 ${r.hoursCheckedAt} ↗`,r.hoursSource));box.append(p);}
       if(boundary)box.append(el('p','notice','抽選期間已跨越營業時刻邊界；本次保留抽選開始時的名單，下次將依新時刻篩選。'));
@@ -1850,14 +4393,15 @@
       state.history.forEach(r=>$('history').append(action(r.short,()=>viewRestaurant(r))));
     }
     function renderDirectory() {
-      const rows=$('listMode').value==='all'?RESTAURANTS:state.pool,q=$('search').value.trim().toLocaleLowerCase();
+      const rows=$('listMode').value==='all'?RESTAURANTS:$('listMode').value==='near'?RESTAURANTS.filter(inLongtanArea):state.pool,q=$('search').value.trim().toLocaleLowerCase();
       const visible=rows.filter(r=>(r.name+' '+r.address).toLocaleLowerCase().includes(q));
-      $('listCount').textContent=`${$('listMode').value==='all'?'全部已收錄':'下次可抽'} ${rows.length} 家 · 搜尋顯示 ${visible.length} 家（搜尋不改變轉盤）`;
+      $('listCount').textContent=`${$('listMode').value==='all'?'斗六全部已收錄':$('listMode').value==='near'?'龍潭路附近全部':'下次可抽'} ${rows.length} 家 · 搜尋顯示 ${visible.length} 家（搜尋不改變轉盤）`;
       const grid=$('restaurantGrid');grid.replaceChildren();
       for(const r of visible) {
         const card=el('article','restaurant-card'),body=el('div','restaurant-info');
         body.append(el('h3','',r.name),el('p','',r.address),el('p','',r.categories.join(' · ')+' · '+r.area));
         const missing=[];if(!routeFor(r))missing.push('路線待補');if(!priceOptions(r,'全部').length)missing.push('價格待補');if(!r.weeklyHours||r.hoursRestricted)missing.push('時刻待補');
+        if(r.hoursBasis==='delivery')body.append(el('p','','時段依外送平台；到店前請確認'));
         if(missing.length)body.append(el('p','',missing.join(' · ')));
         if(r.status!=='已收錄')body.append(el('p','notice',r.status+'：'+r.statusNote));
         const actions=el('div','card-actions');actions.append(action('查看位置 ↗',()=>viewRestaurant(r)),link('來源 ↗',r.source));body.append(actions);card.append(body);grid.append(card);
@@ -1881,13 +4425,13 @@
         groups.forEach((g,i)=>{
           const start=g.from*Math.PI*2-Math.PI/2,end=g.to*Math.PI*2-Math.PI/2;
           ctx.beginPath();ctx.moveTo(500,500);ctx.arc(500,500,492,start,end);ctx.closePath();ctx.fillStyle=palette[i%palette.length];ctx.fill();ctx.strokeStyle='#ffffff';ctx.lineWidth=3;ctx.stroke();
-          ctx.save();ctx.translate(500,500);ctx.rotate((start+end)/2);ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillStyle=i%palette.length===0?'#fff':'#193b3a';ctx.font=`700 ${items.length<=12?30:28}px sans-serif`;ctx.fillText(g.label,450,0,310);ctx.restore();
+          ctx.save();ctx.translate(500,500);ctx.rotate((start+end)/2);ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillStyle=i%palette.length===0?'#fff':'#193b3a';ctx.font=`700 ${items.length<=18?30:28}px sans-serif`;ctx.fillText(g.label,450,0,310);ctx.restore();
         });
         if(!items.length){ctx.beginPath();ctx.arc(500,500,492,0,Math.PI*2);ctx.fillStyle='#d6eeea';ctx.fill();}
       }
       $('wheel').setAttribute('aria-label',`餐廳轉盤，共 ${items.length} 家；完整名單可展開下方「本次轉盤名單」。`);
       $('legend').replaceChildren();items.forEach((r,i)=>$('legend').append(el('li','',`${String(i+1).padStart(2,'0')} · ${r.name}`)));
-      $('groupNote').textContent=items.length>36?'以編號分組顯示，扇形大小依店家數分配；每家店的抽中機率相同。':items.length>12?'轉盤以編號顯示，展開名單查看完整店名。':'每個扇形代表一家店，每家抽中機率相同。';
+      $('groupNote').textContent=items.length>36?'以編號分組顯示，扇形大小依店家數分配；每家店的抽中機率相同。':items.length>18?'轉盤以編號顯示，展開名單查看完整店名。':'每個扇形代表一家店，每家抽中機率相同。';
     }
     function summaryText(date) {
       const f=state.filters,time=f.time==='any'?'不限時間':f.time==='at'?formatTime(date):'現在依表定營業 · '+formatTime(date);
@@ -1896,7 +4440,8 @@
     function updateCounts(selection,date) {
       $('candidateCount').textContent=state.preserveWheel?`本次 ${state.wheelItems.length} 家／下次可抽 ${selection.pool.length} 家`:`可抽 ${selection.pool.length} 家`;
       $('filterSummary').textContent=summaryText(date);
-      $('rangeHelp').textContent=state.filters.range==='city'?'包含斗六市完整行政區；收錄名單持續補充。':`固定從雲科龍潭路側校門出發，步行約 ${state.filters.range==='near'?15:30} 分鐘內。${RESTAURANTS.some(r=>routeFor(r))?'僅納入已核對路線。':'起點已確定，店家步行路線尚待核對，目前此範圍沒有可抽名單。'}`;
+      if(!state.result)$('quickResult').textContent=state.filters.category+' · '+RANGE_LABELS[state.filters.range]+' · '+(state.filters.time==='any'?'不限時間':state.filters.time==='at'?'依指定時間抽選':'依表定營業時間抽選');
+      $('rangeHelp').textContent=state.filters.range==='city'?'包含斗六市完整行政區；收錄名單持續補充。':state.filters.range==='near'?'以大學路以南的斗六生活圈為範圍，包含龍潭路、龍潭北路、四維路、八德路、仁義路與雲科校內；不以步行分鐘限制。':'包含龍潭路附近全區，再加入從雲科龍潭路側校門步行約 30 分鐘內的已核對店家。';
       $('timeError').hidden=!(state.filters.time==='at'&&!date);
       $('spin').disabled=state.spinning||!selection.pool.length||!$('timeError').hidden;
       $('spinLabel').textContent=state.spinning?'正在決定下一餐…':selection.pool.length?'轉一下，決定吃什麼':'沒有符合條件的店家';
@@ -1906,7 +4451,7 @@
       Object.entries(selection.counts).filter(([,v])=>v).forEach(([k,v])=>reasons.append(el('li','',`${REASONS[k]}：${v} 家`)));
       $('diagnosticsSummary').textContent=`名單 ${RESTAURANTS.length} 家 → 符合條件 ${selection.base.length} 家 → 下次可抽 ${selection.pool.length} 家`;
       $('emptyActions').hidden=!!selection.pool.length;
-      $('emptyMessage').textContent=state.filters.range!=='city'&&!RESTAURANTS.some(r=>routeFor(r)&&routeFor(r).minutes<=(state.filters.range==='near'?15:30))?'目前缺少符合此步行範圍的已核對路線，可自行切換斗六市區查看其他選擇。':'這組條件目前沒有可抽的店家。可調整預算、時間或範圍，其他條件會保留。';
+      $('emptyMessage').textContent='這組條件目前沒有可抽的店家。可調整預算、時間或範圍，其他條件會保留；也可在下方瀏覽龍潭路附近全部名單。';
     }
     function refresh({changed=false,preserve=state.preserveWheel}={}) {
       if(state.spinning)return;
@@ -1973,7 +4518,7 @@
     }
     function init() {
       $('totalCount').textContent=RESTAURANTS.length;
-      $('coverage').textContent=`目前收錄 ${RESTAURANTS.length} 家，涵蓋校園周邊、市區、溝壩與石榴班；並非斗六市完整普查。`;
+      $('coverage').textContent=`目前收錄 ${RESTAURANTS.length} 家，其中 ${RESTAURANTS.filter(inLongtanArea).length} 家位於大學路以南的龍潭路附近範圍。公開名錄可能有遺漏與異動，並非全區完整普查；待核對店家僅供查閱，不參與抽選。`;
       $('dataCoverage').textContent=`${RESTAURANTS.length} 家收錄 · ${RESTAURANTS.filter(r=>Object.values(r.priceByCategory).some(Boolean)).length} 家有基準價格 · ${RESTAURANTS.filter(r=>r.weeklyHours&&!r.hoursRestricted).length} 家有每週時刻 · ${RESTAURANTS.filter(r=>routeFor(r)).length} 家有已核對步行路線`;
       document.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>setFilter('category',b.dataset.category)));
       document.querySelectorAll('[data-range]').forEach(b=>b.addEventListener('click',()=>setFilter('range',b.dataset.range)));

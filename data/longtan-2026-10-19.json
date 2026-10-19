@@ -1,0 +1,978 @@
+{
+  "checkedAt": "2026-10-19",
+  "definition": "斗六市大學路以南；地區收錄與步行路線分開判定",
+  "restaurants": [
+    {
+      "id": "datou",
+      "name": "大頭小吃部",
+      "address": "雲林縣斗六市龍潭路1之79號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://vocus.cc/article/68d774c1fd89780001038d19",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "roulei",
+      "name": "肉嘞 斗六店",
+      "address": "雲林縣斗六市龍潭路1-5號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://taberu-food.com/roulei/",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "grayspace",
+      "name": "灰色維度早午餐咖啡廳",
+      "address": "雲林縣斗六市龍潭路1-28號1樓",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://www.ftvnews.com.tw/news/detail/2024327w0280",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "leedong",
+      "name": "李東記肉骨茶 斗六分店",
+      "address": "雲林縣斗六市龍潭路10號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://supertaste.tvbs.com.tw/infocard/31480",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "pengtea",
+      "name": "烹小茶",
+      "address": "雲林縣斗六市龍潭路3-2號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xi=1037675",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "smile",
+      "name": "Mr. Smile 微笑早餐園地 龍潭店",
+      "address": "雲林縣斗六市龍潭路3-16號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://footinder.com.tw/雲林縣斗六市/138407/",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "teas",
+      "name": "TEA'S 原味 斗六龍潭店",
+      "address": "雲林縣斗六市龍潭路14-12號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://drink.footinder.com.tw/uncategorized/33631/",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "laobing",
+      "name": "烙一手好餅",
+      "address": "雲林縣斗六市龍潭路與四維路口",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://food.timetables.tw/restaurant/ChIJ_4_T3xrJbjQRthcNLhlEx1M/",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "kumaball",
+      "name": "熊太地瓜球 斗六店",
+      "address": "雲林縣斗六市龍潭路5之9號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://www.foodpanda.com.tw/restaurant/qd7q/xiong-tai-di-gua-qiu-dou-liu-dian",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "chico",
+      "name": "CHICO 餐廚",
+      "address": "雲林縣斗六市鎮南路176號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://tour.yunlin.gov.tw/mainssl/modules/MySpace/BlogInfo.php?xmlid=1037321",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "wendocurry",
+      "name": "溫度咖哩",
+      "address": "雲林縣斗六市鎮南路166號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://ericboyworld.blogspot.com/2025/01/wendocurry.html",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "milkfish",
+      "name": "專吃無刺虱目魚",
+      "address": "雲林縣斗六市鎮南路288之6號",
+      "areaEvidence": {
+        "included": null,
+        "basis": "大學路沿線攤位／門牌位置仍待確認南北側",
+        "source": "https://travel.yam.com/article/128552",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "meishan",
+      "name": "梅山米糕",
+      "address": "雲林縣斗六市鎮南路90號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://ericboyworld.blogspot.com/2025/11/05-5378979.html",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "hans",
+      "name": "Han's Pizza 翰斯比薩",
+      "address": "雲林縣斗六市大學路三段",
+      "areaEvidence": {
+        "included": null,
+        "basis": "大學路沿線攤位／門牌位置仍待確認南北側",
+        "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/BlogList.php?cn=ZC10353694&pn=11&sn=yunlin",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "kalugi",
+      "name": "卡璐佶咖啡館 雲科大店",
+      "address": "雲林縣斗六市大學路三段123號（設計學院荷花池旁）",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "louisa",
+      "name": "路易莎咖啡 雲科大店",
+      "address": "雲林縣斗六市大學路三段123號（雲泰表演廳南側）",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "xinxin",
+      "name": "心心複合式餐飲",
+      "address": "雲林縣斗六市大學路三段123號（員生餐廳內）",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "qinqin",
+      "name": "親親食堂",
+      "address": "雲林縣斗六市大學路三段123號（員生餐廳內）",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://www.yuntech.edu.tw/index.php/2019-04-02-07-22-58/1/2019-04-02-08-18-11",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "yipin",
+      "name": "一品香火鍋",
+      "address": "雲林縣斗六市武昌路182號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://heidihihi.com/yunlin-douliu-food/",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "erji",
+      "name": "二吉軒豆漿 斗六總店",
+      "address": "雲林縣斗六市成功路300號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://heidihihi.com/yunlin-douliu-food/",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "changxing",
+      "name": "長興圓仔冰",
+      "address": "雲林縣斗六市中華路136號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://heidihihi.com/yunlin-douliu-food/",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "fourth",
+      "name": "四代目麥芽酥圓仔冰",
+      "address": "雲林縣斗六市太平路38號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://heidihihi.com/yunlin-douliu-food/",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "gouba",
+      "name": "溝仔垻清涼冰店",
+      "address": "雲林縣斗六市仁義路144號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南",
+        "source": "https://heidihihi.com/yunlin-douliu-food/",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "oldstreet",
+      "name": "古早味老街碗粿",
+      "address": "雲林縣斗六市太平路122號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037259",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "aguoshi",
+      "name": "阿國獅魷魚羹",
+      "address": "雲林縣斗六市大同路112號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037258",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "aci",
+      "name": "阿賜豬腳飯",
+      "address": "雲林縣斗六市公正街34號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037281",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "shiliuaci",
+      "name": "石榴班阿賜古早味臭豆腐",
+      "address": "雲林縣斗六市中興路43之2號",
+      "areaEvidence": {
+        "included": false,
+        "basis": "地址位於大學路以北／其他斗六區域",
+        "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037845",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "viet",
+      "name": "雲科大 越南料理",
+      "address": "雲林縣斗六市龍潭路5號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.ubereats.com/tw/store/雲科大-越南料理/Di1_vyONVVayfyxzTn1PUQ",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "meiwei",
+      "name": "美味食堂丨斗六必吃鍋氣炒飯炒麵",
+      "address": "雲林縣斗六市龍潭路9號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.ubereats.com/tw/store/美味食堂丨斗六必吃鍋氣炒飯炒麵/Z5YMQS3EW6y4yzj_ZkcDsA",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "riceball",
+      "name": "雲科飯糰 原傳香超二代雲科店",
+      "address": "雲林縣斗六市龍潭路1-20號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.ubereats.com/tw/store/雲科飯糰-原傳香超二代雲科店/bdkVrymAWFOYeeRbyev6DQ",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "nantou",
+      "name": "南投詹意麵 I 雞腿排飯 I 爌肉飯",
+      "address": "雲林縣斗六市龍潭路5號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.ubereats.com/tw/store/南投詹意麵-i-雞腿排飯-i-爌肉飯/MJS4KcwlVTWwqOEcZW2kSw",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "minong",
+      "name": "朝氣美濃商行 斗六雲科店",
+      "address": "雲林縣斗六市龍潭路8號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.ubereats.com/tw/store/朝氣美濃商行-斗六雲科店/1qhM2VrTWyaJ1atXON-xrw",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "chicken",
+      "name": "炸雞大獅 斗六雲科店 台式炸雞",
+      "address": "雲林縣斗六市龍潭路14-13號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.ubereats.com/tw/store/炸雞大獅-斗六雲科店-台式炸雞/7kBOEAlZVOyAgub_V9T80g",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "han",
+      "name": "韓風食堂",
+      "address": "雲林縣斗六市龍潭路5-6號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.ubereats.com/tw/store/韓風食堂/6aKGOZ0SW1e5Nydrx60tjQ",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "wayne",
+      "name": "偉恩市場 Wayne Market",
+      "address": "雲林縣斗六市龍潭北路3號1樓",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭北路生活圈",
+        "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037843",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "happy",
+      "name": "幸福珈琲館",
+      "address": "雲林縣斗六市龍潭路1-31號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037588",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "myshop",
+      "name": "我的店簡餐店",
+      "address": "雲林縣斗六市仁義路9-6號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的仁義路生活圈",
+        "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037545",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "shuyuan",
+      "name": "舒院・私宅咖啡",
+      "address": "雲林縣斗六市四維路56號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的四維路生活圈",
+        "source": "https://tour.yunlin.gov.tw/main/modules/MySpace/index.php?xmlid=1037350",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "seetea",
+      "name": "SEE TEA 戲茶",
+      "address": "雲林縣斗六市八德路78號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的八德路生活圈",
+        "source": "https://yunlin-events.puffermeme.com.tw/v5_township.php?township=douliu",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "liao",
+      "name": "廖家蒸餃",
+      "address": "雲林縣斗六市龍潭路與四維路交叉口",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://yingoyingo.pixnet.net/blog/posts/1034086617",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "homi",
+      "name": "Homi House 咖啡",
+      "address": "雲林縣斗六市龍潭路40號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://yingoyingo.pixnet.net/blog/posts/1034086617",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "edo",
+      "name": "大江戶日本料理",
+      "address": "雲林縣斗六市龍潭路14-14號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://ifoodie.tw/restaurant/5d9bd22dd6895d2318c1ae03-%E5%A4%A7%E6%B1%9F%E6%88%B6%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "pengfood",
+      "name": "烹小鮮",
+      "address": "雲林縣斗六市八德路88號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的八德路生活圈",
+        "source": "https://ifoodie.tw/restaurant/5594df73c03a100cde35b259-%E7%83%B9%E5%B0%8F%E9%AE%AE",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "chunxi",
+      "name": "春囍Have a nice day",
+      "address": "雲林縣斗六市八德路82號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的八德路生活圈",
+        "source": "https://ifoodie.tw/restaurant/5a79eead2756dd3ded778815-%E6%98%A5%E5%9B%8DHave-a-nice-day",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "weike",
+      "name": "濰克早午餐-斗六店",
+      "address": "雲林縣斗六市龍潭北路16之13號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭北路生活圈",
+        "source": "https://ifoodie.tw/restaurant/58fa4b2a2756dd27428b504e-%E6%BF%B0%E5%85%8B%E6%97%A9%E5%8D%88%E9%A4%90-%E6%96%97%E5%85%AD%E5%BA%97",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "origin",
+      "name": "原域咖啡-雲科二店",
+      "address": "雲林縣斗六市龍潭路3之1號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://ifoodie.tw/restaurant/5a073bd12756dd72f4291aaf-%E5%8E%9F%E5%9F%9F%E5%92%96%E5%95%A1-%E9%9B%B2%E7%A7%91%E4%BA%8C%E5%BA%97",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "hokkaido",
+      "name": "旭北海道昆布鍋",
+      "address": "雲林縣斗六市中山路623號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的中山路生活圈",
+        "source": "https://ifoodie.tw/restaurant/59ee2f582756dd291ec63166-%E6%97%AD%E5%8C%97%E6%B5%B7%E9%81%93%E6%98%86%E5%B8%83%E9%8D%8B",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "mrblack",
+      "name": "黑先生飯館Mr.Black",
+      "address": "雲林縣斗六市仁義路13之8號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的仁義路生活圈",
+        "source": "https://ifoodie.tw/restaurant/60463467873d7975311c3f09-%E9%BB%91%E5%85%88%E7%94%9F%E9%A3%AF%E9%A4%A8Mr-Black",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "yoshi",
+      "name": "早安有喜 斗六店",
+      "address": "雲林縣斗六市八德路72號1樓",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的八德路生活圈",
+        "source": "https://douliou.yoshi.net.tw/m_pos/menu?plateform=%E5%A4%96%E5%B8%B6",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "right",
+      "name": "右邊粉漿醬蛋餅",
+      "address": "雲林縣斗六市龍潭路9號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.foodpanda.com.tw/chain/cd1qu/you-bian-fen-jiang-jiang-dan-bing",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "oden",
+      "name": "味道關東煮 斗六店",
+      "address": "雲林縣斗六市四維路76號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的四維路生活圈",
+        "source": "https://www.findglocal.com/TW/Douliu/140794092741656/味道關東煮「斗六店」",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "mwd",
+      "name": "麥味登 斗六龍潭店",
+      "address": "雲林縣斗六市龍潭路13-4號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.chickpt.com.tw/company/BZQ1oaD4A0qx",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "shanyue",
+      "name": "善月水映",
+      "address": "雲林縣斗六市龍潭北路16之11號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭北路生活圈",
+        "source": "https://www.ylepb.gov.tw/df_ufiles/c/113年雲林縣一般廢棄物資源循環及減量推廣計畫期末報告.pdf",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "ganna",
+      "name": "甘乃滴冷泡飲 斗六店",
+      "address": "雲林縣斗六市仁義路38號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的仁義路生活圈",
+        "source": "https://www.ylepb.gov.tw/df_ufiles/c/113年雲林縣一般廢棄物資源循環及減量推廣計畫期末報告.pdf",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "techbreakfast",
+      "name": "科大早餐車",
+      "address": "雲林縣斗六市龍潭路1-51號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.ylepb.gov.tw/df_ufiles/c/113年雲林縣一般廢棄物資源循環及減量推廣計畫期末報告.pdf",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "aki",
+      "name": "阿基好丼",
+      "address": "雲林縣斗六市龍潭北路16-8號1樓",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭北路生活圈",
+        "source": "https://www.nccc.com.tw/wps/wcm/connect/9bcd944c-9798-4835-9c82-ecb97cd5eddf/餐飲業.pdf?CVID=ph4wS4F&MOD=AJPERES",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "daji",
+      "name": "大吉祥香豆腐",
+      "address": "雲林縣斗六市四維路68號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的四維路生活圈",
+        "source": "https://yingoyingo.pixnet.net/blog/posts/1034156475",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "julin",
+      "name": "巨林漢堡",
+      "address": "雲林縣斗六市龍潭路6號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://ifoodie.tw/post/604a474fbaf6d30471549d98",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "chongming",
+      "name": "重明鳥雞白湯拉麵",
+      "address": "雲林縣斗六市龍潭路5之7號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://www.ptt.cc/bbs/Food/M.1639286755.A.F9C.html",
+        "checkedAt": "2026-10-19"
+      }
+    },
+    {
+      "id": "shizai",
+      "name": "蒔洅咖啡廳",
+      "address": "雲林縣斗六市龍潭路16號",
+      "areaEvidence": {
+        "included": true,
+        "basis": "地址位於大學路以南的龍潭路生活圈",
+        "source": "https://food.timetables.tw/restaurant/ChIJIdy079fJbjQRvZR7KSsOjeE/",
+        "checkedAt": "2026-10-19"
+      }
+    }
+  ],
+  "weeklySources": [
+    {
+      "id": "viet",
+      "source": "https://www.ubereats.com/tw/store/雲科大-越南料理/Di1_vyONVVayfyxzTn1PUQ",
+      "kind": "delivery",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "10:30",
+          "closes": "13:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "16:30",
+          "closes": "20:30"
+        }
+      ]
+    },
+    {
+      "id": "meiwei",
+      "source": "https://www.ubereats.com/tw/store/美味食堂丨斗六必吃鍋氣炒飯炒麵/Z5YMQS3EW6y4yzj_ZkcDsA",
+      "kind": "delivery",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday",
+            "Monday"
+          ],
+          "opens": "10:30",
+          "closes": "13:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday",
+            "Monday"
+          ],
+          "opens": "16:00",
+          "closes": "19:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "10:30",
+          "closes": "13:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "16:00",
+          "closes": "19:30"
+        }
+      ]
+    },
+    {
+      "id": "riceball",
+      "source": "https://www.ubereats.com/tw/store/雲科飯糰-原傳香超二代雲科店/bdkVrymAWFOYeeRbyev6DQ",
+      "kind": "delivery",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "05:00",
+          "closes": "13:00"
+        }
+      ]
+    },
+    {
+      "id": "nantou",
+      "source": "https://www.ubereats.com/tw/store/南投詹意麵-i-雞腿排飯-i-爌肉飯/MJS4KcwlVTWwqOEcZW2kSw",
+      "kind": "delivery",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "16:30",
+          "closes": "23:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "11:30",
+          "closes": "13:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "17:00",
+          "closes": "23:30"
+        }
+      ]
+    },
+    {
+      "id": "chicken",
+      "source": "https://www.ubereats.com/tw/store/炸雞大獅-斗六雲科店-台式炸雞/7kBOEAlZVOyAgub_V9T80g",
+      "kind": "delivery",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "11:00",
+          "closes": "20:45"
+        }
+      ]
+    },
+    {
+      "id": "edo",
+      "source": "https://ifoodie.tw/restaurant/5d9bd22dd6895d2318c1ae03-%E5%A4%A7%E6%B1%9F%E6%88%B6%E6%97%A5%E6%9C%AC%E6%96%99%E7%90%86",
+      "kind": "directory",
+      "openingHoursList": [
+        "星期一 11:30-14:00, 17:30-21:00",
+        "星期二 11:30-14:00, 17:30-21:00",
+        "星期三 11:30-14:00, 17:30-21:00",
+        "星期四 11:30-14:00, 17:30-21:00",
+        "星期五 11:30-14:00, 17:30-21:00",
+        "星期六 11:30-14:00, 17:30-21:00",
+        "星期日 11:30-14:00, 17:30-21:00"
+      ]
+    },
+    {
+      "id": "pengfood",
+      "source": "https://ifoodie.tw/restaurant/5594df73c03a100cde35b259-%E7%83%B9%E5%B0%8F%E9%AE%AE",
+      "kind": "directory",
+      "openingHoursList": [
+        "星期一 11:00-13:30, 16:30-19:30",
+        "星期二 11:00-13:30, 16:30-19:30",
+        "星期三 11:00-13:30, 16:30-19:30",
+        "星期四 11:00-13:30, 16:30-19:30",
+        "星期五 11:00-13:30, 16:30-19:30",
+        "星期六 11:00-13:30, 16:30-19:30",
+        "星期日 11:00-13:30, 16:30-19:30"
+      ]
+    },
+    {
+      "id": "chunxi",
+      "source": "https://ifoodie.tw/restaurant/5a79eead2756dd3ded778815-%E6%98%A5%E5%9B%8DHave-a-nice-day",
+      "kind": "directory",
+      "openingHoursList": [
+        "星期一 10:00-14:00, 20:30-00:00",
+        "星期二 休息",
+        "星期三 10:00-14:00, 20:30-00:00",
+        "星期四 10:00-14:00, 20:30-00:00",
+        "星期五 10:00-14:00, 20:30-00:00",
+        "星期六 10:00-14:00, 20:30-00:00",
+        "星期日 10:00-14:00, 20:30-00:00"
+      ]
+    },
+    {
+      "id": "weike",
+      "source": "https://ifoodie.tw/restaurant/58fa4b2a2756dd27428b504e-%E6%BF%B0%E5%85%8B%E6%97%A9%E5%8D%88%E9%A4%90-%E6%96%97%E5%85%AD%E5%BA%97",
+      "kind": "directory",
+      "openingHoursList": [
+        "星期一 08:00-14:00",
+        "星期二 08:00-14:00",
+        "星期三 08:00-14:00",
+        "星期四 08:00-14:00",
+        "星期五 08:00-14:00",
+        "星期六 07:30-14:00",
+        "星期日 07:30-14:00"
+      ]
+    },
+    {
+      "id": "origin",
+      "source": "https://ifoodie.tw/restaurant/5a073bd12756dd72f4291aaf-%E5%8E%9F%E5%9F%9F%E5%92%96%E5%95%A1-%E9%9B%B2%E7%A7%91%E4%BA%8C%E5%BA%97",
+      "kind": "directory",
+      "openingHoursList": [
+        "星期一 10:30-17:30",
+        "星期二 10:30-17:30",
+        "星期三 10:30-17:30",
+        "星期四 10:30-17:30",
+        "星期五 10:30-17:30",
+        "星期六 10:30-17:30",
+        "星期日 10:30-17:30"
+      ]
+    },
+    {
+      "id": "hokkaido",
+      "source": "https://ifoodie.tw/restaurant/59ee2f582756dd291ec63166-%E6%97%AD%E5%8C%97%E6%B5%B7%E9%81%93%E6%98%86%E5%B8%83%E9%8D%8B",
+      "kind": "directory",
+      "openingHoursList": [
+        "星期一 11:00-14:30, 17:00-21:30",
+        "星期二 休息",
+        "星期三 11:00-14:30, 17:00-21:30",
+        "星期四 11:00-14:30, 17:00-21:30",
+        "星期五 11:00-14:30, 17:00-21:30",
+        "星期六 11:00-21:30",
+        "星期日 11:00-21:30"
+      ]
+    },
+    {
+      "id": "mrblack",
+      "source": "https://ifoodie.tw/restaurant/60463467873d7975311c3f09-%E9%BB%91%E5%85%88%E7%94%9F%E9%A3%AF%E9%A4%A8Mr-Black",
+      "kind": "directory",
+      "openingHoursList": [
+        "星期一 11:00-13:30, 16:30-19:30",
+        "星期二 休息",
+        "星期三 休息",
+        "星期四 11:00-13:30, 16:30-19:30",
+        "星期五 11:00-13:30, 16:30-19:30",
+        "星期六 11:00-13:30, 16:30-19:30",
+        "星期日 11:00-13:30, 16:30-19:30"
+      ]
+    }
+  ],
+  "pending": [
+    {
+      "id": "roulei",
+      "name": "肉嘞 斗六店",
+      "reason": "同址出現店面招租資訊，營業狀態待重新確認。",
+      "source": "https://taberu-food.com/roulei/"
+    },
+    {
+      "id": "smile",
+      "name": "Mr. Smile 微笑早餐園地 龍潭店",
+      "reason": "舊名錄資料，尚缺近期店家資訊。",
+      "source": "https://footinder.com.tw/雲林縣斗六市/138407/"
+    },
+    {
+      "id": "laobing",
+      "name": "烙一手好餅",
+      "reason": "攤位位置與營業狀態待重新確認。",
+      "source": "https://food.timetables.tw/restaurant/ChIJ_4_T3xrJbjQRthcNLhlEx1M/"
+    },
+    {
+      "id": "kumaball",
+      "name": "熊太地瓜球 斗六店",
+      "reason": "公開頁面有店址差異，外送平台標示自 2026-10-01 停止上架；實體店現況待確認，不參與抽選。",
+      "source": "https://www.ubereats.com/tw/store/熊太地瓜球-斗六店/obik__PTX2eGsrRTWZ8itA"
+    },
+    {
+      "id": "minong",
+      "name": "朝氣美濃商行 斗六雲科店",
+      "reason": "外送平台已停止上架，實體店現況待確認；不參與抽選。",
+      "source": "https://www.ubereats.com/tw/store/朝氣美濃商行-斗六雲科店/1qhM2VrTWyaJ1atXON-xrw"
+    },
+    {
+      "id": "han",
+      "name": "韓風食堂",
+      "reason": "外送平台已停止上架，實體店現況待確認；不參與抽選。",
+      "source": "https://www.ubereats.com/tw/store/韓風食堂/6aKGOZ0SW1e5Nydrx60tjQ"
+    },
+    {
+      "id": "julin",
+      "name": "巨林漢堡",
+      "reason": "僅找到較早食記，現況與時刻待核對。",
+      "source": "https://ifoodie.tw/post/604a474fbaf6d30471549d98"
+    },
+    {
+      "id": "chongming",
+      "name": "重明鳥雞白湯拉麵",
+      "reason": "僅找到較早食記，現況與時刻待核對。",
+      "source": "https://www.ptt.cc/bbs/Food/M.1639286755.A.F9C.html"
+    },
+    {
+      "id": "shizai",
+      "name": "蒔洅咖啡廳",
+      "reason": "目錄資料較舊，現況與時刻待核對。",
+      "source": "https://food.timetables.tw/restaurant/ChIJIdy079fJbjQRvZR7KSsOjeE/"
+    }
+  ]
+}
